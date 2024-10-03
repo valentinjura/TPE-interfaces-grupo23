@@ -1,0 +1,25 @@
+body {
+  background-color: #ebebeb;
+}
+
+nav {
+  border: solid black;
+  height: 73px;
+  width: 100%;
+  background-color: #d9d9d9;
+  display: flex;
+}
+footer {
+  height: 350px;
+  background-color: #dadada;
+  border: solid black;
+  display: flex;
+}
+#card-banner {
+  border: solid black;
+  height: 773px;
+}
+.card {
+  background-color: #bebebe;
+  height: 380px;
+}

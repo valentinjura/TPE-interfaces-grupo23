@@ -1,0 +1,62 @@
+body {
+  background-color: #ebebeb;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+nav {
+  height: 73px;
+  background-color: #d9d9d9;
+}
+
+form {
+  margin-top: 10em;
+}
+p,
+h3,
+label {
+  color: white;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  background-color: rgba(1, 1, 0, 0.8);
+}
+label {
+  display: inline;
+}
+input {
+  width: 15em;
+  margin-bottom: 15px;
+}
+#form-title {
+  text-align: center;
+}
+#login-data {
+  display: block;
+}
+#input-email {
+  margin-left: 4.3em;
+}
+
+input {
+  margin-left: 15px;
+}
+footer {
+  display: flex;
+  background-color: #d9d9d9;
+  height: 350px;
+  margin-top: 15em;
+}
+#login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 8em;
+  width: 110px;
+  height: 32px;
+}
