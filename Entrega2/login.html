@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LogIn</title>
     <link rel="stylesheet" href="css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -12,15 +18,19 @@
     </header>
     <main>
       <form action="" id="login-form">
-        <h3 id="form-title">LogIn</h3>
+        <h3 id="form-title">Iniciar Sesión</h3>
         <section id="login-data">
-          <label>Email</label><input type="email" id="input-email" />
-          <label>Contraseña</label><input type="password" />
-          <button>Registrarse con Facebook</button>
-          <button>Registrarse con google</button>
+          <input type="email" id="input-email" placeholder="Email" />
+          <input type="password" placeholder="Contraseña" />
+          <button id="login-button">
+            <a href="index.html">Iniciar Sesión</a>
+          </button>
+          <p>No tenes cuenta, registrate <a href="signup.html">aqui</a></p>
         </section>
-        <p>No tenes cuenta, registrate <a href="signup.html">aqui</a></p>
-        <button id="login-button"><a href="index.html">Iniciar Sesión</a></button>
+        <section id="register-gfb-buttons">
+          <button class="fb-btn"><img id="fb-img"src="https://i.ibb.co/pnpDRC6/facebook.png" alt="">Registrarse con Facebook</button>
+          <button class="google-btn">Registrarse con google</button>
+        </section>
       </form>
     </main>
     <footer>
