@@ -7,3 +7,216 @@ nav {
   height: 73px;
   background-color: #d9d9d9;
 }
+.header { 
+  position: absolute;
+  
+}
+
+
+.header-content { 
+  width: 119px;
+  height: 126px;
+  position: absolute;
+  left: 100px;
+  top: 49px;
+}
+
+.header-title { 
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+  position: absolute;
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.header-subtitle { 
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 70px;
+  font-family: Montserrat;
+}
+
+.section { 
+
+  position: absolute;
+  left: 349px;
+  top: 49px;
+}
+
+.section-title { 
+
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.section-title span { 
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.section-links { 
+
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+
+.section-links span { 
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
+.socials { 
+  width: 78px;
+  height: 22px;
+  position: absolute;
+  left: 63px;
+}
+
+.socials span { 
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
+
+.support { 
+  width: 105px;
+  height: 161px;
+  position: absolute;
+  left: 1000px;
+  top: 46px;
+}
+
+.support-title { 
+  width: 105px;
+  height: 35px;
+  font-weight: bold;
+  position: absolute;
+  left: 400px;
+}
+
+.support-title span { 
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.support-links { 
+  width: 105px;
+  height: 119px;
+  position: absolute;
+  left: 400px;
+  top: 70px;
+}
+
+.support-links span { 
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
+
+.company-info { 
+  width: 105px;
+  height: 161px;
+  position: absolute;
+  left: 1600px;
+  top: 40px;
+}
+
+.company-title { 
+  width: 105px;
+  height: 35px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+}
+
+.company-title span { 
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+
+}
+
+.company-links { 
+  width: 105px;
+  height: 119px;
+  position: absolute;
+  top: 70px;
+}
+
+.company-links span { 
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
+
+.third-party-notices { 
+  width: 168px;
+  height: 21px;
+  position: absolute;
+  left: 1600px;
+  top: 301px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
+
+.trademarks { 
+  width: 156px;
+  height: 21px;
+  position: absolute;
+  left:1350px;
+  top: 301px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
+
+.footer-title { 
+  width: 144px;
+  height: 20px;
+  position: absolute;
+  left: 850px;
+  top: 301px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
+
+#legal-advise{
+  width: 335px;
+  height: 21px;
+  position: absolute;
+  left: 345px;
+  top: 301px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
+#privacy-cookies{
+  width: 335px;
+  height: 21px;
+  position: absolute;
+  left: 90px;
+  top: 301px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 16px;
+}
