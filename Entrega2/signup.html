@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SignUp</title>
     <link rel="stylesheet" href="css/signup.css" />
+
   </head>
   <body>
     <header>
@@ -12,13 +13,24 @@
       <section></section>
     </header>
     <main>
-      <form action="">
-        <label for="">Nombre y Apellido</label><input type="text" />
-        <label for="">Nickname</label> <input type="text" />
-        <label for="" class="label-signup">Edad</label> <input type="text" />
-        <label for="" class="label-signup">Email</label><input type="email" />
-        <label for="">Contraseña</label><input type="password" />
-        <label for="">Repetir contraseña</label><input type="password" />
+      <form action="" id="signup-form">
+        <h3 id="form-title">Registrate</h3>
+        <section id="signup-data">
+          <input type="text" required placeholder="Nombre y Apellido" />
+          <input type="text" placeholder="Nickname(opcional)" />
+          <input type="number" required placeholder="Edad" />
+          <input type="email" required placeholder="Email" />
+          <input type="password" required placeholder="Contraseña" />
+          <input type="password" required placeholder="Repetir contraseña" />
+          <button id="signup-button">
+            <a href="index.html">Registrarse</a>
+          </button>
+        </section>
+        <p id="login-button">Ya tenes cuenta <a href="login.html">inicia sesión</a></p>
+        <section id="terminos">
+          <input type="checkbox" id="checkbox"><p>Acepta <a href="#">terminos y condiciones</a></p>
+        </section>
+
       </form>
     </main>
     <footer>
@@ -62,6 +74,12 @@
         </section>
         <span class="third-party-notices">Avisos sobre terceros</span>
         <span class="trademarks">Marcas Registradas</span>
+        <section id="social-media">
+          <img src="assets/facebook.png" alt=""class="socialmedia-logo">
+          <img src="assets/instagram.png" alt=""class="socialmedia-logo">
+          <img src="assets/discord.png" alt="" class="socialmedia-logo">
+
+        </section>
         <span class="footer-title">Interfaces 2024</span>
         <article class="legal-notices">
           <spana id="legal-advise">Aviso Legal</spana>

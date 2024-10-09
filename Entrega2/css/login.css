@@ -5,9 +5,10 @@ main {
   display: flex;
   justify-content: center;
 }
-nav {
-  height: 73px;
+header{
+  border: solid;
   background-color: #d9d9d9;
+  height: 73px;
 }
 
 form {
@@ -19,8 +20,7 @@ p>a{
 }
 
 p,
-h3,
-label {
+h3 {
   color: white;
   font-family: "Montserrat";
 }
@@ -41,12 +41,10 @@ label {
   width: 25em;
   background-color: rgba(1, 1, 0, 0.8);
 }
-label {
-  display: inline;
-}
 input {
   width: 15em;
   margin-bottom: 15px;
+  margin-left: 15px;
 }
 #form-title {
   text-align: center;
@@ -84,9 +82,7 @@ input {
   background-position: 12px 11px;
 }
 
-input {
-  margin-left: 15px;
-}
+
 footer {
   display: flex;
   background-color: #d9d9d9;
@@ -130,7 +126,7 @@ footer {
 }
 
 .section-title { 
-
+  
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -145,7 +141,7 @@ footer {
 }
 
 .section-links { 
-
+  
   position: absolute;
   left: 0;
   top: 50px;
@@ -180,7 +176,7 @@ footer {
 }
 
 .support-title { 
-  width: 105px;
+  width: 130px;
   height: 35px;
   font-weight: bold;
   position: absolute;
@@ -189,8 +185,7 @@ footer {
 
 .support-title span { 
   color: rgba(0, 0, 0, 1);
-  font-family: Montserrat;
-  text-align: left;
+  font-family: Montserrat;  
   font-weight: bold;
   font-size: 16px;
 }
@@ -200,7 +195,7 @@ footer {
   height: 119px;
   position: absolute;
   left: 400px;
-  top: 70px;
+  top: 50px;
 }
 
 .support-links span { 
@@ -219,7 +214,7 @@ footer {
 }
 
 .company-title { 
-  width: 105px;
+  width: 130px;
   height: 35px;
   font-weight: bold;
   position: absolute;
@@ -231,14 +226,14 @@ footer {
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
-
+  
 }
 
 .company-links { 
   width: 105px;
   height: 119px;
   position: absolute;
-  top: 70px;
+  top: 50px;
 }
 
 .company-links span { 
@@ -276,7 +271,7 @@ footer {
   width: 144px;
   height: 20px;
   position: absolute;
-  left: 850px;
+  left: 910px;
   top: 301px;
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
@@ -305,4 +300,45 @@ footer {
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
+}
+
+#social-media{
+  display: flex;
+  flex-direction: column;
+  width: 1800px;
+  height: 230px;
+  align-items: center;
+  justify-content: end;
+  justify-content: space-around;
+}
+
+
+.socialmedia-logo{
+  width: 24px;
+  height: 24px;
+}
+
+#discord{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  width: 260px;  
+}
+#instagram{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  width: 195px;  
+}
+#facebook{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  width: 220px;  
+}
+.logo-text{
+  margin-left: 10px;
 }

@@ -9,6 +9,12 @@ nav {
   background-color: #d9d9d9;
   display: flex;
 }
+footer {
+  display: flex;
+  background-color: #d9d9d9;
+  height: 350px;
+  margin-top: 15em;
+}
 .header { 
   position: absolute;
   
@@ -46,7 +52,7 @@ nav {
 }
 
 .section-title { 
-
+  
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -61,7 +67,7 @@ nav {
 }
 
 .section-links { 
-
+  
   position: absolute;
   left: 0;
   top: 50px;
@@ -96,7 +102,7 @@ nav {
 }
 
 .support-title { 
-  width: 105px;
+  width: 130px;
   height: 35px;
   font-weight: bold;
   position: absolute;
@@ -105,8 +111,7 @@ nav {
 
 .support-title span { 
   color: rgba(0, 0, 0, 1);
-  font-family: Montserrat;
-  text-align: left;
+  font-family: Montserrat;  
   font-weight: bold;
   font-size: 16px;
 }
@@ -116,7 +121,7 @@ nav {
   height: 119px;
   position: absolute;
   left: 400px;
-  top: 70px;
+  top: 50px;
 }
 
 .support-links span { 
@@ -135,7 +140,7 @@ nav {
 }
 
 .company-title { 
-  width: 105px;
+  width: 130px;
   height: 35px;
   font-weight: bold;
   position: absolute;
@@ -147,14 +152,14 @@ nav {
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
-
+  
 }
 
 .company-links { 
   width: 105px;
   height: 119px;
   position: absolute;
-  top: 70px;
+  top: 50px;
 }
 
 .company-links span { 
@@ -192,7 +197,7 @@ nav {
   width: 144px;
   height: 20px;
   position: absolute;
-  left: 850px;
+  left: 910px;
   top: 301px;
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
@@ -222,11 +227,50 @@ nav {
   text-align: left;
   font-size: 16px;
 }
-#card-banner {
-  border: solid black;
-  height: 773px;
+
+#social-media{
+  display: flex;
+  flex-direction: column;
+  width: 1800px;
+  height: 230px;
+  align-items: center;
+  justify-content: end;
+  justify-content: space-around;
 }
-.card {
-  background-color: #bebebe;
-  height: 380px;
+
+
+.socialmedia-logo{
+  width: 24px;
+  height: 24px;
+}
+
+#discord{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  width: 260px;  
+}
+#instagram{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  width: 195px;  
+}
+#facebook{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  width: 220px;  
+}
+.logo-text{
+  margin-left: 10px;
+}
+
+
+@media only screen and (min-width:600px){
+  
+
 }

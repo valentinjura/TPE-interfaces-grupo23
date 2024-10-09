@@ -7,7 +7,52 @@ nav {
   height: 73px;
   background-color: #d9d9d9;
 }
+main {
+  display: flex;
+  justify-content: center;
+}
+form {
+  margin-top: 10em;
+}
+#form-title {
+  text-align: center;
+}
 
+input {
+  width: 15em;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+p,
+h3 {
+  color: white;
+  font-family: "Montserrat";
+}
+
+#signup-button{
+  border-radius: 3px;
+  width: 110px;
+  height: 32px;
+  background-color: #20A53E;
+  
+}
+#signup-button>a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  background-color: rgba(1, 1, 0, 0.8);
+}
+
+#signup-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 footer {
   display: flex;
   background-color: #d9d9d9;
@@ -225,4 +270,39 @@ footer {
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
+}
+#social-media{
+  display: flex;
+  flex-direction: column;
+  width: 1800px;
+  height: 230px;
+  align-items: center;
+  justify-content: end;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+
+#terminos{
+  display: flex;
+  justify-content: center;
+}
+
+#terminos>input{
+  height: 15px;
+  width: 50px;
+  margin-top: 18px;
+}
+
+.socialmedia-logo{
+  width: 24px;
+  height: 24px;
+}
+
+#login-button{
+  text-align: center;
+}
+#login-button>a{
+  text-decoration: none;
+  color: #fff;
 }
