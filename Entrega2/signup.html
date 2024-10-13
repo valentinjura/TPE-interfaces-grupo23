@@ -16,22 +16,22 @@
       <form action="" id="signup-form">
         <h3 id="form-title">Registrate</h3>
         <section id="signup-data">
-          <input type="text" required placeholder="Nombre y Apellido" />
+          <input type="text"  placeholder="Nombre y Apellido"  id="name"/>
           <input type="text" placeholder="Nickname(opcional)" />
-          <input type="number" required placeholder="Edad" />
-          <input type="email" required placeholder="Email" />
-          <input type="password" required placeholder="Contraseña" />
-          <input type="password" required placeholder="Repetir contraseña" />
-          <button id="signup-button">
-            <a href="index.html">Registrarse</a>
-          </button>
+          <input type="number"  placeholder="Edad" id="age" />
+          <input type="email"  placeholder="Email" id="email"/>
+          <input type="password"  placeholder="Contraseña" id="password"/>
+          <input type="password"  placeholder="Repetir contraseña" id="repeat_password" />
+          <section id="terminos">
+            <input type="checkbox" id="checkbox"><p>Acepta <a href="#">terminos y condiciones</a></p>
+          </section>
         </section>
-        <p id="login-button">Ya tenes cuenta <a href="login.html">inicia sesión</a></p>
-        <section id="terminos">
-          <input type="checkbox" id="checkbox"><p>Acepta <a href="#">terminos y condiciones</a></p>
-        </section>
-
+        <button id="signup-button">
+          <a href="#">Registrarse</a>
+        </button>
+        <p id="login-button">Ya tenes cuenta <span><a href="login.html">inicia sesión</a></span></p>
       </form>
+
     </main>
     <footer>
       <section class="header">
@@ -87,5 +87,6 @@
         </article>
       </section>
     </footer>
+    <script src="js/app.js"></script>
   </body>
 </html>

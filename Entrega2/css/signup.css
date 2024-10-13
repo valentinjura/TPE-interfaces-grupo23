@@ -20,6 +20,7 @@ form {
 
 input {
   width: 15em;
+  height: 2em;
   margin-bottom: 15px;
   margin-left: 15px;
 }
@@ -34,7 +35,7 @@ h3 {
   width: 110px;
   height: 32px;
   background-color: #20A53E;
-  
+  margin-left: 265px;
 }
 #signup-button>a{
   text-decoration: none;
@@ -44,7 +45,8 @@ h3 {
 #signup-form {
   display: flex;
   flex-direction: column;
-  width: 25em;
+  width: 40em;
+  height: 30em;
   background-color: rgba(1, 1, 0, 0.8);
 }
 
@@ -286,6 +288,7 @@ footer {
 #terminos{
   display: flex;
   justify-content: center;
+  
 }
 
 #terminos>input{
@@ -301,8 +304,11 @@ footer {
 
 #login-button{
   text-align: center;
+  
 }
 #login-button>a{
   text-decoration: none;
   color: #fff;
 }
+
+/* Succes signup*/
