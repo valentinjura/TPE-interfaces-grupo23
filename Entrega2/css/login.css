@@ -1,11 +1,14 @@
 body {
   background-color: #ebebeb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 main {
   display: flex;
   justify-content: center;
 }
-header{
+
+header {
   border: solid;
   background-color: #d9d9d9;
   height: 73px;
@@ -14,7 +17,8 @@ header{
 form {
   margin-top: 10em;
 }
-p>a{
+
+p>a {
   color: #fff;
   text-decoration: none;
 }
@@ -24,13 +28,18 @@ h3 {
   color: white;
   font-family: "Montserrat";
 }
-#login-button{
+
+#login-button {
+  position: relative;
+  z-index: 10;
   border-radius: 3px;
   width: 110px;
-  height: 32px;
+  height: 35px;
   background-color: #20A53E;
+  text-align: center;
 }
-#login-button>a{
+
+#login-button>a {
   text-decoration: none;
   color: #fff;
 }
@@ -38,49 +47,56 @@ h3 {
 #login-form {
   display: flex;
   flex-direction: column;
-  width: 25em;
+  width: 28em;
   background-color: rgba(1, 1, 0, 0.8);
 }
+
 input {
   width: 15em;
   margin-bottom: 15px;
   margin-left: 15px;
 }
+
 #form-title {
   text-align: center;
 }
+
 #login-data {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#register-gfb-buttons{
+
+#register-gfb-buttons {
   display: flex;
   justify-content: space-between;
+  width: 450px;
 }
+
 .fb-btn {
+  display: flex;
   background: #4267b2;
-  border-radius: 3px;
   color: white;
-  text-align: center;
-  
+  margin-left: 5px;
 
 }
-#fb-img{
+
+#fb-img {
   width: 24px;
   height: 24px;
   padding-right: 16px;
 
 }
+
 .google-btn {
-  padding: 12px 16px 12px 42px;
-  border: none;
+  display: flex;
+  justify-content: space-between;
   color: #757575;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
   background-color: white;
-  background-repeat: no-repeat;
-  background-position: 12px 11px;
+  width: 178px;
+  margin-right: 5px;
 }
+
 
 
 footer {
@@ -89,13 +105,14 @@ footer {
   height: 350px;
   margin-top: 15em;
 }
-.header { 
+
+.header {
   position: absolute;
-  
+
 }
 
 
-.header-content { 
+.header-content {
   width: 119px;
   height: 126px;
   position: absolute;
@@ -103,7 +120,7 @@ footer {
   top: 49px;
 }
 
-.header-title { 
+.header-title {
   color: rgba(0, 0, 0, 1);
   font-weight: bold;
   position: absolute;
@@ -111,28 +128,28 @@ footer {
   font-size: 16px;
 }
 
-.header-subtitle { 
+.header-subtitle {
   color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 70px;
   font-family: Montserrat;
 }
 
-.section { 
+.section {
 
   position: absolute;
   left: 349px;
   top: 49px;
 }
 
-.section-title { 
-  
+.section-title {
+
   position: absolute;
   left: 0;
   font-weight: bold;
 }
 
-.section-title span { 
+.section-title span {
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
   text-align: left;
@@ -140,34 +157,35 @@ footer {
   font-weight: bold;
 }
 
-.section-links { 
-  
+.section-links {
+
   position: absolute;
   left: 0;
   top: 50px;
 }
 
-.section-links span { 
+.section-links span {
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
 }
-.socials { 
+
+.socials {
   width: 78px;
   height: 22px;
   position: absolute;
   left: 63px;
 }
 
-.socials span { 
+.socials span {
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
 }
 
-.support { 
+.support {
   width: 105px;
   height: 161px;
   position: absolute;
@@ -175,7 +193,7 @@ footer {
   top: 46px;
 }
 
-.support-title { 
+.support-title {
   width: 130px;
   height: 35px;
   font-weight: bold;
@@ -183,14 +201,14 @@ footer {
   left: 400px;
 }
 
-.support-title span { 
+.support-title span {
   color: rgba(0, 0, 0, 1);
-  font-family: Montserrat;  
+  font-family: Montserrat;
   font-weight: bold;
   font-size: 16px;
 }
 
-.support-links { 
+.support-links {
   width: 105px;
   height: 119px;
   position: absolute;
@@ -198,14 +216,14 @@ footer {
   top: 50px;
 }
 
-.support-links span { 
+.support-links span {
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
 }
 
-.company-info { 
+.company-info {
   width: 105px;
   height: 161px;
   position: absolute;
@@ -213,7 +231,7 @@ footer {
   top: 40px;
 }
 
-.company-title { 
+.company-title {
   width: 130px;
   height: 35px;
   font-weight: bold;
@@ -221,29 +239,29 @@ footer {
   top: 0;
 }
 
-.company-title span { 
+.company-title span {
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
-  
+
 }
 
-.company-links { 
+.company-links {
   width: 105px;
   height: 119px;
   position: absolute;
   top: 50px;
 }
 
-.company-links span { 
+.company-links span {
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
   text-align: left;
   font-size: 16px;
 }
 
-.third-party-notices { 
+.third-party-notices {
   width: 168px;
   height: 21px;
   position: absolute;
@@ -255,11 +273,11 @@ footer {
   font-size: 16px;
 }
 
-.trademarks { 
+.trademarks {
   width: 156px;
   height: 21px;
   position: absolute;
-  left:1350px;
+  left: 1350px;
   top: 301px;
   color: rgba(0, 0, 0, 1);
   font-family: Montserrat;
@@ -267,7 +285,7 @@ footer {
   font-size: 16px;
 }
 
-.footer-title { 
+.footer-title {
   width: 144px;
   height: 20px;
   position: absolute;
@@ -279,7 +297,7 @@ footer {
   font-size: 16px;
 }
 
-#legal-advise{
+#legal-advise {
   width: 335px;
   height: 21px;
   position: absolute;
@@ -290,7 +308,8 @@ footer {
   text-align: left;
   font-size: 16px;
 }
-#privacy-cookies{
+
+#privacy-cookies {
   width: 335px;
   height: 21px;
   position: absolute;
@@ -302,7 +321,7 @@ footer {
   font-size: 16px;
 }
 
-#social-media{
+#social-media {
   display: flex;
   flex-direction: column;
   width: 1800px;
@@ -313,32 +332,90 @@ footer {
 }
 
 
-.socialmedia-logo{
+.socialmedia-logo {
   width: 24px;
   height: 24px;
 }
 
-#discord{
+#discord {
   display: flex;
   align-items: center;
   justify-content: end;
 
-  width: 260px;  
+  width: 260px;
 }
-#instagram{
+
+#instagram {
   display: flex;
   align-items: center;
   justify-content: end;
 
-  width: 195px;  
+  width: 195px;
 }
-#facebook{
+
+#facebook {
   display: flex;
   align-items: center;
   justify-content: end;
 
-  width: 220px;  
+  width: 220px;
 }
-.logo-text{
+
+.logo-text {
   margin-left: 10px;
+}
+
+.btn>p {
+  font-size: 14px;
+  color: #000;
+  margin-left: 5px;
+}
+
+.btn {
+  display: inline-block; 
+  width: 110px; 
+  height: 35px; 
+  border-radius: 3px;
+  background-color: #20A53E;
+  color: #fff;
+  text-align: center;
+  line-height: 35px; 
+  text-decoration: none; 
+  cursor: pointer; 
+}
+
+
+.btn:after,
+.btn:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0 solid #fff;
+  transition: all 1s;
+}
+
+.btn:after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.btn:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+  width: 100%;
+  height: 100%;
+  border-color: #fff;
 }

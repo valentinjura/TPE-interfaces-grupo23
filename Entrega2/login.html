@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
   </head>
   <body>
     <header>
@@ -23,9 +22,9 @@
         <section id="login-data">
           <input type="email" id="input-email" placeholder="Email" />
           <input type="password" placeholder="Contraseña" />
-          <button id="login-button">
-            <a href="index.html">Iniciar Sesión</a>
-          </button>
+          <div id="login-button">
+            <a href="index.html" class="btn">Iniciar Sesión</a>
+          </div>
           <p>No tenes cuenta, registrate <a href="signup.html">aqui</a></p>
         </section>
         <section id="register-gfb-buttons">
@@ -33,10 +32,15 @@
             <img
               id="fb-img"
               src="https://i.ibb.co/pnpDRC6/facebook.png"
-              alt=""
+              alt="Registrarse con facebook"
             />Registrarse con Facebook
           </button>
-          <button class="google-btn">Registrarse con google</button>
+          <button class="google-btn">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4="
+              alt=""
+            />Registrarse con google
+          </button>
         </section>
       </form>
     </main>
@@ -83,14 +87,25 @@
         <span class="trademarks">Marcas Registradas</span>
         <section id="social-media">
           <article id="facebook">
-            <img src="assets/facebook.png" alt=""class="socialmedia-logo"><span class="logo-text">@pixgaming</span>
-
+            <img
+              src="assets/facebook.png"
+              alt=""
+              class="socialmedia-logo"
+            /><span class="logo-text">@pixgaming</span>
           </article>
           <article id="instagram">
-            <img src="assets/instagram.png" alt=""class="socialmedia-logo"><span class="logo-text">@pixspace</span>
+            <img
+              src="assets/instagram.png"
+              alt=""
+              class="socialmedia-logo"
+            /><span class="logo-text">@pixspace</span>
           </article>
           <article id="discord">
-            <img src="assets/discord.png" alt="" class="socialmedia-logo"><span class="logo-text">PixCommunity</span>
+            <img
+              src="assets/discord.png"
+              alt=""
+              class="socialmedia-logo"
+            /><span class="logo-text">PixCommunity</span>
           </article>
         </section>
         <span class="footer-title">Interfaces 2024</span>
