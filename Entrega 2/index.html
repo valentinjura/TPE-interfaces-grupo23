@@ -39,7 +39,7 @@
     <!-- Menú desplegable -->
     <nav class="nav-menu" id="nav-menu">
         <div class="menu-top">
-            <button class="login-btn">Iniciar sesión</button>
+            <button class="login-btn"  onclick="window.location.href='login.html'" >Iniciar sesión</button>
             <button class="profile-btn">Ir a tu perfil</button>
         </div>
         <span>Categorias</span>
@@ -83,19 +83,113 @@
         </div>
     </div>
    <!-- recomendados -->
-    <section class="Category-game">
-        <h2>Recomendados para ti:</h2>
-        <div class="carrousel-container">
-            <button class="left-arrow">
-                <img src="Imagenes/icons/Arrow-Left.png" alt="Izquierda">
-            </button>
-            <div class="card-wrapper">
-                <div class="card-container">
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/carrusel-secundario/dragon-ace.png" alt="dragon ace">
-                            <p class="title-game">Dragon Age™: The Veilguard</p>
-                            <p class="old-price">ARS$ 7.999</p>
+   <section class="Category-game">
+    <h2>Recomendados para ti:</h2>
+    <div class="carrousel-container">
+        <button class="left-arrow">
+            <img src="Imagenes/icons/Arrow-Left.png" alt="Izquierda">
+        </button>
+        <div class="card-wrapper">
+            <div class="card-container">
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/carrusel-secundario/dragon-ace.png" alt="dragon ace">
+                        <p class="title-game">Dragon Age™: The Veilguard</p>
+                        <p class="old-price">ARS$ 7.999</p>
+                        <p class="new-price">ARS$ 6.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-Deportes/Tennis-World-Tour-2.png" alt="Tennis World Tour 2">
+                        <p class="title-game">Tennis World Tour 2</p>
+                        <p class="normal-price">ARS$ 1.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-Deportes/Tony-Hawk's-Pro-Skater-1-+-2.png" alt="Tony Hawk's Pro Skater 1 + 2">
+                        <p class="title-game">Tony Hawk's Pro Skater 1 + 2</p>
+                        <p class="old-price">ARS$ 7.999</p>
+                        <p class="new-price">ARS$ 6.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/carrusel-secundario/elden-ring.png" alt="elden ring">
+                        <p class="title-game">Elden Ring</p>
+                        <p class="normal-price">ARS$ 9.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/carrusel-secundario/need-for-speed.png" alt="need for speed heat">
+                        <p class="title-game">Need for Speed Heat</p>
+                        <p class="normal-price">ARS$ 5.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-Aventura/Assassin's-Creed-Valhalla.png" alt="Assassin's Creed: Valhalla">
+                        <p class="title-game">Assassin's Creed: Valhalla</p>
+                        <p class="old-price">ARS$ 7.999</p>
+                        <p class="new-price">ARS$ 6.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/carrusel-secundario/starcraft.png" alt="starcraft">
+                        <p class="title-game">StarCraft II: Heart of the swarm</p>
+                        <p class="old-price">ARS$ 7.999</p>
                             <p class="new-price">ARS$ 6.999</p>
                             <button class="add-cart-button">
                                 <span class="add-text">Agregar al carrito</span>
@@ -105,13 +199,398 @@
                                 <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
                                 <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
                             </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/carrusel-secundario/aliens.webp" alt="aliens">
+                        <p class="title-game">Aliens: Fireteam Elite</p>
+                        <p class="old-price">ARS$ 7.999</p>
+                        <p class="new-price">ARS$ 6.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-Aventura/The-Witcher-3-Wild-Hunt.png" alt="The Witcher 3: Wild Hunt">
+                        <p class="title-game">The Witcher 3: Wild Hunt</p>
+                        <p class="normal-price">ARS$ 1.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-Aventura/Uncharted-4-A-Thief's-End.png" alt="Uncharted 4: A Thief's End">
+                        <p class="title-game">Uncharted 4: A Thief's End</p>
+                        <p class="library-text">En biblioteca</p>
+                        <button class="button-play">
+                            <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-Acción/Far-Cry-6.png" alt="Far Cry 6">
+                        <p class="title-game">Far Cry 6</p>
+                        <p class="normal-price">ARS$ 1.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <button class="right-arrow">
+            <img src="Imagenes/icons/Arrow-Right.png" alt="Derecha">
+        </button>
+    </div>
+</section>
+
+
+<!-- Clasicos -->
+<section class="Category-game" id="Clasicos">
+    <h2>Clásicos:</h2>
+    <div class="carrousel-container">
+        <button class="left-arrow">
+            <img src="Imagenes/icons/Arrow-Left.png" alt="Izquierda">
+        </button>
+        <div class="card-wrapper">
+            <div class="card-container">
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/card-super-mario.png" alt="Super Mario Bros. 2">
+                        <p class="title-game">Super Mario Bros. 2</p>
+                        <p class="library-text">En biblioteca</p>
+                        <button class="button-play">
+                            <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/card-metal-slug.png" alt="Metal Slug">
+                        <p class="title-game">Metal Slug</p>
+                        <p class="library-text">En biblioteca</p>
+                        <button class="button-play">
+                            <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/card-sonic.png" alt="Sonic the Hedgehog Chaos">
+                        <p class="title-game">Sonic the Hedgehog Chaos</p>
+                        <p class="normal-price">ARS$ 4.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/category-classic/card-4-en-linea.png" alt="4 en Línea: Batman vs Joker">
+                        <p class="title-game">4 en Línea: Batman vs Joker</p>
+                        <a class="link-juego-4-en-linea" href="game.html">
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                        </a>
+                        <p class="library-text">En biblioteca</p>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/Street-Fighter.png" alt="Street Fighter">
+                        <p class="title-game" >Street Fighter</p>
+                        <p class="normal-price">ARS$ 2.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/Pac-man.png" alt="Pac-Man">
+                        <p class="title-game" >Pac-Man</p>
+                        <p class="old-price">ARS$ 7.999</p>
+                        <p class="new-price">ARS$ 6.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/Donkey-Kong.png" alt="Donkey Kong">
+                        <p class="title-game">Donkey Kong</p>
+                        <p class="library-text">En biblioteca</p>
+                        <button class="button-play">
+                            <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/Tetris.png" alt="Tetris">
+                        <p class="title-game" >Tetris</p>
+                        <p class="old-price">ARS$ 2.999</p>
+                        <p class="new-price">ARS$ 1.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/Pong.png" alt="Pong">
+                        <p class="title-game" >Pong</p>
+                        <button class="button-play">
+                            <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/Doom.png" alt="Doom">
+                        <p class="title-game" >Doom</p>
+                        <p class="normal-price">ARS$ 3.999</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="container-game-card">
+                        <img class="img-game" src="Imagenes/Category-classic/Duck-Hunt.png" alt="Duck Hunt">
+                        <p class="title-game" >Duck Hunt</p>
+                        <p class="normal-price">ARS$ 2.499</p>
+                        <button class="add-cart-button">
+                            <span class="add-text">Agregar al carrito</span>
+                            <span class="remove-text">Eliminar del carrito</span>
+                        </button>
+                        <button class="cart-button">
+                            <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                            <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="right-arrow">
+            <img src="Imagenes/icons/Arrow-Right.png" alt="Derecha">
+        </button>
+    </div>
+</section>
+
+    <!-- biblioteca -->
+    <section class="Category-game" id="Biblioteca">
+        <h2>En tu biblioteca:</h2>
+        <div class="carrousel-container">
+            <button class="left-arrow">
+                <img src="Imagenes/icons/Arrow-Left.png" alt="Izquierda">
+            </button>
+            <div class="card-wrapper">
+                <div class="card-container">
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-classic/card-super-mario.png" alt="Super Mario Bros. 2">
+                            <p class="title-game" >Super Mario Bros. 2</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                            <p class="library-text">En biblioteca</p>
                         </div>
                     </div>
                     <div class="container-cards">
                         <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-Deportes/Tennis-World-Tour-2.png" alt="Tennis World Tour 2">
-                            <p class="title-game">Tennis World Tour 2</p>
-                            <p class="normal-price">ARS$ 1.999</p>
+                            <img class="img-game" src="Imagenes/category-classic/card-4-en-linea.png" alt="4 en Línea: Batman vs Joker">
+                            <p class="title-game" >4 en Línea: Batman vs Joker</p>
+                            <a class="link-juego-4-en-linea" href="game.html">
+                                <button class="button-play">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                                </button>
+                            </a>
+                            <p class="library-text">En biblioteca</p>
+                        </div>
+                    </div>
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Shooters/call-of-duty.png" alt="Call of Duty">
+                            <p class="title-game" >Call of Duty</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                            <p class="library-text">En biblioteca</p>
+                        </div>
+                    </div>
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-classic/Donkey-Kong.png" alt="Donkey Kong">
+                            <p class="title-game" >Donkey Kong</p>
+                            <p class="library-text">En biblioteca</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Aventura/Control.png" alt="Control">
+                            <p class="title-game" >Control</p>
+                            <p class="library-text">En biblioteca</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Shooters/PayDay-3.png" alt="Payday 3">
+                            <p class="title-game" >Payday 3</p>
+                            <p class="library-text">En biblioteca</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Deportes/NBA-2K25.png" alt="NBA 2K25">
+                            <p class="title-game" >NBA 2K25</p>
+                            <p class="library-text">En biblioteca</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Shooters/Katana-Zero.png" alt="Katana Zero">
+                            <p class="title-game" >Katana Zero</p>
+                            <p class="library-text">En biblioteca</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Aventura/Shadow-of-the-Colossus.png" alt="Shadow of the Colossus">
+                            <p class="title-game" >Shadow of the Colossus</p>
+                            <p class="library-text">En biblioteca</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-classic/card-metal-slug.png" alt="Metal Slug">
+                            <p class="title-game" >Metal Slug</p>
+                            <p class="library-text">En biblioteca</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                           
+                        </div>
+                    </div>
+
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Aventura/Red-Dead-Redemption-II.png" alt="Red Dead Redemption II">
+                            <p class="title-game" >Red Dead Redemption II</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                            <p class="library-text">En biblioteca</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <button class="right-arrow">
+                <img src="Imagenes/icons/Arrow-Right.png" alt="Derecha">
+            </button>
+        </div>
+    </section>
+    
+   
+
+
+    <section class="Category-game" id="Shooters">
+        <h2>Shooters:</h2>
+        <div class="carrousel-container">
+            <button class="left-arrow">
+                <img src="Imagenes/icons/Arrow-Left.png" alt="Izquierda">
+            </button>
+            <div class="card-wrapper">
+                <div class="card-container">
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Shooters/call-of-duty.png" alt="Call of Duty">
+                            <p class="title-game" >Call of Duty</p>
+                            <button class="button-play">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
+                            </button>
+                            <p class="library-text">En biblioteca</p>
+                        </div>
+                    </div>
+    
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Shooters/Counter-Strike.png" alt="Counter-Strike: Global Offensive">
+                            <p class="title-game" >Counter-Strike: Global Offensive</p>
+                            <p class="normal-price">ARS$ 2.999</p>
                             <button class="add-cart-button">
                                 <span class="add-text">Agregar al carrito</span>
                                 <span class="remove-text">Eliminar del carrito</span>
@@ -125,8 +604,8 @@
     
                     <div class="container-cards">
                         <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-Deportes/Tony-Hawk's-Pro-Skater-1-+-2.png" alt="Tony Hawk's Pro Skater 1 + 2">
-                            <p class="title-game">Tony Hawk's Pro Skater 1 + 2</p>
+                            <img class="img-game" src="Imagenes/Category-Shooters/Rainbow-Six-Siege.png" alt="Tom Clancy's Rainbow Six: Siege">
+                            <p class="title-game" >Tom Clancy's Rainbow Six: Siege</p>
                             <p class="old-price">ARS$ 7.999</p>
                             <p class="new-price">ARS$ 6.999</p>
                             <button class="add-cart-button">
@@ -141,38 +620,8 @@
                     </div>
                     <div class="container-cards">
                         <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/carrusel-secundario/elden-ring.png" alt="elden ring">
-                            <p class="title-game">Elden Ring</p>
-                            <p class="normal-price">ARS$ 9.999</p>
-                            <button class="add-cart-button">
-                                <span class="add-text">Agregar al carrito</span>
-                                <span class="remove-text">Eliminar del carrito</span>
-                            </button>
-                            <button class="cart-button">
-                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/carrusel-secundario/need-for-speed.png" alt="need for speed heat">
-                            <p class="title-game">Need for Speed Heat</p>
-                            <p class="normal-price">ARS$ 5.999</p>
-                            <button class="add-cart-button">
-                                <span class="add-text">Agregar al carrito</span>
-                                <span class="remove-text">Eliminar del carrito</span>
-                            </button>
-                            <button class="cart-button">
-                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-Aventura/Assassin's-Creed-Valhalla.png" alt="Assassin's Creed: Valhalla">
-                            <p class="title-game">Assassin's Creed: Valhalla</p>
+                            <img class="img-game" src="Imagenes/Category-Shooters/Overwatch-Origins-Edition.png" alt="Overwatch (Origins Edition)">
+                            <p class="title-game" >Overwatch (Origins Edition)</p>
                             <p class="old-price">ARS$ 7.999</p>
                             <p class="new-price">ARS$ 6.999</p>
                             <button class="add-cart-button">
@@ -185,148 +634,11 @@
                             </button>
                         </div>
                     </div>
+    
                     <div class="container-cards">
                         <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/carrusel-secundario/starcraft.png" alt="starcraft">
-                            <p class="title-game">StarCraft II: Heart of the swarm</p>
-                            <p class="old-price">ARS$ 7.999</p>
-                                <p class="new-price">ARS$ 6.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/carrusel-secundario/aliens.webp" alt="aliens">
-                            <p class="title-game">Aliens: Fireteam Elite</p>
-                            <p class="old-price">ARS$ 7.999</p>
-                            <p class="new-price">ARS$ 6.999</p>
-                            <button class="add-cart-button">
-                                <span class="add-text">Agregar al carrito</span>
-                                <span class="remove-text">Eliminar del carrito</span>
-                            </button>
-                            <button class="cart-button">
-                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-Aventura/The-Witcher-3-Wild-Hunt.png" alt="The Witcher 3: Wild Hunt">
-                            <p class="title-game">The Witcher 3: Wild Hunt</p>
-                            <p class="normal-price">ARS$ 1.999</p>
-                            <button class="add-cart-button">
-                                <span class="add-text">Agregar al carrito</span>
-                                <span class="remove-text">Eliminar del carrito</span>
-                            </button>
-                            <button class="cart-button">
-                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-Aventura/Uncharted-4-A-Thief's-End.png" alt="Uncharted 4: A Thief's End">
-                            <p class="title-game">Uncharted 4: A Thief's End</p>
-                            <p class="library-text">En biblioteca</p>
-                            <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-Acción/Far-Cry-6.png" alt="Far Cry 6">
-                            <p class="title-game">Far Cry 6</p>
-                            <p class="normal-price">ARS$ 1.999</p>
-                            <button class="add-cart-button">
-                                <span class="add-text">Agregar al carrito</span>
-                                <span class="remove-text">Eliminar del carrito</span>
-                            </button>
-                            <button class="cart-button">
-                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <button class="right-arrow">
-                <img src="Imagenes/icons/Arrow-Right.png" alt="Derecha">
-            </button>
-        </div>
-    </section>
-
-
-    <!-- Clasicos -->
-    <section class="Category-game" id="Clasicos">
-        <h2>Clásicos:</h2>
-        <div class="carrousel-container">
-            <button class="left-arrow">
-                <img src="Imagenes/icons/Arrow-Left.png" alt="Izquierda">
-            </button>
-            <div class="card-wrapper">
-                <div class="card-container">
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/card-super-mario.png" alt="Super Mario Bros. 2">
-                            <p class="title-game">Super Mario Bros. 2</p>
-                            <p class="library-text">En biblioteca</p>
-                            <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/card-metal-slug.png" alt="Metal Slug">
-                            <p class="title-game">Metal Slug</p>
-                            <p class="library-text">En biblioteca</p>
-                            <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/card-sonic.png" alt="Sonic the Hedgehog Chaos">
-                            <p class="title-game">Sonic the Hedgehog Chaos</p>
-                            <p class="normal-price">ARS$ 4.999</p>
-                            <button class="add-cart-button">
-                                <span class="add-text">Agregar al carrito</span>
-                                <span class="remove-text">Eliminar del carrito</span>
-                            </button>
-                            <button class="cart-button">
-                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/category-classic/card-4-en-linea.png" alt="4 en Línea: Batman vs Joker">
-                            <p class="title-game">4 en Línea: Batman vs Joker</p>
-                            <a class="link-juego-4-en-linea" href="game.html">
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                            </a>
-                            <p class="library-text">En biblioteca</p>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/Street-Fighter.png" alt="Street Fighter">
-                            <p class="title-game" >Street Fighter</p>
+                            <img class="img-game" src="Imagenes/Category-Shooters/Apex-Legends.png" alt="Apex Legends">
+                            <p class="title-game" >Apex Legends</p>
                             <p class="normal-price">ARS$ 2.999</p>
                             <button class="add-cart-button">
                                 <span class="add-text">Agregar al carrito</span>
@@ -338,10 +650,11 @@
                             </button>
                         </div>
                     </div>
+    
                     <div class="container-cards">
                         <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/Pac-man.png" alt="Pac-Man">
-                            <p class="title-game" >Pac-Man</p>
+                            <img class="img-game" src="Imagenes/Category-Shooters/Risk-of-Rain-2.png" alt="Risk of Rain 2: Seekers of the Storm">
+                            <p class="title-game" >Risk of Rain 2: Seekers of the Storm</p>
                             <p class="old-price">ARS$ 7.999</p>
                             <p class="new-price">ARS$ 6.999</p>
                             <button class="add-cart-button">
@@ -354,61 +667,73 @@
                             </button>
                         </div>
                     </div>
+    
                     <div class="container-cards">
                         <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/Donkey-Kong.png" alt="Donkey Kong">
-                            <p class="title-game">Donkey Kong</p>
+                            <img class="img-game" src="Imagenes/Category-Shooters/Enter-the-Gungeon.png" alt="Enter the Gungeon">
+                            <p class="title-game" >Enter the Gungeon</p>
+                            <p class="normal-price">ARS$ 2.999</p>
+                            <button class="add-cart-button">
+                                <span class="add-text">Agregar al carrito</span>
+                                <span class="remove-text">Eliminar del carrito</span>
+                            </button>
+                            <button class="cart-button">
+                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Shooters/PayDay-3.png" alt="Payday 3">
+                            <p class="title-game" >Payday 3</p>
+                            <p class="library-text">En biblioteca</p>
+                            <button class="add-cart-button">
+                                <span class="add-text">Agregar al carrito</span>
+                                <span class="remove-text">Eliminar del carrito</span>
+                            </button>
+                            <button class="cart-button">
+                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Shooters/Hunt-Showdown.png" alt="Hunt: Showdown (Legendary Edition)">
+                            <p class="title-game" >Hunt: Showdown (Legendary Edition)</p>
+                            <p class="old-price">ARS$ 7.999</p>
+                            <p class="new-price">ARS$ 6.999</p>
+                            <button class="add-cart-button">
+                                <span class="add-text">Agregar al carrito</span>
+                                <span class="remove-text">Eliminar del carrito</span>
+                            </button>
+                            <button class="cart-button">
+                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
+                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="container-cards">
+                        <div class="container-game-card">
+                            <img class="img-game" src="Imagenes/Category-Shooters/Katana-Zero.png" alt="Katana Zero">
+                            <p class="title-game" >Katana Zero</p>
                             <p class="library-text">En biblioteca</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
                         </div>
                     </div>
+    
                     <div class="container-cards">
                         <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/Tetris.png" alt="Tetris">
-                            <p class="title-game" >Tetris</p>
-                            <p class="old-price">ARS$ 2.999</p>
-                            <p class="new-price">ARS$ 1.999</p>
-                            <button class="add-cart-button">
-                                <span class="add-text">Agregar al carrito</span>
-                                <span class="remove-text">Eliminar del carrito</span>
-                            </button>
-                            <button class="cart-button">
-                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/Pong.png" alt="Pong">
-                            <p class="title-game" >Pong</p>
-                            <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/Doom.png" alt="Doom">
-                            <p class="title-game" >Doom</p>
-                            <p class="normal-price">ARS$ 3.999</p>
-                            <button class="add-cart-button">
-                                <span class="add-text">Agregar al carrito</span>
-                                <span class="remove-text">Eliminar del carrito</span>
-                            </button>
-                            <button class="cart-button">
-                                <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container-cards">
-                        <div class="container-game-card">
-                            <img class="img-game" src="Imagenes/Category-classic/Duck-Hunt.png" alt="Duck Hunt">
-                            <p class="title-game" >Duck Hunt</p>
-                            <p class="normal-price">ARS$ 2.499</p>
+                            <img class="img-game" src="Imagenes/Category-Shooters/Star-Wars-Battlefront-II.png" alt="Star Wars: Battlefront II (Celebration Edition)">
+                            <p class="title-game">Star Wars: Battlefront II</p>
+                            <p class="old-price">ARS$ 7.999</p>
+                            <p class="new-price">ARS$ 6.999</p>
                             <button class="add-cart-button">
                                 <span class="add-text">Agregar al carrito</span>
                                 <span class="remove-text">Eliminar del carrito</span>
@@ -426,334 +751,8 @@
             </button>
         </div>
     </section>
-
-        <!-- biblioteca -->
-        <section class="Category-game" id="Biblioteca">
-            <h2>En tu biblioteca:</h2>
-            <div class="carrousel-container">
-                <button class="left-arrow">
-                    <img src="Imagenes/icons/Arrow-Left.png" alt="Izquierda">
-                </button>
-                <div class="card-wrapper">
-                    <div class="card-container">
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-classic/card-super-mario.png" alt="Super Mario Bros. 2">
-                                <p class="title-game" >Super Mario Bros. 2</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                                <p class="library-text">En biblioteca</p>
-                            </div>
-                        </div>
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/category-classic/card-4-en-linea.png" alt="4 en Línea: Batman vs Joker">
-                                <p class="title-game" >4 en Línea: Batman vs Joker</p>
-                                <a class="link-juego-4-en-linea" href="game.html">
-                                    <button class="button-play">
-                                        <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                    </button>
-                                </a>
-                                <p class="library-text">En biblioteca</p>
-                            </div>
-                        </div>
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/call-of-duty.png" alt="Call of Duty">
-                                <p class="title-game" >Call of Duty</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                                <p class="library-text">En biblioteca</p>
-                            </div>
-                        </div>
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-classic/Donkey-Kong.png" alt="Donkey Kong">
-                                <p class="title-game" >Donkey Kong</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Aventura/Control.png" alt="Control">
-                                <p class="title-game" >Control</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/PayDay-3.png" alt="Payday 3">
-                                <p class="title-game" >Payday 3</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Deportes/NBA-2K25.png" alt="NBA 2K25">
-                                <p class="title-game" >NBA 2K25</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Katana-Zero.png" alt="Katana Zero">
-                                <p class="title-game" >Katana Zero</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Aventura/Shadow-of-the-Colossus.png" alt="Shadow of the Colossus">
-                                <p class="title-game" >Shadow of the Colossus</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-classic/card-metal-slug.png" alt="Metal Slug">
-                                <p class="title-game" >Metal Slug</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                               
-                            </div>
-                        </div>
-
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Aventura/Red-Dead-Redemption-II.png" alt="Red Dead Redemption II">
-                                <p class="title-game" >Red Dead Redemption II</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                                <p class="library-text">En biblioteca</p>
-                            </div>
-                        </div>
-
-                        
-                    </div>
-                </div>
-                <button class="right-arrow">
-                    <img src="Imagenes/icons/Arrow-Right.png" alt="Derecha">
-                </button>
-            </div>
-        </section>
-        
-       
-
-
-        <section class="Category-game" id="Shooters">
-            <h2>Shooters:</h2>
-            <div class="carrousel-container">
-                <button class="left-arrow">
-                    <img src="Imagenes/icons/Arrow-Left.png" alt="Izquierda">
-                </button>
-                <div class="card-wrapper">
-                    <div class="card-container">
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/call-of-duty.png" alt="Call of Duty">
-                                <p class="title-game" >Call of Duty</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                                <p class="library-text">En biblioteca</p>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Counter-Strike.png" alt="Counter-Strike: Global Offensive">
-                                <p class="title-game" >Counter-Strike: Global Offensive</p>
-                                <p class="normal-price">ARS$ 2.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Rainbow-Six-Siege.png" alt="Tom Clancy's Rainbow Six: Siege">
-                                <p class="title-game" >Tom Clancy's Rainbow Six: Siege</p>
-                                <p class="old-price">ARS$ 7.999</p>
-                                <p class="new-price">ARS$ 6.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Overwatch-Origins-Edition.png" alt="Overwatch (Origins Edition)">
-                                <p class="title-game" >Overwatch (Origins Edition)</p>
-                                <p class="old-price">ARS$ 7.999</p>
-                                <p class="new-price">ARS$ 6.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Apex-Legends.png" alt="Apex Legends">
-                                <p class="title-game" >Apex Legends</p>
-                                <p class="normal-price">ARS$ 2.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Risk-of-Rain-2.png" alt="Risk of Rain 2: Seekers of the Storm">
-                                <p class="title-game" >Risk of Rain 2: Seekers of the Storm</p>
-                                <p class="old-price">ARS$ 7.999</p>
-                                <p class="new-price">ARS$ 6.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Enter-the-Gungeon.png" alt="Enter the Gungeon">
-                                <p class="title-game" >Enter the Gungeon</p>
-                                <p class="normal-price">ARS$ 2.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/PayDay-3.png" alt="Payday 3">
-                                <p class="title-game" >Payday 3</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Hunt-Showdown.png" alt="Hunt: Showdown (Legendary Edition)">
-                                <p class="title-game" >Hunt: Showdown (Legendary Edition)</p>
-                                <p class="old-price">ARS$ 7.999</p>
-                                <p class="new-price">ARS$ 6.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Katana-Zero.png" alt="Katana Zero">
-                                <p class="title-game" >Katana Zero</p>
-                                <p class="library-text">En biblioteca</p>
-                                <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-        
-                        <div class="container-cards">
-                            <div class="container-game-card">
-                                <img class="img-game" src="Imagenes/Category-Shooters/Star-Wars-Battlefront-II.png" alt="Star Wars: Battlefront II (Celebration Edition)">
-                                <p class="title-game">Star Wars: Battlefront II</p>
-                                <p class="old-price">ARS$ 7.999</p>
-                                <p class="new-price">ARS$ 6.999</p>
-                                <button class="add-cart-button">
-                                    <span class="add-text">Agregar al carrito</span>
-                                    <span class="remove-text">Eliminar del carrito</span>
-                                </button>
-                                <button class="cart-button">
-                                    <img class="carrito" src="Imagenes/icons/Agregar-Carrito.png" alt="">
-                                    <img class="carrito-black" src="Imagenes/icons/carrito-black1.png" alt="">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="right-arrow">
-                    <img src="Imagenes/icons/Arrow-Right.png" alt="Derecha">
-                </button>
-            </div>
-        </section>
-        
-      <!-- Deportes -->
-      <section class="Category-game" id="Deportes">
+     <!-- Deportes -->
+     <section class="Category-game" id="Deportes">
         <h2>Deportes:</h2>
         <div class="carrousel-container">
             <button class="left-arrow">
@@ -850,7 +849,7 @@
                             <p class="title-game">Skater XL</p>
                             <p class="library-text">Gratuito</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -861,7 +860,7 @@
                             <p class="title-game">NBA 2K25</p>
                             <p class="library-text">En biblioteca</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -906,7 +905,7 @@
                             <p class="title-game">UFC 2</p>
                             <p class="library-text">Gratuito</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -950,7 +949,7 @@
                                 <img class="img-game" src="Imagenes/Category-Aventura/Red-Dead-Redemption-II.png" alt="Red Dead Redemption II">
                                 <p class="title-game">Red Dead Redemption II</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                                 <p class="library-text">En biblioteca</p>
                             </div>
@@ -992,7 +991,7 @@
                                 <p class="title-game">Uncharted 4: A Thief's End</p>
                                 <p class="library-text">En biblioteca</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1018,7 +1017,7 @@
                                 <p class="title-game">Shadow of the Colossus</p>
                                 <p class="library-text">En biblioteca</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1044,7 +1043,7 @@
                                 <p class="title-game">Sea of Thieves</p>
                                 <p class="library-text">Gratuito</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1084,7 +1083,7 @@
                                 <p class="title-game">Control</p>
                                 <p class="library-text">En biblioteca</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1111,7 +1110,7 @@
                                 <p class="title-game">Metro: Exodus</p>
                                 <p class="library-text">Gratuito</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1152,7 +1151,7 @@
                                 <p class="title-game">Sekiro: Shadows Die Twice</p>
                                 <p class="library-text">Gratuito</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1208,7 +1207,7 @@
                                 <p class="title-game">Titanfall 2</p>
                                 <p class="library-text">Gratuito</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1283,7 +1282,7 @@
                                 <p class="title-game">Super Mario Bros. 2</p>
                                 <p class="library-text">En biblioteca</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1345,7 +1344,7 @@
                                 <img class="img-game" src="Imagenes/Category-Aventura/Red-Dead-Redemption-II.png" alt="Red Dead Redemption II">
                                 <p class="title-game">Red Dead Redemption II</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                                 <p class="library-text">En biblioteca</p>
                             </div>
@@ -1358,7 +1357,7 @@
                                 <p class="title-game">The Witcher 3: Wild Hunt</p>
                                 <p class="library-text">Gratuito</p>
                                 <button class="button-play">
-                                    <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                    <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
@@ -1469,9 +1468,9 @@
                         <div class="container-game-card">
                             <img class="img-game" src="Imagenes/Category-Rompecabezas/The-Witness.png" alt="The Witness">
                             <p class="title-game">The Witness</p>
-                            <p class="library-text">En biblioteca</p>
+                            <p class="library-text">Gratuito</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -1483,7 +1482,7 @@
                             <p class="title-game">Portal 2</p>
                             <p class="library-text">Gratuito</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -1512,9 +1511,9 @@
                             <img class="img-game" src="Imagenes/Category-Rompecabezas/Tetris-Effect.png" alt="Tetris Effect">
                             <p class="title-game">Tetris Effect</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
-                            <p class="library-text">En biblioteca</p>
+                            <p class="library-text">Gratuito</p>
                         </div>
                     </div>
     
@@ -1574,9 +1573,9 @@
                         <div class="container-game-card">
                             <img class="img-game" src="Imagenes/Category-Rompecabezas/Unravel.png" alt="Unravel">
                             <p class="title-game">Unravel</p>
-                            <p class="library-text">En biblioteca</p>
+                            <p class="library-text">Gratuito</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -1588,7 +1587,7 @@
                             <p class="title-game">Opus Magnum</p>
                             <p class="library-text">Gratuito</p>
                             <button class="button-play">
-                                <img class="play-button" src="Imagenes/icons/play-button.png" alt="">
+                                <img class="play-button" src="Imagenes/icons/play-button.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -1635,23 +1634,22 @@
         </div>
     </section>
     
-
     <footer>
         <div class="footer-content-container">
             <div class="footer-content">
                 <p>Condiciones de uso y privacidad</p>
-                <ul>
-                    <li><a href="">Términos y condiciones</a></li>
-                    <li><a href="">Política de privacidad y cookies</a></li>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="">Términos y condiciones</a></li>
+                    <li class="footer-link-item"><a href="">Política de privacidad y cookies</a></li>
                 </ul>
             </div>
             <div class="footer-content">
                 <p>Para compradores</p>
-                <ul>
-                    <li><a href="">Asistencia a compradores</a></li>
-                    <li><a href="">Cómo comprar</a></li>
-                    <li><a href="">Mantente a salvo</a></li>
-                    <li><a href="">Mapa del sitio</a></li>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="">Asistencia a compradores</a></li>
+                    <li class="footer-link-item"><a href="">Cómo comprar</a></li>
+                    <li class="footer-link-item"><a href="">Mantente a salvo</a></li>
+                    <li class="footer-link-item"><a href="">Mapa del sitio</a></li>
                 </ul>
             </div>
             <div class="footer-content">
@@ -1681,24 +1679,23 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                
+            </div>
             <div class="footer-content">
                 <p>Soporte para jugadores</p>
-                <ul>
-                    <li><a href="">Soporte para jugadores</a></li>
-                    <li><a href="">Problemas para acceder</a></li>
-                    <li><a href="">Cambio de contraseña</a></li>
-                    <li><a href="">Realizar reseñas</a></li>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="">Soporte para jugadores</a></li>
+                    <li class="footer-link-item"><a href="">Problemas para acceder</a></li>
+                    <li class="footer-link-item"><a href="">Cambio de contraseña</a></li>
+                    <li class="footer-link-item"><a href="">Realizar reseñas</a></li>
                 </ul>
             </div>
             <div class="footer-content">
                 <p>Información de la empresa</p>
-                <ul>
-                    <li><a href="">¿Quienes somos?</a></li>
-                    <li><a href="">Contáctanos</a></li>
-                    <li><a href="">Nuestra historia</a></li>
-                    <li><a href="">Nuestros valores</a></li>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="">¿Quienes somos?</a></li>
+                    <li class="footer-link-item"><a href="">Contáctanos</a></li>
+                    <li class="footer-link-item"><a href="">Nuestra historia</a></li>
+                    <li class="footer-link-item"><a href="">Nuestros valores</a></li>
                 </ul>
             </div>
         </div>
@@ -1708,20 +1705,21 @@
                 <div class="privacidad"><a href="">Privacidad y cookies</a></div>
                 <div class="aviso-legal"><a href="">Aviso legal</a></div>
             </div>
-            
+    
             <div class="footer-center">
                 <div class="interfaces">
-                    <img src="Imagenes/Logo-oscuro.png" alt="logo">
+                    <img src="Imagenes/icons/logo-black.png" alt="logo">
                     <p>Interfaces 2024</p>
                 </div>
             </div>
-            
+    
             <div class="footer-right">
                 <div class="marcas"><a href="">Marcas registradas</a></div>
                 <div class="avisos"><a href="">Avisos sobre terceros</a></div>
             </div>
         </div>
     </footer>
+    
     
     <div class="loading-overlay" id="loadingOverlay">
         <div class="spinner">

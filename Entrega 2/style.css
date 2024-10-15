@@ -2,12 +2,12 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #EBEBEB;
-   
 }
+
 * {
     box-sizing: border-box; 
 }
-/* header */
+
 header {
     position: fixed; 
     top: 0; 
@@ -25,7 +25,7 @@ header {
 
 .left-container,
 .right-container {
-    flex: 0 1 auto; /* Ambos contenedores crecerán para ocupar espacio igual */
+    flex: 0 1 auto; 
     max-width: 120px;
     display: flex;
     align-items: center; 
@@ -65,15 +65,15 @@ header {
 
 .Barra-busqueda {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    flex-grow: 0; /* No crecer, centrarse entre los contenedores laterales */
-    flex-shrink: 0; /* No encogerse */
+    justify-content: center; 
+    align-items: center; 
+    flex-grow: 0; 
+    flex-shrink: 0; 
 }
 
 .search-container {
     position: relative; 
-    width: 120px; /* Mantener el ancho deseado para la barra de búsqueda */
+    width: 120px; 
 }
 
 .Busqueda-input {
@@ -120,10 +120,6 @@ header {
     object-fit: contain;
 }
 
-
-
-/* menú hamburguesa */
-
 @keyframes mostrarNav {
     0% {
         opacity: 0.2;
@@ -133,7 +129,7 @@ header {
         opacity: 0.4;
         transform: translatex(-3%);
     }
-    75%{
+    75% {
         opacity: 0.6;
         transform: translatex(-1%);
     }
@@ -160,15 +156,14 @@ header {
     left: 0; 
 }
 
-/* Eotones menu desplegable */
 .menu-top {
     width: auto;
     margin-top: 14px;
-  
 }
+
 .login-btn, .profile-btn {
     width: 110px; 
-    background-color: #24B745; /* Color original */
+    background-color: #24B745; 
     color: white;
     border: none;
     font-size: 14px;
@@ -182,7 +177,7 @@ header {
     text-align: center; 
     position: relative; 
     overflow: hidden; 
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza el cambio de fondo y añade transformación */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .login-btn {
@@ -195,13 +190,11 @@ header {
     width: 90px; 
 }
 
-/* Hover styles */
 .login-btn:hover, .profile-btn:hover {
-    background-color: #1D8A2B; /* Color más oscuro en hover */
-    transform: translateY(-2px) scale(1.05); /* Efecto de elevación y desplazamiento */
+    background-color: #1D8A2B; 
+    transform: translateY(-2px) scale(1.05); 
 }
 
-/* Pseudo-elemento para el borde */
 .login-btn::before, .profile-btn::before {
     content: '';
     position: absolute;
@@ -209,23 +202,20 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid rgba(255, 255, 255, 0.5); /* Borde más sutil */
+    border: 2px solid rgba(255, 255, 255, 0.5); 
     transform: scale(0);
     transition: transform 0.3s ease; 
     z-index: -1; 
 }
 
 .login-btn:hover::before, .profile-btn:hover::before {
-    transform: scale(1); /* Mantiene el efecto del borde */
+    transform: scale(1); 
 }
 
-/* Sombra sutil */
 .login-btn:hover, .profile-btn:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-
-/* Categorías de juegos dentro del desplegable */
 .nav-menu span {
     margin-top: 27px;
     margin-left: 24px;
@@ -293,8 +283,6 @@ header {
     margin-left: 10px;
 }
 
-
-/* menú hamburguesa */
 .hamburger-menu {
     cursor: pointer;
     display: flex;
@@ -325,23 +313,20 @@ header {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-
-/* carousel */
-
 .main-content {
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido principal */
-    padding-top: 50px; /* Espacio entre el encabezado y el carrusel */
-    position: relative; /* Asegúrate de que el contenedor sea relativo */
+    justify-content: center; 
+    padding-top: 50px; 
+    position: relative; 
 }
 
 .image-carousel-container {
-    width: 300px; /* Ancho del carrusel */
-    height: 150px; /* Altura del carrusel */
+    width: 300px; 
+    height: 150px; 
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el carrusel horizontalmente */
+    align-items: center; 
 }
 
 .image-carousel {
@@ -349,10 +334,11 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 350px; /* Ancho del carrusel */
-    height: 150px; /* Altura del carrusel */
+    width: 350px; 
+    height: 150px; 
     position: relative;
 }
+
 
 .carousel-display {
     width: 100%;
@@ -549,7 +535,7 @@ header {
     display: flex;
     flex-direction: column; 
     align-items: flex-start; 
-    height: 240px; /* Reducido */
+    height: 240px; 
     background-color: white;
     position: relative; 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
@@ -558,12 +544,10 @@ header {
 
 .container-game-card img {
     width: 125px; 
-    height: 170px; /* Reducido */
+    height: 170px; 
     object-fit: cover;
-    transition: filter 0.3s ease; /* Transición para el desenfoque de la imagen */
+    transition: filter 0.3s ease; 
 }
-
-
 
 .container-cards {
     width: 125px; 
@@ -579,8 +563,8 @@ header {
 }
 
 .container-cards.visible {
-    opacity: 1; /* Totalmente visible */
-    transform: translateY(0) scale(1); /* Regresar a su tamaño y posición original */
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
 }
 
 .container-cards:first-child {
@@ -599,13 +583,14 @@ header {
     font-size: 11px; 
     color: #000; 
 } 
-.container-game-card .normal-price, .new-price, .old-price{
+
+.container-game-card .normal-price, .new-price, .old-price {
     margin: 0;
 }
 
 .container-game-card .old-price {
     position: absolute;
-    bottom: 16px; /* Ajustado */
+    bottom: 16px; 
     right: 2px;
     font-size: 9px; 
     color: #818181;
@@ -644,7 +629,17 @@ header {
     left: 50%; 
     transform: translateX(-50%); 
     opacity: 0; 
-    transition: opacity 0.3s; 
+    transition: all 150ms linear;
+    border-radius: 50%;
+    display: flex;
+}
+
+.play-button:hover {
+    background: #196A2B;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+    color:  #b3e3b3;
+    transition: all 250ms linear;
 }
 
 .add-cart-button {
@@ -652,21 +647,21 @@ header {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #d9d9d9ea; /* Fondo semi-transparente */
+    background: #d9d9d9ea; 
     border: none;
-    padding: 10px 20px; /* Tamaño del botón */
-    display: none; /* Inicialmente oculto */
-    cursor: pointer; /* Cambia el cursor para indicar clickeable */
-    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+    padding: 10px 20px; 
+    display: none; 
+    cursor: pointer; 
+    z-index: 10; 
 }
 
 .container-game-card:hover .add-cart-button {
-    display: block; /* Muestra el botón al hacer hover */
+    display: block; 
 }
 
 .add-text, .remove-text {
-    display: inline; /* Cambia a inline para asegurarte de que se muestre */
-    color: #000; /* Color del texto para mayor visibilidad */
+    display: inline; 
+    color: #000; 
 }
 
 .cart-button {
@@ -676,12 +671,12 @@ header {
     background: none; 
     border: none; 
     cursor: pointer; 
-    display: flex; /* Asegúrate de que se mantenga en línea */
+    display: flex; 
     align-items: center;
 }
 
 .cart-button .carrito-black {
-    display: none; /* Oculta el carrito negro inicialmente */
+    display: none; 
 }
 
 .cart-button img {
@@ -690,12 +685,12 @@ header {
 }
 
 .add-text, .remove-text {
-    font-size: 12px; /* Tamaño de fuente */
-    display: none; /* Inicialmente oculto */
+    font-size: 12px; 
+    display: none; 
 }
 
 .container-game-card.active .add-text {
-    display: none; /* Oculta "Agregar" si está activo */
+    display: none; 
 }
 
 .container-game-card:hover .play-button {
@@ -703,16 +698,16 @@ header {
 }
 
 .container-game-card .title-game {
-    font-size: 12.5px; /* Tamaño de fuente para el título del juego */
-    font-weight: bold; /* Negrita */
-    text-align: left; /* Alinear a la izquierda */
-    margin: 3px 0 0 3px; /* Ajustar márgenes si es necesario */
+    font-size: 12.5px; 
+    font-weight: bold; 
+    text-align: left; 
+    margin: 3px 0 0 3px; 
     width: 95%;
 }
 
 .library-text {
-    font-size: 11.5px; /* Tamaño de fuente para "En biblioteca" */
-    font-weight: normal; /* Peso normal (no negrita) */
+    font-size: 11.5px; 
+    font-weight: normal; 
     position: absolute; 
     bottom: 1px; 
     right: 2px; 
@@ -720,6 +715,7 @@ header {
     padding: 0; 
     text-align: right; 
 }
+
 .left-arrow, .right-arrow {
     background: none; 
     border: none; 
@@ -770,21 +766,21 @@ footer {
     margin: 0;
 }
 
-ul {
+.footer-content ul {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+.footer-content ul li {
     margin: 5px 0;
 }
 
-ul li a {
+.footer-content ul li a {
     text-decoration: none;
-    color: #333;
+    color: #000;
 }
 
-ul li a:hover {
+.footer-content ul li a:hover {
     text-decoration: underline;
     color: #218D39;
 }
@@ -810,10 +806,10 @@ ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1250px;
 }
 
-.footer-content-secundario {
+.footer-content-container-secundario {
     margin: 20px;
     flex: 1 1 200px;
     text-align: center;
@@ -830,9 +826,12 @@ ul li a:hover {
     height: auto;
 }
 
-.footer-content-secundario a {
+.footer-content-container-secundario a {
     text-decoration: none;
     color: black;
+}
+.footer-content-container-secundario a:hover{
+    color: #2FED59;
 }
 
 .footer-left, .footer-right {
@@ -1008,12 +1007,35 @@ ul li a:hover {
     .btn-acento a{
         font-size: 36px;
     }
-
+  
     .footer-content-container {
         display: flex;
         justify-content: center;
+        width: auto;
 
     }
+    .footer-content{
+        justify-content: flex-start;
+    }
+   
+    .social-container{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+       align-content: center;
+    }
+    
+    .footer-content-container-secundario {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        margin: 0; 
+        width: 1250px;
+
+    }
+    
+    /* Espaciado entre los elementos de las redes sociales */
     .social-container{
         width: 80%;
         display: flex;
@@ -1021,20 +1043,52 @@ ul li a:hover {
         flex-direction: column;
        align-content: center;
     }
-    .footer-content-container-secundario {
-        display: flex;
-        width: 1100px;
-        justify-content: space-between; 
-        align-items: center; 
-        margin: 0 ; 
-    }
     
-    .footer-left, .footer-right{
+    
+    .footer-left {
         width: 350px;
-        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 80px;
+    }
+    .footer-left, .footer-right {
+        display: flex; 
+        flex-direction: row; 
         justify-content: space-between;
     }
-
+    
+    .footer-right {
+        width: 380px;
+        margin-right: 80px;
+    }
+    
+    .footer-left div,
+    .footer-right div {
+        display: flex; 
+    }
+    
+    .footer-left div:last-child,
+    .footer-right div:last-child {
+        margin-right: 0; 
+    }
+    .footer-center img {
+        margin-right: 10px;
+    }
+    
+    .footer-content a {
+        text-decoration: none; 
+        transition: color 0.3s; 
+    }
+    
+    .footer-links {
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+    }
+    
+    .footer-link-item {
+        margin: 5px 0; 
+    }
+    
     .footer-center {
         text-align: center; 
     }
@@ -1043,109 +1097,105 @@ ul li a:hover {
         max-width: 100px; 
         height: auto; 
     }
-  
-
+    
     .main-content {
-        padding-top: 100px; /* Ajusta el espacio según necesites */
+        padding-top: 100px; 
     }
-
+    
     .image-carousel-container {
-        width: 950px; /* Ancho del carrusel para escritorio */
-        height: 350px; /* Altura del carrusel para escritorio */
+        width: 950px; 
+        height: 350px; 
     }
-
+    
     .image-carousel {
-        width: 950px; /* Ancho del carrusel para escritorio */
-        height: 350px; /* Altura del carrusel para escritorio */
+        width: 950px; 
+        height: 350px; 
     }
-
+    
     .carousel-item {
-        height: 350px; /* Altura de las imágenes para escritorio */
-        width: 900px; /* Ancho de las imágenes para escritorio */
+        height: 350px; 
+        width: 900px; 
     }
-
+    
     .carousel-caption {
-        bottom: 20px; /* Ajusta según necesites */
-        right: 30px; /* Ajusta según necesites */
-        width: 250px; /* Ajusta según necesites */
-        height: 50px; /* Ajusta según necesites */
+        bottom: 20px; 
+        right: 30px; 
+        width: 250px; 
+        height: 50px; 
     }
-    .carousel-caption a{
+    .carousel-caption a {
         font-size: 26px;
     }
     
-
-     /* game page */
-    .title-game-4-en-linea{
+    .title-game-4-en-linea {
         margin-top: 100px;
     }
-     .titulo-juego {
+    .titulo-juego {
         text-align: center;
     }
-
+    
     .navegacion a {
         text-decoration: none;
         color: black;
     }
-
+    
     .navegacion a:hover {
-        text-decoration: underline; /* Subrayar al pasar el mouse */
-        color: #218D39; /* Cambiar color al pasar el mouse */
+        text-decoration: underline; 
+        color: #218D39; 
     }
-
+    
     .info-container {
         display: flex;
         flex-direction: column;
         margin: auto;
         width: 1200px;
     }
-
-    .support-share{
+    
+    .support-share {
         width: 1200px;
         display: flex;
         justify-content: space-between;
     }
-    .game-container img{
+    .game-container img {
         width: 100%;
     }
-
+    
     .support-link {
         display: flex;
         color: black;
     }
-
+    
     .support-link:hover {
-        text-decoration: underline; /* Subrayar al pasar el mouse */
-        color: #218D39; /* Cambiar color al pasar el mouse */
+        text-decoration: underline; 
+        color: #218D39; 
     }
-
+    
     .share-button-container {
         text-align: center;
         width: fit-content;
-        
     }
-
+    
     .share-button-container p {
         font-weight: bold;
         margin-bottom: 5px;
     }
-
+    
     .share-button {
-        background-color: #D9D9D9; /* Color de fondo aplicado aquí */
+        background-color: #D9D9D9; 
         display: flex;
-        padding: 10px; /* Añadir padding para que el fondo sea visible */
-        border-radius: 5px; /* Opcional: bordes redondeados */
+        padding: 10px; 
+        border-radius: 5px; 
     }
-
+    
     .share-button button {
         border-style: hidden;
-        transition: transform 0.3s ease; /* Añadir transición suave */
-        background: transparent;
+        transition: transform 0.3s ease; 
     }
-
+    
     .share-button button:hover {
-        transform: scale(1.3); /* Aumentar el tamaño del botón al pasar el cursor */
+        transform: scale(1.3); 
     }
+    
 
     .community-section-container {
         width: 100%;
@@ -1225,45 +1275,46 @@ ul li a:hover {
         font-size: 12px;
         color: #818181;
     }
-
     .main-layout {
         display: flex;
-        justify-content: space-between; /* Espacio entre los contenedores */
-        align-items: center; /* Centra verticalmente los contenedores */
+        justify-content: space-between; 
+        align-items: center; 
         max-width: 1200px;
-        margin: 0 auto; /* Centra el contenedor principal */
+        margin: 0 auto; 
         margin-bottom: 50px;
     }
     
     .four-in-line-container {
         background-color: #D9D9D9;
-        width: 65%; /* Ajusta el ancho como necesites */
-        max-width: 600px;
+        width: 90%; 
+        max-width: 1000px;
     }
     
     .container-gameplay-tutorial {
         display: flex;
-        flex-direction: column; /* Alinea los videos uno encima del otro */
-        justify-content: center; /* Centra verticalmente */
-        align-items: center; /* Centra horizontalmente */
-        width: 30%; /* Ajusta el ancho del contenedor de videos */
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        width: 30%; 
         background-color: #D9D9D9;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 20px;
     }
     
     .video-container {
-        margin-bottom: 10px; /* Espacio entre los videos */
+        margin-bottom: 10px; 
         padding: 10px;
-        transition: transform 0.3s; /* Transición suave */
+        transition: transform 0.3s; 
     }
     
     .title-video {
+        text-align: center;
         color: #000000;
         margin-bottom: 15px;
         font-size: 28px;
         font-weight: bold;
     }
+    
     video {
         max-width: 100%;
         height: auto;
@@ -1271,20 +1322,18 @@ ul li a:hover {
     }
     
     .video-container:hover video {
-        filter: blur(0); /* Elimina el difuminado al pasar el ratón */
+        filter: blur(0); 
     }
-    
-    /* Resto de tus estilos para .four-in-line-container y otros elementos */
     
     .four-in-line-container h2,
     .four-in-line-container h3 {
-        color: #333;
+        color: #000000;
         font-family: 'Montserrat', sans-serif;
         text-align: center;
     }
     
     .four-in-line-container p {
-        color: #666;
+        color: #000000;
         font-size: 16px;
         line-height: 1.6;
         margin: 10px 0;
@@ -1297,8 +1346,9 @@ ul li a:hover {
     
     .image-text-row,
     .text-image-row {
+        width: 100%;
         text-align: center;
-        justify-content: space-around; /* Alinea horizontalmente el contenido */
+        justify-content: space-around; 
         align-items: center;
         display: flex;
         margin-bottom: 15px;
@@ -1306,10 +1356,11 @@ ul li a:hover {
     
     .image-container {
         flex: 1;
-        max-width: 201px; /* Tamaño reducido de las imágenes */
+        max-width: 201px; 
         height: auto;
         padding: 5px;
     }
+    
     
     .image-container img {
         width: 100%;
@@ -1318,15 +1369,341 @@ ul li a:hover {
     
     .text-container {
         flex: 1;
-        max-width: 45%;
+        max-width: 250px;
         padding: 5px;
     }
     
     .text-container h3 {
         margin-bottom: 5px;
         font-size: 20px;
-        color: #196A2B;
+        color: #218D39;
     }
+
+
+
+
+    /* Estilos Login */
+    .main-layout-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+    }
+    
+    .login-form {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(1, 1, 0, 0.8);
+        padding: 30px;
+        border-radius: 2px;
+    }
+    
+    .login-data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    
+    .logo-container-login {
+        margin-right: 10px;
+    }
+    
+    .logo-login {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .title-content {
+        display: flex;
+        align-items: center;
+    }
+    
+    .form-title {
+        color: white;
+        font-size: 24px;
+    }
+    
+    .input-email,
+    .input-password {
+        width: 100%;
+        height: 25px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    
+    .login-button {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .btn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        background-color: #20A53E;
+        font-size: 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .btn:hover {
+        background-color: #218D39;
+        transform: translateY(-3px);
+    }
+    
+    .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .btn:hover::before {
+        transform: scale(1);
+    }
+    
+    .register-text {
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .register-link {
+        color: white;
+        text-decoration: underline;
+        transition: color 0.3s ease; 
+    }
+    
+    .register-link:hover {
+        color: #20A53E; 
+    }
+    .register-gfb-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .fb-btn,
+    .google-btn {
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 2px;
+        width: 48%;
+        cursor: pointer;
+    }
+    
+    .fb-btn {
+        background: #4267b2;
+    }
+    
+    .fb-img {
+        width: 24px;
+        height: 24px;
+        padding-right: 8px;
+    }
+    
+    .google-btn {
+        justify-content: space-between;
+        background-color: white;
+        color: #757575;
+    }
+    .login-form, 
+    .form-title, 
+    .input-email, 
+    .input-password, 
+    .register-text, 
+    .register-link,
+    .fb-btn, 
+    .google-btn {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .main-layout-signup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+    }
+    
+    .signup-form {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(1, 1, 0, 0.8);
+        padding: 30px;
+        border-radius: 2px;
+    }
+    
+    .signup-data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    
+    .logo-container-signup {
+        margin-right: 10px;
+    }
+    
+    .logo-signup {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .title-content {
+        display: flex;
+        align-items: center;
+    }
+    
+    .form-title {
+        color: white;
+        font-size: 24px;
+    }
+    
+    .name,
+    .nickname,
+    .edad,
+    .email,
+    .password ,
+    .repeat-password{
+        width: 100%;
+        height: 25px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    
+    .signup-button {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .signup-verification {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        margin: 20px;
+    }
+    
+    .btn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        background-color: #20A53E;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .btn:hover {
+        background-color: #218D39;
+        transform: translateY(-3px);
+    }
+    
+    .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .btn:hover::before {
+        transform: scale(1);
+    }
+    
+    .signup-text {
+        font-size: 16px;
+        color: #bebebeac;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .signup-link {
+        font-size: 16px;
+        color: #bebebeac;
+        text-decoration: underline;
+        transition: color 0.3s ease; 
+    }
+    
+    .signup-link:hover {
+        color: #20A53E; 
+    }
+    
+    .terminos {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        color: white;
+    }
+    
+    .terminos a {
+        text-decoration: underline;
+        color: white;
+    }
+    
+    .terminos a:hover {
+        color: #20A53E;
+    }
+    
+    .terminos-check {
+        display: flex;
+    }
+    
+    .error-message {
+        display: none;
+        color: black; 
+        margin-top: 5px;
+    }
+    
+    .success-message {
+        display: none; /* Oculta el mensaje por defecto */
+        color: #196A2B; /* Color del mensaje de éxito */
+        margin-top: 10px; /* Espacio superior */
+        font-size: 16px; /* Tamaño de fuente */
+    }
+   
+    
+    
     
     }
     
