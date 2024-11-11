@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="left-container">
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+               <a href="index.html"><img src="Imagenes/Logo nombre.png" alt="Logo"></a> 
+            </div>
+        </div>
+        <div class="Barra-busqueda">
+            <div class="search-container">
+                <input type="text" class="Busqueda-input" placeholder="Buscar...">
+                <div class="search-icon">
+                    <img src="Imagenes/icons/lupa.png" alt="Buscar">
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="icon-container cart-icon">
+                <img src="Imagenes/icons/carrito-black1.png" alt="Carrito">
+            </div>
+            <div class="icon-container login-icon">
+                <img src="Imagenes/icons/people.png" alt="Login">
+            </div>
+        </div>
+    </header>
+    
+    <!-- Menú desplegable -->
+    <nav class="nav-menu" id="nav-menu">
+        <div class="menu-top">
+            <button class="login-btn">Iniciar sesión</button>
+            <button class="profile-btn">Ir a tu perfil</button>
+        </div>
+        <span>Categorias</span>
+        <ul class="game-categories">
+            
+    <li><a href="index.html#Accion"><img src="Imagenes/icons/accion-icon.svg" alt="" class="icon"> Acción</a></li>
+    <li><a href="index.html#Aventura"><img src="Imagenes/icons/aventura-icon.svg" alt="" class="icon"> Aventura</a></li>
+    <li><a href="index.html#Biblioteca"><img src="Imagenes/icons/biblioteca-icon.svg" alt="" class="icon"> Biblioteca</a></li>
+    <li><a href="index.html#Clasicos"><img src="Imagenes/icons/classic-icon.svg" alt="" class="icon"> Clásicos</a></li>
+    <li><a href="index.html#Deportes"><img src="Imagenes/icons/deportes-icon.svg" alt="" class="icon"> Deportes</a></li>
+    <li><a href="index.html#Mas-Jugados"><img src="Imagenes/icons/mas-jugados.svg" alt="" class="icon"> Más Jugados</a></li>
+    <li><a href="index.html#Rompecabezas"><img src="Imagenes/icons/puzzle-icon.svg" alt="" class="icon"> Rompecabezas</a></li>
+    <li><a href="index.html#Shooters"><img src="Imagenes/icons/shooter-icon.svg" alt="" class="icon"> Shooters</a></li>
+        </ul>
+        <div class="menu-footer">
+            <img src="Imagenes/icons/instagram-nav-icon.svg" alt="Instagram">
+            <img src="Imagenes/icons/discord-nav-icon.svg" alt="discord">
+            <img src="Imagenes/icons/facebook-nav-icon.svg" alt="Facebook">
+        </div>
+    </nav>
+
+
+    <div class="title-game-4-en-linea">
+        <h1 class="titulo-juego">4 en línea: Batman vs Joker</h1>
+    </div>
+    
+
+    <div class="info-container">
+        <nav class="navegacion">
+            <a href="index.html">Inicio</a> - 
+            <a href="index.html#Biblioteca">Biblioteca</a> - 
+            <a href="index.html#Clasicos">Clásicos</a> - 
+            <span>4 en línea: Batman vs Joker</span>
+        </nav>
+        <div class="game-container">
+            <div class="settings">
+                <h2 class="Configuracion-name">Configuración del Juego</h2>
+                <div class="character-selection">
+                    <div class="player-section">
+                        <h3 class="player-name">Jugador 1</h3>
+                        <div class="character-options">
+                            <div class="character-option selected" data-player="1" data-character="batman">
+                                <img src="Imagenes/4-en-linea-game/Batman.png" alt="Batman">
+                                <div class="name-personaje">Batman</div>
+                            </div>
+                            <div class="character-option" data-player="1" data-character="nightwing">
+                                <img src="Imagenes/4-en-linea-game/NightWing.png" alt="Nightwing">
+                                <div class="name-personaje">Nightwing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-section">
+                        <h3 class="player-name">Jugador 2</h3>
+                        <div class="character-options">
+                            <div class="character-option selected" data-player="2" data-character="joker">
+                                <img src="Imagenes/4-en-linea-game/Joker.png" alt="Joker">
+                                <div class="name-personaje">Joker</div>
+                            </div>
+                            <div class="character-option" data-player="2" data-character="harley">
+                                <img src="Imagenes/4-en-linea-game/Harley.png" alt="Harley Quinn">
+                                <div class="name-personaje">Harley Quinn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-controls">
+                    <label class="label-select" for="line-length">Fichas en línea para ganar:</label>
+                    <select id="line-length">
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button id="start-game" class="button-start">Comenzar Juego</button>
+                </div>
+            </div>
+        
+            <canvas id="game-board" class="hidden"></canvas>
+        
+            <div class="game-info hidden">
+                <div id="turn-indicator">Turno: Jugador 1</div>
+                <div id="timer">Tiempo: <span id="time-left">60</span>s</div>
+                <button class="restart-button" id="restart-game">Reiniciar Juego</button>
+            </div>
+        </div>
+        <div class="support-share">
+            <div class="support">
+                <a href="" class="support-link">¿Tienes problemas? Visita nuestro soporte técnico.</a>
+            </div>
+            <div class="share-button-container">
+                <p>Compartir</p>
+                <div class="share-button">
+                    <button><img src="Imagenes\Botones\youtube.png" alt=""></button>
+                    <button><img src="Imagenes\Botones\whatsapp.png" alt=""></button>
+                    <button><img src="Imagenes\Botones\messenger.png" alt=""></button>
+                    <button><img src="Imagenes\Botones\group.png" alt="group"></button>
+                    <button><img src="Imagenes\Botones\tiktok.png" alt="tiktok"></button>
+                    <button><img src="Imagenes\Botones\gmail.png" alt="gmail"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <div class="main-layout">
+    <div class="main-layout">
+        <div class="four-in-line-container">
+            <div class="intro-section">
+                <h2>¿Qué es 4 en Línea?</h2>
+                <p>En Gotham, Batman y el Joker se enfrentan en un épico juego de 4 en Línea. Cada jugador busca alinear cuatro fichas de su color en el tablero, donde cada movimiento es crucial.</p>
+            </div>
+            
+            <div class="image-text-row">
+                <div class="image-container">
+                    <img src="Imagenes/juego-4-en-linea/tablero-img.png" alt="Tablero de 4 en Línea">
+                </div>
+                <div class="text-container">
+                    <h3>El Tablero</h3>
+                    <p>El tablero tiene 7 columnas y 6 filas. Batman y el Joker se turnan para dejar caer sus fichas, tratando de anticipar los movimientos del oponente.</p>
+                </div>
+            </div>
+            
+            <div class="text-image-row">
+                <div class="text-container">
+                    <h3>Objetivo del Juego</h3>
+                    <p>El objetivo es conectar cuatro fichas. Batman defiende Gotham, mientras que el Joker busca sembrar el caos con sus jugadas astutas.</p>
+                </div>
+                <div class="image-container">
+                    <img src="Imagenes/juego-4-en-linea/batman-vs-joker-victoria.png" alt="Victoria en 4 en Línea">
+                </div>
+            </div>
+            
+            <div class="image-text-row">
+                <div class="image-container">
+                    <img src="Imagenes/juego-4-en-linea/estrategia-img.png" alt="Estrategia en 4 en Línea">
+                </div>
+                <div class="text-container">
+                    <h3>Estrategia</h3>
+                    <p>Cada jugador debe ser astuto. Batman observa al Joker y busca frustrar sus planes, mientras que el Joker intenta sorprender con jugadas inesperadas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container-gameplay-tutorial">
+        <div class="video-container gameplay-container">
+            <h1 class="title-video">Gameplay</h1>
+            <video controls>
+                <source src="Imagenes/video-4-en-linea/Juego_De_Mesa_Hasbro_Gaming_Conecta_4.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container tutorial-container">
+            <h1 class="title-video">Tutorial</h1>
+            <video controls>
+                <source src="Imagenes/video-4-en-linea/CONECTA 4 ¿Cómo se JUEGA.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+
+    <div class="community-section-container">
+        <div class="comentarios">
+            <h2>Comentarios</h2>
+            <div class="comentarios-community">
+                <div class="community-section">
+                    <div class="objects-container">
+                        <div class="user">
+                            <img src="Imagenes/icons/people.png">
+                            <div class="username">
+                                <p>Tú</p>
+                            </div>
+                        </div>
+                        <div class="edit-like"><img src="Imagenes\icons\lapiz.png"></div>
+                    </div>
+                    <div class="comments-container">
+                        <div class="my-comment">
+                            <p>Escribe un comentario...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="community-section">
+                    <div class="objects-container">
+                        <div class="user">
+                            <img src="Imagenes/icons/people-2.png">
+                            <div class="username">
+                                <p>@PablitoClavito</p>
+                            </div>
+                        </div>
+                        <div class="edit-like"><img src="Imagenes/icons/pulgar-arriba.svg"></div>
+                    </div>
+                    <div class="comments-container">
+                        <div class="comment">
+                            <p>
+                                ¡Es un gran clásico! Me encanta cómo han mantenido la esencia del 4 en línea en este formato 2D. 
+                                La mecánica es simple, pero adictiva. He pasado horas jugando con amigos. 
+                                ¡Definitivamente lo recomendaría para una buena tarde de diversión!
+                            </p>
+                        </div>
+                        <div class="date">
+                            <p>03/02</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="community-section">
+                    <div class="objects-container">
+                        <div class="user">
+                            <img src="Imagenes/icons/people-3.png">
+                            <div class="username">
+                                <p>@EstebanQuito</p>
+                            </div>
+                        </div>
+                        <div class="edit-like"><img src="Imagenes/icons/pulgar-arriba.svg"></div>
+                    </div>
+                    <div class="comments-container">
+                        <div class="comment">
+                            <p>"El diseño es muy atractivo y fácil de entender. 
+                                Me gusta la opción de jugar en línea con amigos. 
+                                Sin embargo, me gustaría ver más modos de juego o variaciones para hacerlo aún más interesante. 
+                                ¡Buen trabajo en general!</p>
+                        </div>
+                        <div class="date">
+                            <p>17/08</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+
+
+
+    <footer>
+        <div class="footer-content-container">
+            <div class="footer-content">
+                <p>Condiciones de uso y privacidad</p>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="">Términos y condiciones</a></li>
+                    <li class="footer-link-item"><a href="">Política de privacidad y cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <p>Para compradores</p>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="">Asistencia a compradores</a></li>
+                    <li class="footer-link-item"><a href="">Cómo comprar</a></li>
+                    <li class="footer-link-item"><a href="">Mantente a salvo</a></li>
+                    <li class="footer-link-item"><a href="">Mapa del sitio</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <div class="social-container">
+                    <div class="instagram-social">
+                        <div class="instagram-logo">
+                            <img src="Imagenes/icons/instagram-nav-icon.svg" alt="">
+                        </div>
+                        <div class="instagram">
+                            <p>@pixspace</p>
+                        </div>
+                    </div>
+                    <div class="discord-social">
+                        <div class="discord-logo">
+                            <img src="Imagenes/icons/discord-nav-icon.svg" alt="">
+                        </div>
+                        <div class="discord">
+                            <p>PixCommunity</p>
+                        </div>
+                    </div>
+                    <div class="facebook-social">
+                        <div class="facebook-logo">
+                            <img src="Imagenes/icons/facebook-nav-icon.svg" alt="">
+                        </div>
+                        <div class="facebook">
+                            <p>@pixgaming</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p>Soporte para jugadores</p>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="">Soporte para jugadores</a></li>
+                    <li class="footer-link-item"><a href="">Problemas para acceder</a></li>
+                    <li class="footer-link-item"><a href="">Cambio de contraseña</a></li>
+                    <li class="footer-link-item"><a href="">Realizar reseñas</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <p>Información de la empresa</p>
+                <ul class="footer-links">
+                    <li class="footer-link-item"><a href="">¿Quienes somos?</a></li>
+                    <li class="footer-link-item"><a href="">Contáctanos</a></li>
+                    <li class="footer-link-item"><a href="">Nuestra historia</a></li>
+                    <li class="footer-link-item"><a href="">Nuestros valores</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-content-container-secundario">
+            <div class="footer-left">
+                <div class="privacidad"><a href="">Privacidad y cookies</a></div>
+                <div class="aviso-legal"><a href="">Aviso legal</a></div>
+            </div>
+    
+            <div class="footer-center">
+                <div class="interfaces">
+                    <img src="Imagenes/icons/logo-black.png" alt="logo">
+                    <p>Interfaces 2024</p>
+                </div>
+            </div>
+    
+            <div class="footer-right">
+                <div class="marcas"><a href="">Marcas registradas</a></div>
+                <div class="avisos"><a href="">Avisos sobre terceros</a></div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+  
+    <script src="JS/script.js"></script>
+   
+  
+
+</body>
+</html>
