@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style-game.css">
 </head>
 <body>
     <header>
@@ -67,82 +68,112 @@
     </div>
     
 
+    
     <div class="info-container">
+    
         <nav class="navegacion">
             <a href="index.html">Inicio</a> - 
             <a href="index.html#Biblioteca">Biblioteca</a> - 
             <a href="index.html#Clasicos">Clásicos</a> - 
             <span>4 en línea: Batman vs Joker</span>
         </nav>
-        <div class="game-container">
-            <div class="settings">
-                <h2 class="Configuracion-name">Configuración del Juego</h2>
-                <div class="character-selection">
-                    <div class="player-section">
-                        <h3 class="player-name">Jugador 1</h3>
-                        <div class="character-options">
-                            <div class="character-option selected" data-player="1" data-character="batman">
-                                <img src="Imagenes/4-en-linea-game/Batman.png" alt="Batman">
-                                <div class="name-personaje">Batman</div>
-                            </div>
-                            <div class="character-option" data-player="1" data-character="nightwing">
-                                <img src="Imagenes/4-en-linea-game/NightWing.png" alt="Nightwing">
-                                <div class="name-personaje">Nightwing</div>
-                            </div>
-                        </div>
+        <div class="screen-game-complete">
+
+            <div class="game-canva" id="gamePortada">
+                <div class="game-content">
+                    <div class="photo-game">
+                        <img class="game-photo" src="IMG-GAME/fondo-tablero.jpg" alt="fotoJuego" />
                     </div>
-                    <div class="player-section">
-                        <h3 class="player-name">Jugador 2</h3>
-                        <div class="character-options">
-                            <div class="character-option selected" data-player="2" data-character="joker">
-                                <img src="Imagenes/4-en-linea-game/Joker.png" alt="Joker">
-                                <div class="name-personaje">Joker</div>
-                            </div>
-                            <div class="character-option" data-player="2" data-character="harley">
-                                <img src="Imagenes/4-en-linea-game/Harley.png" alt="Harley Quinn">
-                                <div class="name-personaje">Harley Quinn</div>
-                            </div>
+                    <div class="elements-canva-game" id="elementsPortada">
+                        <div class="text-box">
+                            <h1>Batman vs Joker</h1>
+                            <button class="button-play" id="changeScreen">
+                                <span class="text-jugar">JUGAR</span>
+                              </button>
                         </div>
                     </div>
                 </div>
-                <div class="game-controls">
-                    <label class="label-select" for="line-length">Fichas en línea para ganar:</label>
-                    <select id="line-length">
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
+            </div>
+           
+            <div class="cartel taparJuego" id="formLineas" style="margin-top: 0px;">
+                <h2>Modo de juego: </h2>
+                <form class="form_game">
+                    <label>
+                        <input type="radio" name="tipo" value="4"> 4 en línea
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tipo" value="5"> 5 en línea
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tipo" value="6"> 6 en línea
+                    </label><br>
+                    <h4 style="margin-top: 5px;">Elija los equipos:</h4>
+                    <label for="equipo1">Equipo 1:</label>
+                    <select id="equipo1" name="equipo1" class="select-pequeno">
+                    <option value="batman">Batman</option>
+                    <option value="joker">Joker</option>
+                    <option value="harley">harley</option>
+                    <option value="nightwing">nightwing</option>
                     </select>
-                    <button id="start-game" class="button-start">Comenzar Juego</button>
+
+                    <label for="equipo2">Equipo 2:</label>
+                    <select id="equipo2" name="equipo2" class="select-pequeno">
+                    <option value="batman">Batman</option>
+                    <option value="joker">Joker</option>
+                    <option value="harley">harley</option>
+                    <option value="nightwing">nightwing</option>
+                    </select>
+
+                    <button type="submit" class="button-play" id="btnJugar" style="margin-top: 10px;">
+                        <span class="text-jugar">JUGAR</span>
+                      </button>
+                    <br>
+                      <span class="taparJuego" id="msjError" style="font-size: x-small;">para poder jugar, no deben ser iguales las fichas!</span>
+                </form>
+            </div>
+            <div id="turn-indicator" class="turno-indicador taparJuego"></div>
+            <div class="contenedor-temporizador taparJuego">
+                <span id="juego-temporizador"></span>
+            </div>
+            <div id="modal" class="modal taparJuego">
+                <div class="modal-content ">
+                    <h3 id="winner-message"></h3>
+                    <button  id="play-again-btn">Jugar de nuevo</button>
                 </div>
             </div>
-        
-            <canvas id="game-board" class="hidden"></canvas>
-        
-            <div class="game-info hidden">
-                <div id="turn-indicator">Turno: Jugador 1</div>
-                <div id="timer">Tiempo: <span id="time-left">60</span>s</div>
-                <button class="restart-button" id="restart-game">Reiniciar Juego</button>
+            <div class="cointainerBtnBack " id="btnResetGame">
+                <button class="taparJuego" id="resetGame">
+                    <span class="material-symbols-outlined">
+                        
+                        </span>
+                        Reiniciar Juego
+                </button>
             </div>
+            <div class="taparJuego" id="fondoJuego">
+                <canvas id="canvaJuego" width="1011" height="550" class="canvasClass"></canvas>
+            </div>
+            
+          
+    </div>
+   
+
+
+    <div class="support-share">
+        <div class="support">
+            <a href="" class="support-link">¿Tienes problemas? Visita nuestro soporte técnico.</a>
         </div>
-        <div class="support-share">
-            <div class="support">
-                <a href="" class="support-link">¿Tienes problemas? Visita nuestro soporte técnico.</a>
-            </div>
-            <div class="share-button-container">
-                <p>Compartir</p>
-                <div class="share-button">
-                    <button><img src="Imagenes\Botones\youtube.png" alt=""></button>
-                    <button><img src="Imagenes\Botones\whatsapp.png" alt=""></button>
-                    <button><img src="Imagenes\Botones\messenger.png" alt=""></button>
-                    <button><img src="Imagenes\Botones\group.png" alt="group"></button>
-                    <button><img src="Imagenes\Botones\tiktok.png" alt="tiktok"></button>
-                    <button><img src="Imagenes\Botones\gmail.png" alt="gmail"></button>
-                </div>
+        <div class="share-button-container">
+            <p>Compartir</p>
+            <div class="share-button">
+                <button><img src="Imagenes\Botones\youtube.png" alt=""></button>
+                <button><img src="Imagenes\Botones\whatsapp.png" alt=""></button>
+                <button><img src="Imagenes\Botones\messenger.png" alt=""></button>
+                <button><img src="Imagenes\Botones\group.png" alt="group"></button>
+                <button><img src="Imagenes\Botones\tiktok.png" alt="tiktok"></button>
+                <button><img src="Imagenes\Botones\gmail.png" alt="gmail"></button>
             </div>
         </div>
     </div>
-
-
  <div class="main-layout">
     <div class="main-layout">
         <div class="four-in-line-container">
@@ -373,7 +404,13 @@
         </div>
     </div>
   
-    <script src="JS/script.js"></script>
+    <script src="js.js"></script>
+    <script type="module" src="../js/game/Casillero.js"></script>
+    <script type="module" src="../js/game/Ficha.js"></script>
+    <script type="module" src="../js/game/Juego.js"></script>
+    <script type="module" src="../js/game/Main.js"></script>
+    <script type="module" src="../js/game/Tablero.js"></script>
+    
    
   
 
