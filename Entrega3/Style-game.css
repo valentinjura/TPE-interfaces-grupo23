@@ -1,5 +1,6 @@
 
 
+
 :root {
   --shadow-primary: #218D39;
   --shadow-secundary: #638643;
@@ -27,21 +28,12 @@ a {
 body {
   display: flex;
   flex-direction: column;
-
   min-height: 100vh;
-  
-
   overflow: visible;
 }
 
 
-.game {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.game-content {
+.contenido-juego {
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -50,13 +42,13 @@ body {
   width: 1011px;
   height: 510px;
   }
-  .photo-game img {
+  .fondo-game img {
     width: 100%;
     height: 510px;
     filter: blur(1px);
   }
 
-  .photo-game {
+  .fondo-game {
     width: 100%;
     height: 510px;
     display: flex;
@@ -64,7 +56,7 @@ body {
     align-items: center;
   }
 
-  .elements-canva-game {
+  .elemento-canvas-juego {
     position: absolute;
     top: 40%;
     left: 40%;
@@ -73,49 +65,16 @@ body {
     color: var(--white);
   }
 
-  .btn-play {
-    width: 50%;
-    height: 2.5rem;
- 
-    
-    cursor: pointer;
-    color: var(--white);
-    margin-top: 1rem;
-  }
-
-  
-
-  .logo-pag {
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .title-game {
-    text-align: center;
-    margin-left: 1rem;
-  }
-
-
-
 
 .info-game {
-
   display: flex;
   justify-content: space-between;
   width: 77%;
   align-items: center;
-
   margin-top: 0;
-  
+}
 
-  
 
-  .title-game {
-    text-align: center;
-    margin-left: 1rem;
-  }
 .screen-game-complete {
   display: flex;
   flex-direction: column;
@@ -123,82 +82,13 @@ body {
   overflow: hidden;
 }
 
-.how-to-play {
-  padding: 0.5rem;
-}
+.game-info-container {
 
-.game-info-container ul {
-  list-style: none;
-}
-
-.game-images-playing {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.game-images {
-  padding: 0.5rem;
-  margin-top: 1rem;
-  background-color: var(--dark-shddow);
-
-}
-
-.img-controls {
-  width: 3.25rem;
-  height: auto;
-}
-
-.img-controls-move {
-  width: 4.5rem;
-}
-
-
-
-.game-controls {
-  background-color: var(--dark-shddow);
- 
-  display: flex;
-  align-items: center;
-  margin-top: 0.5rem;
-  margin-bottom: 3rem;
-}
-
-.game-controls-title {
-  margin-top: 2rem;
-}
-
-.games-recommended {
-  color: var(--white);
-  margin-top: 1rem;
-  background-color: var(--bg-color-divs-game);
- 
+  margin-top: 25px;
   width: 77%;
-  overflow: hidden;
-  padding: 0.8rem;
-}
-
-.games-recommended-elements {
-  background-color: var(--dark-shddow);
-  overflow: hidden;
-  padding: 0.5rem;
+  padding: 1rem;
 
 }
-
-.games-recommended-images {
-  display: flex;
-  flex-direction: row;
-  max-width: 80%;
-  margin-top: 1rem;
-}
-
-.game-card {
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-}
-
 
 :root {
     --primary-green: #4CAF50;
@@ -207,7 +97,7 @@ body {
     --soft-shadow: rgba(0, 0, 0, 0.1);
   }
   
-  .button-with-icon {
+  .button-play {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -224,21 +114,21 @@ body {
     overflow: hidden;
   }
   
-  .button-with-icon .text-jugar {
+  .button-play .text-jugar {
     position: relative;
     z-index: 2;
   }
   
-  .button-with-icon:hover {
+  .button-play:hover {
     background-color: #45a049;
   }
   
-  .button-with-icon:active {
+  .button-play:active {
     transform: scale(0.95);
     background-color: #3d8b40;
   }
   
-  .button-with-icon::before {
+  .button-play::before {
     content: '';
     position: absolute;
     top: 0;
@@ -250,10 +140,10 @@ body {
     z-index: 1;
   }
   
-  .button-with-icon:hover::before {
+  .button-play:hover::before {
     left: 100%;
   }
-  .text-jugar {
+  .jugar-texto {
     transition: all 0.5s ease-in-out;
   }
   
@@ -345,6 +235,9 @@ body {
 
 .taparJuego {
   opacity: 0;
+  font-size: 10px;
+
+ 
   visibility: hidden;
   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
@@ -357,7 +250,7 @@ body {
 
 .contenedor_temp {
   position: relative;
-  bottom: 719px;
+  bottom: 710px;
   left: -385px;
   background-color: var(--primary-color);
   width: auto;
@@ -411,7 +304,7 @@ button {
 .contenedor-temporizador {
   /* Positioning */
   position: absolute;
-  bottom: 62%;
+  bottom: 61%;
   right: 15%;
   z-index: 3;
   pointer-events: none;
@@ -544,7 +437,7 @@ button {
 
 .turno-indicador {
   position: absolute;
-  bottom: 63%;
+  bottom: 62%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
@@ -559,14 +452,11 @@ button {
 }
 
 
-
-
-
 .cointainerBtnBack {
     position: absolute;
-    bottom: 63%; /* Ajuste del margen inferior */
+    bottom: 61%;
     left: 13%;
-    padding: 5px; /* Reduce el padding general */
+    padding: 5px;
     cursor: pointer;
     z-index: 3;
 }
@@ -577,15 +467,15 @@ button {
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.026);
     color: #ffffff; 
-    width: 100%; /* Ajusta el ancho del botón */
-    height: 30%; /* Ajusta la altura */
-    font-size: 16px; /* Tamaño de fuente reducido */
-    padding: 5px; /* Reduce el padding interno del botón */
+    width: 100%;
+    height: 30%; 
+    font-size: 16px; 
+    padding: 5px;
 }
 
 .cointainerBtnBack span {
-    margin-right: 4px; /* Reduce el margen del icono */
-    font-size: 18px; /* Tamaño del icono */
+    margin-right: 6px; 
+    font-size: 18px; 
 }
 
 
@@ -608,7 +498,7 @@ button {
     letter-spacing: 1px;
 }
 
-.form_game {
+.form-juego {
   max-width: 350px;
   height: 380px;
   display: flex;
@@ -616,7 +506,7 @@ button {
   
 }
 
-.form_game label {
+.form-juego label {
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
@@ -625,11 +515,11 @@ button {
   border-radius: 4px;
 }
 
-.form_game label:hover {
+.form-juego label:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.form_game input[type="radio"] {
+.form-juego input[type="radio"] {
   appearance: none;
   width: 22px;
   height: 22px;
@@ -642,13 +532,13 @@ button {
   background-color: transparent;
 }
 
-.form_game input[type="radio"]:checked {
+.form-juego input[type="radio"]:checked {
   background-color: white;
   border-color: black;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
-.form_game input[type="radio"]:checked::after {
+.form-juego input[type="radio"]:checked::after {
   content: '✓';
   position: absolute;
   top: 50%;
@@ -659,7 +549,7 @@ button {
   font-size: 14px;
 }
 
-.form_game h4 {
+.form-juego h4 {
   margin-top: 15px;
   margin-bottom: 10px;
   color: white;
@@ -667,7 +557,7 @@ button {
   letter-spacing: 1px;
 }
 
-.select-pequeno {
+.select-equipo {
   width: 100%;
   padding: 12px;
   background-color: rgba(0, 0, 0, 0.627);
@@ -682,7 +572,7 @@ button {
   background-position: right 10px center;
 }
 
-.select-pequeno:focus {
+.select-equipo:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
@@ -712,18 +602,6 @@ button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-#msjError {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-#msjError.mostrar {
-    opacity: 1;
-}
 
 
 
