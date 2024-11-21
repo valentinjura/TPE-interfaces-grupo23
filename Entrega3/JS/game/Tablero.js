@@ -14,7 +14,7 @@ export  class Tablero {
 
   //---------------------Constructor---------------------------
 
-  constructor(line) {
+ constructor(line) {
     if (line <= 0) {
       throw new Error("line debe ser un número entero positivo el numero es: ");
     }
@@ -23,28 +23,26 @@ export  class Tablero {
     this.columns = line + 3;
     this.anchoColumna = 55;
     this.canvasJuego = document.getElementById("canvaJuego");
+    // Agregar esta línea para obtener el contexto
+    this.ctx = this.canvasJuego.getContext('2d');
+    
     let offsetY = 0; 
-    let direccion = 1; // 1 para subir, -1 para bajar
-    const velocidad = 0.5; // Controla la velocidad de movimiento
-    const maxDesplazamiento = 5; //
+    let direccion = 1;
+    const velocidad = 0.5;
+    const maxDesplazamiento = 5;
+    
     this.imagenFondo = new Image();
-        this.imagenFondo.src = './IMG-GAME/gotham-city.png'; // Ruta de la imagen
-        
-        // Variable para rastrear si la imagen está lista
-        this.imagenFondoLista = false;
-        
-        // Manejar la carga de la imagen
-   this.imagenFondo.onload = () => {
-            this.imagenFondoLista = true;
-            // Forzar un redibujo cuando la imagen esté lista
-            this.dibujarTablero(this.ctx);
-        };
-   
-   
-this.initTablero();
-  }
+    this.imagenFondo.src = './IMG-GAME/gotham-city.png';
+    this.imagenFondoLista = false;
+    
+    this.imagenFondo.onload = () => {
+        this.imagenFondoLista = true;
+        // Ahora pasamos this.ctx en lugar de ctx
+        this.dibujarTablero(this.ctx);
+    };
 
-
+    this.initTablero();
+}
 
   //----- CREAR TABLERO---------------
   initTablero() {
