@@ -41,7 +41,7 @@ export  class Tablero {
         };
     
    
-    this.initTablero();
+this.initTablero();
   }
 
   this.imagenFondo.onload = () => {
