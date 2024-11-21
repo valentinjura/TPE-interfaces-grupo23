@@ -142,35 +142,7 @@ body {
   transform: translateY(-2px);
 }
 
-.breadcrumb-container {
-  align-self: flex-start;
-  margin-left: 9%;
-  position: relative;
-}
 
-.breadcrumb {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  padding-top: 10px;
-  font-size: 14px;
- 
-  align-self: flex-start;
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #fff;
-  /* Color de los enlaces */
-  margin-right: 5px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-  transform: translateY(-1px);
-}
 
 .screen-game-complete {
   display: flex;
@@ -232,34 +204,6 @@ body {
   margin-top: 2rem;
 }
 
-.games-recommended {
-  color: var(--white);
-  margin-top: 1rem;
-  background-color: var(--bg-color-divs-game);
- 
-  width: 77%;
-  overflow: hidden;
-  padding: 0.8rem;
-}
-
-.games-recommended-elements {
-  background-color: var(--dark-shddow);
-  overflow: hidden;
-  padding: 0.5rem;
-
-}
-
-.games-recommended-images {
-  display: flex;
-  flex-direction: row;
-  max-width: 80%;
-  margin-top: 1rem;
-}
-
-.game-card {
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-}
 
 
 /*<---------------------- BOTON JUGAR ANIMACION ------------------>*/
@@ -420,7 +364,7 @@ body {
 
 .contenedor_temp {
   position: relative;
-  bottom: 710px;
+  bottom: 724px;
   left: -385px;
   background-color: var(--primary-color);
   width: auto;
@@ -474,7 +418,7 @@ button {
 .contenedor-temporizador {
   /* Positioning */
   position: absolute;
-  bottom: 60%;
+  bottom: 65%;
   right: 15%;
   z-index: 3;
   pointer-events: none;
@@ -607,7 +551,7 @@ button {
 
 .turno-indicador {
   position: absolute;
-  bottom: 61%;
+  bottom: 65%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
