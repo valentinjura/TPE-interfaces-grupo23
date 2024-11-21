@@ -14,7 +14,7 @@ export  class Tablero {
 
   //---------------------Constructor---------------------------
 
- constructor(line) {
+constructor(line) {
     if (line <= 0) {
       throw new Error("line debe ser un número entero positivo el numero es: ");
     }
@@ -23,27 +23,31 @@ export  class Tablero {
     this.columns = line + 3;
     this.anchoColumna = 55;
     this.canvasJuego = document.getElementById("canvaJuego");
-    // Agregar esta línea para obtener el contexto
     this.ctx = this.canvasJuego.getContext('2d');
     
-    let offsetY = 0; 
-    let direccion = 1;
-    const velocidad = 0.5;
-    const maxDesplazamiento = 5;
-    
+    // Corregir la ruta de la imagen
     this.imagenFondo = new Image();
-    this.imagenFondo.src = './IMG-GAME/gotham-city.png';
+    // Usar una ruta absoluta desde la raíz del proyecto
+    this.imagenFondo.src = '/TPE-interfaces-grupo23/Entrega3/IMG-GAME/gotham-city.png';
+    // O una ruta relativa desde donde está el archivo JS
+    // this.imagenFondo.src = '../IMG-GAME/gotham-city.png';
+    
     this.imagenFondoLista = false;
     
     this.imagenFondo.onload = () => {
         this.imagenFondoLista = true;
-        // Ahora pasamos this.ctx en lugar de ctx
+        this.dibujarTablero(this.ctx);
+    };
+
+    this.imagenFondo.onerror = (e) => {
+        console.error('Error al cargar la imagen:', e);
+        this.imagenFondoLista = false;
+        // Usar color de respaldo
         this.dibujarTablero(this.ctx);
     };
 
     this.initTablero();
 }
-
   //----- CREAR TABLERO---------------
   initTablero() {
     const offsetX =
