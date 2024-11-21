@@ -91,7 +91,7 @@ dibujarTablero(ctx) {
             if (patron) {
                 ctx.fillStyle = patron;
             } else {
-                ctx.fillStyle = 'transparent'; // Color de respaldo
+                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // Color de respaldo
             }
             
             // Dibujar el fondo
