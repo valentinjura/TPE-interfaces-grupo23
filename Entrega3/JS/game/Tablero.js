@@ -38,9 +38,22 @@ export  class Tablero {
             // Forzar un redibujo cuando la imagen esté lista
             this.dibujarTablero(this.ctx);
         };
+    
    
     this.initTablero();
   }
+
+  this.imagenFondo.onload = () => {
+    this.imagenFondoLista = true;
+    // Forzar un redibujo cuando la imagen esté lista
+    this.dibujarTablero(this.ctx);
+};
+
+// Manejar error en la carga de la imagen
+this.imagenFondo.onerror = (error) => {
+    console.error("Error al cargar la imagen: ", error);
+    alert("No se pudo cargar la imagen de fondo.");
+};
 
   //----- CREAR TABLERO---------------
   initTablero() {
