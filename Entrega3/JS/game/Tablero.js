@@ -65,32 +65,55 @@ export  class Tablero {
 
  
 
-  //Dibujar tablero
+dibujarTablero(ctx) {
+    if (!ctx) {
+        ctx = this.canvasJuego.getContext('2d');
+    }
 
-  dibujarTablero(ctx) {
     const anchoCasillero = this.anchoColumna;
     const offsetX = Math.floor((this.canvasJuego.width - this.columns * anchoCasillero) / 2);
     const offsetY = Math.floor((this.canvasJuego.height - this.rows * anchoCasillero) / 2);
-    // Crear un rectángulo para el fondo del tablero
     const anchoTablero = this.columns * anchoCasillero + 14;
     const altoTablero = this.rows * anchoCasillero + 14;
     
-    // Verificar si la imagen está lista antes de crear el patrón
-    if (this.imagenFondoLista) {
-        // Crear un patrón de imagen
-        const patron = ctx.createPattern(this.imagenFondo, 'repeat');
-        
-        // Dibujar el fondo con el patrón
-        ctx.fillStyle = patron;
-        ctx.fillRect(
-            offsetX - 10, 
-            offsetY - 10, 
-            anchoTablero, 
-            altoTablero
-        );
+    // Verificar si la imagen está lista y si es válida
+    if (this.imagenFondoLista && this.imagenFondo.complete) {
+        try {
+            // Guardar el estado actual del contexto
+            ctx.save();
+            
+            // Crear y usar el patrón
+            const patron = ctx.createPattern(this.imagenFondo, 'repeat');
+            if (patron) {
+                ctx.fillStyle = patron;
+            } else {
+                ctx.fillStyle = '#0077be'; // Color de respaldo
+            }
+            
+            // Dibujar el fondo
+            ctx.fillRect(
+                offsetX - 10, 
+                offsetY - 10, 
+                anchoTablero, 
+                altoTablero
+            );
+            
+            // Restaurar el estado del contexto
+            ctx.restore();
+        } catch (error) {
+            console.error('Error al crear el patrón:', error);
+            // Usar color de respaldo si hay error
+            ctx.fillStyle = '#0077be';
+            ctx.fillRect(
+                offsetX - 10, 
+                offsetY - 10, 
+                anchoTablero, 
+                altoTablero
+            );
+        }
     } else {
-        // Usar un color de fondo temporal mientras la imagen carga
-        ctx.fillStyle = '#0077be'; // Azul marino original
+        // Color de respaldo si la imagen no está lista
+        ctx.fillStyle = '#0077be';
         ctx.fillRect(
             offsetX - 10, 
             offsetY - 10, 
@@ -110,21 +133,18 @@ export  class Tablero {
             ctx.arc(
                 x + anchoCasillero / 2, 
                 y + anchoCasillero / 2, 
-                anchoCasillero * 0.4, // Radio del círculo 
+                anchoCasillero * 0.4, 
                 0, 
                 Math.PI * 2
             );
             
-            // Fondo de cada casillero
-            ctx.fillStyle = '#ffffff'; // Blanco
+            ctx.fillStyle = '#ffffff';
             ctx.fill();
             
-            // Borde de cada casillero
-            ctx.strokeStyle = '#0077be'; // Azul marino para el borde
+            ctx.strokeStyle = '#0077be';
             ctx.lineWidth = 2;
             ctx.stroke();
             
-            // Si hay una ficha, dibujarla
             const casillero = this.casilleros[i][j];
             if (!casillero.estaVacio()) {
                 const ficha = casillero.getFicha();
@@ -133,11 +153,8 @@ export  class Tablero {
         }
     }
     
-    // Dibujar flechas (método que ya tenías)
     this.dibujarFlechas(ctx);
 }
-
-
 // Método para dibujar fichas (sin cambios)
 dibujarFicha(ctx, x, y, ficha) {
   const radio = this.anchoColumna * 0.4;
