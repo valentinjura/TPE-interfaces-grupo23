@@ -1,8 +1,8 @@
-"use strict";
+""use strict";
 import { Ficha } from './Ficha.js';
 import { Casillero } from './Casillero.js';
 
-export default class Tablero {
+export  class Tablero {
   casilleros = [];
   canvasJuego;
   tableroImg;
