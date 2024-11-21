@@ -162,7 +162,7 @@ dibujarFicha(ctx, x, y, ficha) {
     console.log("vacio casilleros");
 
     // Redibujar el tablero limpio
-    const ctx = this.canvasJuego.getContext("2d");
+   this.ctx = this.canvasJuego.getContext('2d');
     //this.dibujarTablero(ctx);
   }
 
