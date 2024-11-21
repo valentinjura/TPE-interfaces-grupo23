@@ -2,7 +2,7 @@
 import { Ficha } from './Ficha.js';
 import { Casillero } from './Casillero.js';
 
-export  class Tablero {
+export default class Tablero {
   casilleros = [];
   canvasJuego;
   tableroImg;
@@ -27,13 +27,13 @@ export  class Tablero {
     const velocidad = 0.5; // Controla la velocidad de movimiento
     const maxDesplazamiento = 5; //
     this.imagenFondo = new Image();
-     this.imagenFondo.src = '../IMG-GAME/gotham-city.png';/ Ruta de la imagen
+        this.imagenFondo.src = '../IMG-GAME/gotham-city.png'; // Ruta de la imagen
         
         // Variable para rastrear si la imagen está lista
         this.imagenFondoLista = false;
         
         // Manejar la carga de la imagen
-         this.imagenFondo.onload = () => {
+        this.imagenFondo.onload = () => {
             this.imagenFondoLista = true;
             // Forzar un redibujo cuando la imagen esté lista
             this.dibujarTablero(this.ctx);
@@ -517,3 +517,5 @@ dibujarFicha(ctx, x, y, ficha) {
     return cont === this.line;
   }
 }
+
+//export default Tablero;
