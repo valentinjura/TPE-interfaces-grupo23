@@ -25,48 +25,43 @@ export class Tablero {
     const velocidad = 0.5;
     const maxDesplazamiento = 5;
 
-    // Usar un color de fondo por defecto
-    this.backgroundColor = '#0077be';
-
-    // Intentar cargar la imagen con manejo de errores
-    this.imagenFondo = new Image();
-    this.imagenFondo.onerror = () => {
-      console.log('Error al cargar la imagen, usando color de fondo por defecto');
-      this.imagenFondoLista = true; // Marcamos como lista para que use el color de fondo
-    };
+    // Crear un gradiente como fondo en lugar de una imagen
+    this.createBackground();
     
-    this.imagenFondo.onload = () => {
-      this.imagenFondoLista = true;
-      this.dibujarTablero(this.ctx);
-    };
-
-    // Opciones de rutas alternativas para la imagen
-    const posiblesRutas = [
-      '../IMG-GAME/gotham-city.png',
-      './IMG-GAME/gotham-city.png',
-      '/IMG-GAME/gotham-city.png',
-      'img/gotham-city.png',
-      // Puedes agregar más rutas alternativas aquí
-    ];
-
-    // Función para intentar cargar la imagen desde diferentes rutas
-    const intentarCargarImagen = (index) => {
-      if (index >= posiblesRutas.length) {
-        console.log('No se pudo cargar la imagen desde ninguna ruta');
-        this.imagenFondoLista = true; // Usar color de fondo por defecto
-        return;
-      }
-
-      this.imagenFondo.src = posiblesRutas[index];
-      this.imagenFondo.onerror = () => {
-        intentarCargarImagen(index + 1);
-      };
-    };
-
-    // Comenzar intentos de carga
-    intentarCargarImagen(0);
-
     this.initTablero();
+  }
+
+  createBackground() {
+    // Crear un canvas temporal para generar el patrón de fondo
+    const tempCanvas = document.createElement('canvas');
+    const tempCtx = tempCanvas.getContext('2d');
+    tempCanvas.width = 200;  // Tamaño del patrón
+    tempCanvas.height = 200;
+
+    // Crear un gradiente oscuro que simule una ciudad nocturna
+    const gradient = tempCtx.createLinearGradient(0, 0, 0, tempCanvas.height);
+    gradient.addColorStop(0, '#1a1a2e');     // Azul muy oscuro
+    gradient.addColorStop(0.5, '#16213e');   // Azul medio oscuro
+    gradient.addColorStop(1, '#0f3460');     // Azul oscuro
+
+    // Aplicar el gradiente
+    tempCtx.fillStyle = gradient;
+    tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+
+    // Añadir algunos detalles que simulen luces de ciudad
+    for (let i = 0; i < 50; i++) {
+      const x = Math.random() * tempCanvas.width;
+      const y = Math.random() * tempCanvas.height;
+      const size = Math.random() * 2 + 1;
+      
+      tempCtx.beginPath();
+      tempCtx.arc(x, y, size, 0, Math.PI * 2);
+      tempCtx.fillStyle = `rgba(255, 255, 200, ${Math.random() * 0.3})`;
+      tempCtx.fill();
+    }
+
+    // Guardar el patrón
+    this.backgroundPattern = tempCtx.createPattern(tempCanvas, 'repeat');
   }
 
   dibujarTablero(ctx) {
@@ -76,21 +71,14 @@ export class Tablero {
     const anchoTablero = this.columns * anchoCasillero + 14;
     const altoTablero = this.rows * anchoCasillero + 14;
     
-    // Dibujar el fondo
-    if (this.imagenFondoLista && this.imagenFondo.complete && this.imagenFondo.naturalWidth !== 0) {
-      try {
-        const patron = ctx.createPattern(this.imagenFondo, 'repeat');
-        ctx.fillStyle = patron;
-        ctx.fillRect(offsetX - 10, offsetY - 10, anchoTablero, altoTablero);
-      } catch (error) {
-        console.log('Error al crear el patrón, usando color de fondo');
-        ctx.fillStyle = this.backgroundColor;
-        ctx.fillRect(offsetX - 10, offsetY - 10, anchoTablero, altoTablero);
-      }
-    } else {
-      ctx.fillStyle = this.backgroundColor;
-      ctx.fillRect(offsetX - 10, offsetY - 10, anchoTablero, altoTablero);
-    }
+    // Dibujar el fondo usando el patrón generado
+    ctx.fillStyle = this.backgroundPattern;
+    ctx.fillRect(offsetX - 10, offsetY - 10, anchoTablero, altoTablero);
+
+    // Añadir un borde suave al tablero
+    ctx.strokeStyle = '#4a90e2';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(offsetX - 10, offsetY - 10, anchoTablero, altoTablero);
     
     // Dibujar casilleros
     for (let i = 0; i < this.rows; i++) {
@@ -98,22 +86,33 @@ export class Tablero {
         const x = offsetX + j * anchoCasillero;
         const y = offsetY + i * anchoCasillero;
             
-        // Dibujar hueco redondo
+        // Dibujar hueco redondo con efecto de profundidad
+        // Sombra exterior
         ctx.beginPath();
         ctx.arc(
           x + anchoCasillero / 2, 
           y + anchoCasillero / 2, 
-          anchoCasillero * 0.4, // Radio del círculo 
+          anchoCasillero * 0.4,
           0, 
           Math.PI * 2
         );
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+        ctx.shadowBlur = 5;
+        ctx.shadowOffsetX = 2;
+        ctx.shadowOffsetY = 2;
             
         // Fondo de cada casillero
-        ctx.fillStyle = '#ffffff'; // Blanco
+        ctx.fillStyle = '#ffffff';
         ctx.fill();
+        
+        // Resetear sombra
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 0;
             
         // Borde de cada casillero
-        ctx.strokeStyle = '#0077be'; // Azul marino para el borde
+        ctx.strokeStyle = '#4a90e2';
         ctx.lineWidth = 2;
         ctx.stroke();
             
@@ -130,93 +129,44 @@ export class Tablero {
     this.dibujarFlechas(ctx);
   }
 
-
-// Método para dibujar fichas (sin cambios)
-dibujarFicha(ctx, x, y, ficha) {
-  const radio = this.anchoColumna * 0.4;
-  const centroPosX = x + this.anchoColumna / 2;
-  const centroPosY = y + this.anchoColumna / 2;
-  
-  ctx.beginPath();
-  ctx.arc(centroPosX, centroPosY, radio, 0, Math.PI * 2);
-  
-  // Color fijo para todas las fichas
-  ctx.fillStyle = '#888888'; // Gris neutro
-  ctx.fill();
-  
-  ctx.strokeStyle = '#000000';
-  ctx.lineWidth = 2;
-  ctx.stroke();
-}
-
-  reiniciarTablero() {
-    for (let i = 0; i < this.rows; i++) {
-      for (let j = 0; j < this.columns; j++) {
-        this.casilleros[i][j].vaciar(); // Asegúrate de tener un método vaciar() en Casillero para resetear las fichas
-      }
-    }
-    console.log("vacio casilleros");
-
-    // Redibujar el tablero limpio
-    const ctx = this.canvasJuego.getContext("2d");
-    //this.dibujarTablero(ctx);
-  }
-
-  getCasillero(row, column) {
-    return this.casilleros[row][column];
-  }
-
-  // //------COLOCAR FICHA------
-
-  obtenerCasillero(posX, posY) {
-    return this.casilleros[posX][posY];
-  }
-
-  isFull() {
-    for (let i = 0; i < this.rows; i++) {
-      for (let j = 0; j < this.columns; j++) {
-        const casillero = this.casilleros[i][j];
-        if (casillero.estaVacio()) {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-
-  isInZoneDrop(fichaSeleccionada, ctx) {
-    const anchoCasillero = this.anchoColumna;
-
-    const zonaX = (this.canvasJuego.width - this.columns * anchoCasillero) / 2;
-
-    const zonaY =
-      (this.canvasJuego.height - this.rows * anchoCasillero) / 2 -
-      anchoCasillero;
-
-    const zonaAncho = this.columns * anchoCasillero;
-    const zonaAlto = 50;
-
-    if (
-      fichaSeleccionada.getPosX() >= zonaX &&
-      fichaSeleccionada.getPosX() <= zonaX + zonaAncho &&
-      fichaSeleccionada.getPosY() >= zonaY &&
-      fichaSeleccionada.getPosY() <= zonaY + zonaAlto
-    ) {
-      const columna = Math.floor(
-        (fichaSeleccionada.getPosX() - zonaX) / anchoCasillero
-      );
-      console.log("Columna detectada: ", columna);
-
-      if (this.columnaDisponible(columna)) {
-        this.colocarFichaEnColumna(columna, fichaSeleccionada);
-        return true;
-      } else {
-        console.log("Columna llena");
-        return false;
-      }
-    } else {
-      return false;
-    }
+  dibujarFicha(ctx, x, y, ficha) {
+    const radio = this.anchoColumna * 0.4;
+    const centroPosX = x + this.anchoColumna / 2;
+    const centroPosY = y + this.anchoColumna / 2;
+    
+    // Efecto de sombra para las fichas
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+    ctx.shadowBlur = 5;
+    ctx.shadowOffsetX = 2;
+    ctx.shadowOffsetY = 2;
+    
+    ctx.beginPath();
+    ctx.arc(centroPosX, centroPosY, radio, 0, Math.PI * 2);
+    
+    // Gradiente para dar efecto 3D a las fichas
+    const gradient = ctx.createRadialGradient(
+      centroPosX - radio/3, 
+      centroPosY - radio/3, 
+      radio/10,
+      centroPosX,
+      centroPosY,
+      radio
+    );
+    gradient.addColorStop(0, '#a0a0a0');
+    gradient.addColorStop(1, '#707070');
+    
+    ctx.fillStyle = gradient;
+    ctx.fill();
+    
+    ctx.strokeStyle = '#505050';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    
+    // Resetear sombra
+    ctx.shadowColor = 'transparent';
+    ctx.shadowBlur = 0;
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 0;
   }
 
   dibujarFlechas(ctx) {
@@ -231,18 +181,34 @@ dibujarFicha(ctx, x, y, ficha) {
     const offset = Math.sin(time) * 4; 
 
     for (let columna = 0; columna < this.columns; columna++) {
-        const posX = zonaX + columna * anchoCasillero + anchoCasillero / 2;
-        const posY = basePosY + offset; 
+      const posX = zonaX + columna * anchoCasillero + anchoCasillero / 2;
+      const posY = basePosY + offset; 
 
-        ctx.fillStyle = "rgba(0, 128, 0, 0.6)"; //gris con un poco de transparencia
-        ctx.beginPath();
-        ctx.moveTo(posX - anchoFlecha / 2, posY);
-        ctx.lineTo(posX + anchoFlecha / 2, posY);
-        ctx.lineTo(posX, posY + altoFlecha);
-        ctx.closePath();
-        ctx.fill();
+      // Añadir efecto de brillo a las flechas
+      const gradient = ctx.createLinearGradient(
+        posX - anchoFlecha / 2,
+        posY,
+        posX + anchoFlecha / 2,
+        posY + altoFlecha
+      );
+      gradient.addColorStop(0, 'rgba(0, 180, 0, 0.8)');
+      gradient.addColorStop(1, 'rgba(0, 128, 0, 0.6)');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.moveTo(posX - anchoFlecha / 2, posY);
+      ctx.lineTo(posX + anchoFlecha / 2, posY);
+      ctx.lineTo(posX, posY + altoFlecha);
+      ctx.closePath();
+      ctx.fill();
+
+      // Añadir brillo
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
     }
   }
+
   
   colocarFichaEnColumna(columna, ficha) {
     const fila = this.ultimaFilaDisponible(columna);
