@@ -1,5 +1,6 @@
 'use strict';
-import Juego from './Juego.js';
+import { Juego } from './Juego.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const formLineas = document.getElementById('formLineas');

@@ -1,7 +1,7 @@
 "use strict";
 
-import Tablero from './Tablero.js';
-import Ficha from './Ficha.js';
+import { Tablero } from './Tablero.js';
+import { Ficha } from './Ficha.js';
 
 
 let divTemporizador = document.querySelector(".contenedor-temporizador");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let mouseDown = false;
 });
 
-export default class Juego {
+export  class Juego {
   constructor(line) {
     console.log(`Juego creado con ${line + 2} filas y ${line + 3} columnas`);
     this.tablero = new Tablero(line);

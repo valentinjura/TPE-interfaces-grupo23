@@ -1,6 +1,6 @@
 "use strict";
 
-export default class Casillero {
+export  class Casillero {
   imagen;
   constructor(numRow, numColumn, ancho) {
     if (typeof numRow !== "number" || numRow < 0) {

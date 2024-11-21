@@ -1,7 +1,8 @@
 "use strict";
-import Casillero from "./Casillero.js";
-import Ficha from "./Ficha.js";
-export default class Tablero {
+import { Ficha } from './Ficha.js';
+import { Casillero } from './Casillero.js';
+
+export  class Tablero {
   casilleros = [];
   canvasJuego;
   tableroImg;

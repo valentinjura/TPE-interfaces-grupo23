@@ -1,5 +1,5 @@
 'use strict';
-export default class Ficha {
+export  class Ficha {
     posXInicial;
     posYInicial;
     constructor(x,y,equipo, img) {
