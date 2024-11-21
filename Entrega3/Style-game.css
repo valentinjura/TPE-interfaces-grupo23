@@ -207,7 +207,7 @@ body {
     --soft-shadow: rgba(0, 0, 0, 0.1);
   }
   
-  .button-play {
+  .button-with-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -224,21 +224,21 @@ body {
     overflow: hidden;
   }
   
-  .button-play.text-jugar {
+  .button-with-icon .text-jugar {
     position: relative;
     z-index: 2;
   }
   
-  .button-play:hover {
+  .button-with-icon:hover {
     background-color: #45a049;
   }
   
-  .button-play:active {
+  .button-with-icon:active {
     transform: scale(0.95);
     background-color: #3d8b40;
   }
   
-  .button-play::before {
+  .button-with-icon::before {
     content: '';
     position: absolute;
     top: 0;
@@ -250,7 +250,7 @@ body {
     z-index: 1;
   }
   
-  .button-play:hover::before {
+  .button-with-icon:hover::before {
     left: 100%;
   }
   .text-jugar {
