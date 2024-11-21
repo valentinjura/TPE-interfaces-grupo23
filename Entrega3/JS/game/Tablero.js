@@ -34,7 +34,7 @@ export  class Tablero {
         this.imagenFondoLista = false;
         
         // Manejar la carga de la imagen
-  this.imagenFondo.onload = () => {
+     this.imagenFondo.onload = () => {
     console.log('Imagen cargada');
     this.imagenFondoLista = true;
     this.dibujarTablero(this.ctx);
