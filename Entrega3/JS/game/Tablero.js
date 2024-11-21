@@ -39,7 +39,6 @@ export  class Tablero {
             // Forzar un redibujo cuando la imagen esté lista
             this.dibujarTablero(this.ctx);
         };
-
     
    
 this.initTablero();
