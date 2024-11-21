@@ -33,10 +33,11 @@ export  class Tablero {
         this.imagenFondoLista = false;
         
         // Manejar la carga de la imagen
-       this.imagenFondo.onload = () => {
-    this.imagenFondoLista = true;
-    this.dibujarTablero(this.ctx);
-};
+        this.imagenFondo.onload = () => {
+            this.imagenFondoLista = true;
+            // Forzar un redibujo cuando la imagen esté lista
+            this.dibujarTablero(this.ctx);
+        };
    
     this.initTablero();
   }
@@ -162,7 +163,7 @@ dibujarFicha(ctx, x, y, ficha) {
     console.log("vacio casilleros");
 
     // Redibujar el tablero limpio
-   this.ctx = this.canvasJuego.getContext('2d');
+    const ctx = this.canvasJuego.getContext("2d");
     //this.dibujarTablero(ctx);
   }
 
@@ -516,3 +517,5 @@ dibujarFicha(ctx, x, y, ficha) {
     return cont === this.line;
   }
 }
+
+//export default Tablero;
