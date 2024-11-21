@@ -77,7 +77,7 @@
             <a href="index.html#Clasicos">Clásicos</a> - 
             <span>4 en línea: Batman vs Joker</span>
         </nav>
-        <div class="screen-game-complete">
+        <div class="contenedor-juego-completo">
 
             <div class="game-canva" id="gamePortada">
                 <div class="contenido-juego">
@@ -108,27 +108,30 @@
                         <input type="radio" name="tipo" value="6"> 6 en línea
                     </label><br>
                     <h4 style="margin-top: 5px;">Elija los equipos:</h4>
+
+                    
                     <label for="equipo1">Equipo 1:</label>
                     <select id="equipo1" name="equipo1" class="select-equipo">
-                    <option value="batman">Batman</option>
-                    <option value="joker">Joker</option>
-                    <option value="harley">harley</option>
-                    <option value="nightwing">nightwing</option>
+                        <option value="batman">Batman</option>
+                        <option value="joker">Joker</option>
+                        <option value="harley">harley</option>
+                        <option value="nightwing">nightwing</option>
                     </select>
 
                     <label for="equipo2">Equipo 2:</label>
+                    
                     <select id="equipo2" name="equipo2" class="select-equipo">
-                    <option value="batman">Batman</option>
-                    <option value="joker">Joker</option>
-                    <option value="harley">harley</option>
-                    <option value="nightwing">nightwing</option>
+                        <option value="batman">Batman</option>
+                        <option value="joker">Joker</option>
+                        <option value="harley">harley</option>
+                        <option value="nightwing">nightwing</option>
                     </select>
 
                     <button type="submit" class="button-play" id="btnJugar" style="margin-top: 10px;">
                         <span class="jugar-texto">JUGAR</span>
                       </button>
                     <br>
-                      <span class="taparJuego" id="msjError" style="font-size: x-small;">para poder jugar, no deben ser iguales las fichas!</span>
+                      <span class="taparJuego" id="msjError";">para poder jugar, no deben ser iguales las fichas!</span>
                 </form>
             </div>
             <div id="turn-indicator" class="turno-indicador taparJuego"></div>
