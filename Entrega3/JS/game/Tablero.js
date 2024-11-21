@@ -34,11 +34,11 @@ export  class Tablero {
         this.imagenFondoLista = false;
         
         // Manejar la carga de la imagen
-     this.imagenFondo.onload = () => {
-    console.log('Imagen cargada');
-    this.imagenFondoLista = true;
-    this.dibujarTablero(this.ctx);
-};
+ this.imagenFondo.onload = () => {
+            this.imagenFondoLista = true;
+            // Forzar un redibujo cuando la imagen esté lista
+            this.dibujarTablero(this.ctx);
+        };
 
     
    
