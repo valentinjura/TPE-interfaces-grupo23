@@ -28,7 +28,7 @@ constructor(line) {
     // Corregir la ruta de la imagen
     this.imagenFondo = new Image();
     // Usar una ruta absoluta desde la raíz del proyecto
-    this.imagenFondo.src = '../IMG-GAME/gotham-city.png';
+    this.imagenFondo.src = 'https://t3.ftcdn.net/jpg/06/97/34/88/240_F_697348876_5jWptToKHUirUBlkVxeTnJepVkirWmd0.jpg';
     // O una ruta relativa desde donde está el archivo JS
     // this.imagenFondo.src = '../IMG-GAME/gotham-city.png';
     
