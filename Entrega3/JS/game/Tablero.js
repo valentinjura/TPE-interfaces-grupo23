@@ -1,47 +1,67 @@
+
 "use strict";
 import { Ficha } from './Ficha.js';
 import { Casillero } from './Casillero.js';
 
-export class Tablero {
+export  class Tablero {
+  casilleros = [];
+  canvasJuego;
+  tableroImg;
+  rows;
+  columns;
+  casilleroImagen;
+  animacionId;
+
+  //---------------------Constructor---------------------------
+
   constructor(line) {
     if (line <= 0) {
       throw new Error("line debe ser un número entero positivo el numero es: ");
     }
-
-    // Initialize all properties first
     this.line = line;
     this.rows = line + 2;
     this.columns = line + 3;
     this.anchoColumna = 55;
-    this.casilleros = [];
-    this.animacionId = null;
     this.canvasJuego = document.getElementById("canvaJuego");
-    
-    // Image initialization
+    let offsetY = 0; 
+    let direccion = 1; // 1 para subir, -1 para bajar
+    const velocidad = 0.5; // Controla la velocidad de movimiento
+    const maxDesplazamiento = 5; //
     this.imagenFondo = new Image();
-    this.imagenFondo.src = '../IMG-GAME/gotham-city.png';
-    this.imagenFondoLista = false;
+        this.imagenFondo.src = './IMG-GAME/gotham-city.png'; // Ruta de la imagen
+        
+        // Variable para rastrear si la imagen está lista
+        this.imagenFondoLista = false;
+        
+        // Manejar la carga de la imagen
+        this.imagenFondo.onload = () => {
+            this.imagenFondoLista = true;
+            // Forzar un redibujo cuando la imagen esté lista
+            this.dibujarTablero(this.ctx);
+        };
     
-    // Handle image load
-    this.imagenFondo.onload = () => {
-        this.imagenFondoLista = true;
-        if (this.canvasJuego) {
-            const ctx = this.canvasJuego.getContext('2d');
-            this.dibujarTablero(ctx);
-        }
-    };
-
-    // Now that all properties are initialized, we can safely call initTablero
+   
     this.initTablero();
   }
 
-  initTablero() {
-    if (!this.canvasJuego) {
-      throw new Error("Canvas element not found");
-    }
+  this.imagenFondo.onload = () => {
+    this.imagenFondoLista = true;
+    // Forzar un redibujo cuando la imagen esté lista
+    this.dibujarTablero(this.ctx);
+};
 
-    const offsetX = (this.canvasJuego.width - this.columns * this.anchoColumna) / 2;
-    const offsetY = (this.canvasJuego.height - this.rows * this.anchoColumna) / 2;
+// Manejar error en la carga de la imagen
+this.imagenFondo.onerror = (error) => {
+    console.error("Error al cargar la imagen: ", error);
+    alert("No se pudo cargar la imagen de fondo.");
+};
+
+  //----- CREAR TABLERO---------------
+  initTablero() {
+    const offsetX =
+      (this.canvasJuego.width - this.columns * this.anchoColumna) / 2;
+    const offsetY =
+      (this.canvasJuego.height - this.rows * this.anchoColumna) / 2;
 
     for (let i = 0; i < this.rows; i++) {
       this.casilleros[i] = [];
@@ -54,6 +74,8 @@ export class Tablero {
       }
     }
   }
+
+ 
 
   //Dibujar tablero
 
@@ -510,4 +532,3 @@ dibujarFicha(ctx, x, y, ficha) {
   }
 }
 
-//export default Tablero;
