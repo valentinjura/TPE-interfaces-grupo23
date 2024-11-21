@@ -26,8 +26,8 @@ export  class Tablero {
     let direccion = 1; // 1 para subir, -1 para bajar
     const velocidad = 0.5; // Controla la velocidad de movimiento
     const maxDesplazamiento = 5; //
-     this.imagenFondo = new Image();
-       this.imagenFondo.src = '../IMG/gotham-city.png'; // Ruta de la imagen
+    this.imagenFondo = new Image();
+        this.imagenFondo.src = '../IMG-GAME/gotham-city.png'; // Ruta de la imagen
         
         // Variable para rastrear si la imagen está lista
         this.imagenFondoLista = false;
