@@ -80,15 +80,15 @@
         <div class="screen-game-complete">
 
             <div class="game-canva" id="gamePortada">
-                <div class="game-content">
-                    <div class="photo-game">
-                        <img class="game-photo" src="IMG-GAME/fondo-tablero.jpg" alt="fotoJuego" />
+                <div class="contenido-juego">
+                    <div class="fondo-game">
+                        <img class="fondo-game" src="IMG-GAME/fondo-tablero.jpg" alt="fotoJuego" />
                     </div>
-                    <div class="elements-canva-game" id="elementsPortada">
+                    <div class="elemento-canvas-juego" id="elementsPortada">
                         <div class="text-box">
                             <h1>Batman vs Joker</h1>
                             <button class="button-play" id="changeScreen">
-                                <span class="text-jugar">JUGAR</span>
+                                <span class="jugar-texto">JUGAR</span>
                               </button>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
            
             <div class="cartel taparJuego" id="formLineas" style="margin-top: 0px;">
                 <h2>Modo de juego: </h2>
-                <form class="form_game">
+                <form class="form-juego">
                     <label>
                         <input type="radio" name="tipo" value="4"> 4 en línea
                     </label><br>
@@ -109,7 +109,7 @@
                     </label><br>
                     <h4 style="margin-top: 5px;">Elija los equipos:</h4>
                     <label for="equipo1">Equipo 1:</label>
-                    <select id="equipo1" name="equipo1" class="select-pequeno">
+                    <select id="equipo1" name="equipo1" class="select-equipo">
                     <option value="batman">Batman</option>
                     <option value="joker">Joker</option>
                     <option value="harley">harley</option>
@@ -117,7 +117,7 @@
                     </select>
 
                     <label for="equipo2">Equipo 2:</label>
-                    <select id="equipo2" name="equipo2" class="select-pequeno">
+                    <select id="equipo2" name="equipo2" class="select-equipo">
                     <option value="batman">Batman</option>
                     <option value="joker">Joker</option>
                     <option value="harley">harley</option>
@@ -125,7 +125,7 @@
                     </select>
 
                     <button type="submit" class="button-play" id="btnJugar" style="margin-top: 10px;">
-                        <span class="text-jugar">JUGAR</span>
+                        <span class="jugar-texto">JUGAR</span>
                       </button>
                     <br>
                       <span class="taparJuego" id="msjError" style="font-size: x-small;">para poder jugar, no deben ser iguales las fichas!</span>
