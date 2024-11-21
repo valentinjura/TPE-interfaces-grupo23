@@ -2,7 +2,7 @@
 import { Ficha } from './Ficha.js';
 import { Casillero } from './Casillero.js';
 
-export  class Tablero {
+export class Tablero {
   casilleros = [];
   canvasJuego;
   tableroImg;
@@ -10,8 +10,6 @@ export  class Tablero {
   columns;
   casilleroImagen;
   animacionId;
-
-  //---------------------Constructor---------------------------
 
   constructor(line) {
     if (line <= 0) {
@@ -22,118 +20,115 @@ export  class Tablero {
     this.columns = line + 3;
     this.anchoColumna = 55;
     this.canvasJuego = document.getElementById("canvaJuego");
-    let offsetY = 0; 
-    let direccion = 1; // 1 para subir, -1 para bajar
-    const velocidad = 0.5; // Controla la velocidad de movimiento
-    const maxDesplazamiento = 5; //
+    let offsetY = 0;
+    let direccion = 1;
+    const velocidad = 0.5;
+    const maxDesplazamiento = 5;
+
+    // Usar un color de fondo por defecto
+    this.backgroundColor = '#0077be';
+
+    // Intentar cargar la imagen con manejo de errores
     this.imagenFondo = new Image();
-     this.imagenFondo.src = '../IMG-GAME/gotham-city.png';/ Ruta de la imagen
-        
-        // Variable para rastrear si la imagen está lista
-        this.imagenFondoLista = false;
-        
-        // Manejar la carga de la imagen
-         this.imagenFondo.onload = () => {
-            this.imagenFondoLista = true;
-            // Forzar un redibujo cuando la imagen esté lista
-            this.dibujarTablero(this.ctx);
-        };
-   
+    this.imagenFondo.onerror = () => {
+      console.log('Error al cargar la imagen, usando color de fondo por defecto');
+      this.imagenFondoLista = true; // Marcamos como lista para que use el color de fondo
+    };
+    
+    this.imagenFondo.onload = () => {
+      this.imagenFondoLista = true;
+      this.dibujarTablero(this.ctx);
+    };
+
+    // Opciones de rutas alternativas para la imagen
+    const posiblesRutas = [
+      '../IMG-GAME/gotham-city.png',
+      './IMG-GAME/gotham-city.png',
+      '/IMG-GAME/gotham-city.png',
+      'img/gotham-city.png',
+      // Puedes agregar más rutas alternativas aquí
+    ];
+
+    // Función para intentar cargar la imagen desde diferentes rutas
+    const intentarCargarImagen = (index) => {
+      if (index >= posiblesRutas.length) {
+        console.log('No se pudo cargar la imagen desde ninguna ruta');
+        this.imagenFondoLista = true; // Usar color de fondo por defecto
+        return;
+      }
+
+      this.imagenFondo.src = posiblesRutas[index];
+      this.imagenFondo.onerror = () => {
+        intentarCargarImagen(index + 1);
+      };
+    };
+
+    // Comenzar intentos de carga
+    intentarCargarImagen(0);
+
     this.initTablero();
   }
-
-  //----- CREAR TABLERO---------------
-  initTablero() {
-    const offsetX =
-      (this.canvasJuego.width - this.columns * this.anchoColumna) / 2;
-    const offsetY =
-      (this.canvasJuego.height - this.rows * this.anchoColumna) / 2;
-
-    for (let i = 0; i < this.rows; i++) {
-      this.casilleros[i] = [];
-      for (let j = 0; j < this.columns; j++) {
-        this.casilleros[i][j] = new Casillero(i, j, this.anchoColumna);
-        this.casilleros[i][j].setPosicion(
-          offsetX + j * this.anchoColumna,
-          offsetY + i * this.anchoColumna
-        );
-      }
-    }
-  }
-
- 
-
-  //Dibujar tablero
 
   dibujarTablero(ctx) {
     const anchoCasillero = this.anchoColumna;
     const offsetX = Math.floor((this.canvasJuego.width - this.columns * anchoCasillero) / 2);
     const offsetY = Math.floor((this.canvasJuego.height - this.rows * anchoCasillero) / 2);
-    // Crear un rectángulo para el fondo del tablero
     const anchoTablero = this.columns * anchoCasillero + 14;
     const altoTablero = this.rows * anchoCasillero + 14;
     
-    // Verificar si la imagen está lista antes de crear el patrón
-    if (this.imagenFondoLista) {
-        // Crear un patrón de imagen
+    // Dibujar el fondo
+    if (this.imagenFondoLista && this.imagenFondo.complete && this.imagenFondo.naturalWidth !== 0) {
+      try {
         const patron = ctx.createPattern(this.imagenFondo, 'repeat');
-        
-        // Dibujar el fondo con el patrón
         ctx.fillStyle = patron;
-        ctx.fillRect(
-            offsetX - 10, 
-            offsetY - 10, 
-            anchoTablero, 
-            altoTablero
-        );
+        ctx.fillRect(offsetX - 10, offsetY - 10, anchoTablero, altoTablero);
+      } catch (error) {
+        console.log('Error al crear el patrón, usando color de fondo');
+        ctx.fillStyle = this.backgroundColor;
+        ctx.fillRect(offsetX - 10, offsetY - 10, anchoTablero, altoTablero);
+      }
     } else {
-        // Usar un color de fondo temporal mientras la imagen carga
-        ctx.fillStyle = '#0077be'; // Azul marino original
-        ctx.fillRect(
-            offsetX - 10, 
-            offsetY - 10, 
-            anchoTablero, 
-            altoTablero
-        );
+      ctx.fillStyle = this.backgroundColor;
+      ctx.fillRect(offsetX - 10, offsetY - 10, anchoTablero, altoTablero);
     }
     
     // Dibujar casilleros
     for (let i = 0; i < this.rows; i++) {
-        for (let j = 0; j < this.columns; j++) {
-            const x = offsetX + j * anchoCasillero;
-            const y = offsetY + i * anchoCasillero;
+      for (let j = 0; j < this.columns; j++) {
+        const x = offsetX + j * anchoCasillero;
+        const y = offsetY + i * anchoCasillero;
             
-            // Dibujar hueco redondo
-            ctx.beginPath();
-            ctx.arc(
-                x + anchoCasillero / 2, 
-                y + anchoCasillero / 2, 
-                anchoCasillero * 0.4, // Radio del círculo 
-                0, 
-                Math.PI * 2
-            );
+        // Dibujar hueco redondo
+        ctx.beginPath();
+        ctx.arc(
+          x + anchoCasillero / 2, 
+          y + anchoCasillero / 2, 
+          anchoCasillero * 0.4, // Radio del círculo 
+          0, 
+          Math.PI * 2
+        );
             
-            // Fondo de cada casillero
-            ctx.fillStyle = '#ffffff'; // Blanco
-            ctx.fill();
+        // Fondo de cada casillero
+        ctx.fillStyle = '#ffffff'; // Blanco
+        ctx.fill();
             
-            // Borde de cada casillero
-            ctx.strokeStyle = '#0077be'; // Azul marino para el borde
-            ctx.lineWidth = 2;
-            ctx.stroke();
+        // Borde de cada casillero
+        ctx.strokeStyle = '#0077be'; // Azul marino para el borde
+        ctx.lineWidth = 2;
+        ctx.stroke();
             
-            // Si hay una ficha, dibujarla
-            const casillero = this.casilleros[i][j];
-            if (!casillero.estaVacio()) {
-                const ficha = casillero.getFicha();
-                this.dibujarFicha(ctx, x, y, ficha);
-            }
+        // Si hay una ficha, dibujarla
+        const casillero = this.casilleros[i][j];
+        if (!casillero.estaVacio()) {
+          const ficha = casillero.getFicha();
+          this.dibujarFicha(ctx, x, y, ficha);
         }
+      }
     }
     
-    // Dibujar flechas (método que ya tenías)
+    // Dibujar las flechas animadas
     this.dibujarFlechas(ctx);
-}
+  }
 
 
 // Método para dibujar fichas (sin cambios)
