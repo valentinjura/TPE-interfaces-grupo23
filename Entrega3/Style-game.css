@@ -18,7 +18,7 @@
   margin: 0;
   padding: 0;
   
- 
+  font-family: var(--font-baloo);
 }
 
 a {
@@ -29,11 +29,18 @@ a {
 body {
   display: flex;
   flex-direction: column;
+
   min-height: 100vh;
-  margin: 0;
+  
+
   overflow: visible;
 }
 
+
+
+
+
+/* ------------------------Screen Juego------------------------- */
 
 .game {
   display: flex;
@@ -106,7 +113,63 @@ body {
     margin-left: 1rem;
   }
 
+  .feedback {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
 
+.btn-feedback {
+  background-color: transparent;
+  border: none;
+  padding: 0.3rem;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.btn-feedback span {
+  padding: 0.3rem;
+}
+
+.btn-feedback:hover {
+ 
+  transform: translateY(-2px);
+}
+
+.breadcrumb-container {
+  align-self: flex-start;
+  margin-left: 9%;
+  position: relative;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  padding-top: 10px;
+  font-size: 14px;
+ 
+  align-self: flex-start;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #fff;
+  /* Color de los enlaces */
+  margin-right: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
 
 .screen-game-complete {
   display: flex;
@@ -115,7 +178,90 @@ body {
   overflow: hidden;
 }
 
+.game-info-container {
 
+  margin-top: 25px;
+  width: 77%;
+  padding: 1rem;
+
+}
+
+.how-to-play {
+  padding: 0.5rem;
+}
+
+.game-info-container ul {
+  list-style: none;
+}
+
+.game-images-playing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.game-images {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: var(--dark-shddow);
+
+}
+
+.img-controls {
+  width: 3.25rem;
+  height: auto;
+}
+
+.img-controls-move {
+  width: 4.5rem;
+}
+
+.game-controls {
+  background-color: var(--dark-shddow);
+ 
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.game-controls-title {
+  margin-top: 2rem;
+}
+
+.games-recommended {
+  color: var(--white);
+  margin-top: 1rem;
+  background-color: var(--bg-color-divs-game);
+ 
+  width: 77%;
+  overflow: hidden;
+  padding: 0.8rem;
+}
+
+.games-recommended-elements {
+  background-color: var(--dark-shddow);
+  overflow: hidden;
+  padding: 0.5rem;
+
+}
+
+.games-recommended-images {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin-top: 1rem;
+}
+
+.game-card {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+
+/*<---------------------- BOTON JUGAR ANIMACION ------------------>*/
 :root {
     --primary-green: #4CAF50;
     --green-hover: #45a049;
@@ -273,7 +419,7 @@ body {
 
 .contenedor_temp {
   position: relative;
-  bottom: 732px;
+  bottom: 719px;
   left: -385px;
   background-color: var(--primary-color);
   width: auto;
@@ -284,7 +430,7 @@ body {
 }
 
 .cartel {
-  top: 150px;
+  top: px;
   margin-top: 2.3rem;
   position: absolute;
   background-color: var(--shadow-primary);
@@ -327,7 +473,7 @@ button {
 .contenedor-temporizador {
   /* Positioning */
   position: absolute;
-  bottom: 69%;
+  bottom: 62%;
   right: 15%;
   z-index: 3;
   pointer-events: none;
@@ -406,7 +552,7 @@ button {
   flex-direction: column;
   align-items: center;
   color: var(--white);
- 
+  background-color: var(--shadow-primary);
   margin: 15% auto;
   padding: 20px;
 
@@ -460,7 +606,7 @@ button {
 
 .turno-indicador {
   position: absolute;
-  bottom: 69%;
+  bottom: 63%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
@@ -640,5 +786,8 @@ button {
 #msjError.mostrar {
     opacity: 1;
 }
+
+
+
 
 
