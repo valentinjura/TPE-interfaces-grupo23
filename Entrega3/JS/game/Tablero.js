@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function(){
 "use strict";
 import { Ficha } from './Ficha.js';
 import { Casillero } from './Casillero.js';
@@ -536,4 +536,4 @@ dibujarFicha(ctx, x, y, ficha) {
     return cont === this.line;
   }
 }
-
+});
