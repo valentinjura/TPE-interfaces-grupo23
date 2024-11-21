@@ -75,7 +75,7 @@ body {
 }
 
 
-.screen-game-complete {
+.contenedor-juego-completo {
   display: flex;
   flex-direction: column;
   align-items: center;
