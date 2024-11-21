@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Validar que se haya seleccionado un tipo de juego
             if (!tipoSeleccionado) {
-                msjError.textContent = "Seleccione una cantidad de líneas para jugar.";
+                msjError.textContent = "Eliga un modo de juego!";
                 msjError.classList.remove('taparJuego');
                 return;
             }
