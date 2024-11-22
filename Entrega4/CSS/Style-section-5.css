@@ -10,27 +10,27 @@
 
 .content-container5 img {
     width: 100%;
-    height: auto; /* Mantener la relación de aspecto */
+    height: auto; 
 }
 
 .container5-info {
     margin-left: 100px;
     display: flex;
-    align-items: flex-start; /* Asegura que los elementos dentro estén alineados hacia la parte superior */
+    align-items: flex-start; 
     gap: 100px;
 }
 
-/* Contenedor del título */
+
 .title-container5 {
-    position: absolute; /* Colocamos el título de manera absoluta para controlar su posición */
-    top: 309px; /* Ubica el título 309px desde la parte superior */
-    width: 740px; /* Ancho fijo del contenedor del título */
-    height: 171px; /* Alto fijo del contenedor del título */
-    color: white; /* El color del texto es blanco */
-    display: flex; /* Usamos flexbox para alinear el contenido */
-    align-items: center; /* Centra el texto verticalmente */
-    justify-content: center; /* Centra el texto horizontalmente */
-    z-index: 2; /* Asegura que el título esté por encima de otros elementos */
+    position: absolute; 
+    top: 309px; 
+    width: 740px; 
+    height: 171px; 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 2; 
     margin-bottom: 54px;
 }
 
@@ -49,12 +49,12 @@
     transition: transform 0.2s ease-out;
 }
 
-/* Imagen del personaje */
+
 .container5-caracter3 img {
-    width: auto; /* Ajustamos el ancho de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-height: none; /* Permite que la imagen tenga una altura mayor al contenedor */
-    transform: translateX(740px); /* Movemos la imagen 86px hacia arriba, para que sobrepase el contenedor */
+    width: auto; 
+    height: auto; 
+    max-height: none; 
+    transform: translateX(740px); 
 }
 
 .video-container5 {
