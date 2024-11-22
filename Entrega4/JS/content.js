@@ -8,10 +8,9 @@ function changeSlide() {
 
     slides[currentIndex].classList.remove('active1');
     
-    // Incrementar el índice para la siguiente imagen
+ 
     currentIndex = (currentIndex + 1) % slides.length;
-    
-    // Añadir la clase 'active' a la siguiente imagen
+ 
     slides[currentIndex].classList.add('active1');
 }
 
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: 0.1 // Porcentaje de elemento visible para activar
+        threshold: 0.1 
     });
 
     containers.forEach(container => {
@@ -39,10 +38,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-document.querySelector('.sprite-container').addEventListener('click', function() {
-    const sprite = document.querySelector('.sprite');
-    sprite.classList.toggle('paused');
-});
-
-// Aquí puedes añadir la clase 'paused' para detener la animación cuando haces clic en el contenedor
