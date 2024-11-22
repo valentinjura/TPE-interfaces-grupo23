@@ -12,14 +12,14 @@ body {
 }
 
 .title-seccion-4 {
-    width: 731px; /* Cambiado de max-width a width fijo */
+    width: 731px; 
     height: 57px;
     display: flex;
     align-items: center;
     padding-left: 100px;
     margin-bottom: 73px;
     margin-top: 174px;
-    white-space: nowrap; /* Fuerza el texto a una sola línea */
+    white-space: nowrap; 
  
 }
 .title-seccion-4 h1 {
@@ -27,10 +27,10 @@ body {
     font-weight: 600;
     font-family: 'Lato', sans-serif;
     color: #000000;
-    margin: 0; /* Elimina márgenes por defecto */
-    padding: 0; /* Elimina padding por defecto */
-    line-height: 1; /* Ajusta la altura de línea */
-    white-space: nowrap; /* Asegura que el texto permanezca en una línea */
+    margin: 0; 
+    padding: 0; 
+    line-height: 1; 
+    white-space: nowrap; 
 }
 
 .personajes-seccion {
@@ -44,19 +44,19 @@ body {
 .imagen-container {
     position: sticky;
     top: 100px;
-    width: 475px; /* Aumentado para acomodar el personaje más ancho */
+    width: 475px; 
     height: 514px;
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    margin-left: 200px; /* Añadido para mover los personajes 243px desde la izquierda */
+    margin-left: 200px; 
 
 }
 
 .imagen-personaje {
     position: absolute;
-    width: auto; /* Importante: permite que el ancho se ajuste según la clase específica */
-    height: auto; /* Importante: permite que la altura se ajuste según la clase específica */
+    width: auto; 
+    height: auto; 
     object-fit: contain;
     opacity: 0;
     transform: translateY(20px);
@@ -161,7 +161,7 @@ body {
     justify-content: center;
     position: relative;
     padding: 60px;
-    padding-right: 100px; /* Asegurando el espacio desde la derecha */
+    padding-right: 100px; 
     overflow: hidden;
 }
 
@@ -184,8 +184,8 @@ body {
 .titulo-container {
     overflow: hidden;
     margin-bottom: 30px;
-    /* Añadido: asegurar que el contenedor tenga altura suficiente */
-    height: 60px; /* Ajusta este valor según el tamaño de tu título */
+    
+    height: 60px; 
 }
 
 .personaje-info h2 {
@@ -208,8 +208,8 @@ body {
 .texto-container {
     overflow: hidden;
     position: relative;
-    /* Añadido: asegurar espacio adecuado para el texto */
-    margin-top: 20px; /* Añade espacio después del título */
+    
+    margin-top: 20px; 
 }
 
 .texto-container::after {
@@ -234,7 +234,7 @@ body {
     font-size: 20px;
     color: #666;
     width: 467px;
-    /* Eliminado height fijo para permitir ajuste natural */
+
     transform: translateY(20px);
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
@@ -356,7 +356,7 @@ body {
     background-color: rgba(255, 100, 255, 0.8);
 }
 
-/* Para imágenes reales */
+
 .character img {
     width: 100%;
     height: 100%;
