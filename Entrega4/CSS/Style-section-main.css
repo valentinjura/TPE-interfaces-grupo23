@@ -2,12 +2,12 @@
     background-image: url(../IMG/seccion-main/fondo-seccion-1.svg);
     background-repeat: no-repeat;
     position: sticky;
-    background-attachment: fixed; /* Fondo fijo */
-    position: relative; /* Cambiar a relative para no afectar otros elementos */
+    background-attachment: fixed; 
+    position: relative; 
     top: 0;
     height: 959px;
     width: 100%;
-    overflow: hidden; /* Evita que el contenido se salga del contenedor */
+    overflow: hidden; 
     background-size: cover;
     perspective: 1280px;
 }
@@ -23,13 +23,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    transform: translateZ(-1px) scale(1.1);  /* Esto reducirá el movimiento y aumentará el efecto de fondo */
+    transform: translateZ(-1px) scale(1.1);  
 }
 
 /* Árboles */
 .tree {
     position: absolute;
-    opacity: 1; /* Cambiado para que sea visible desde el inicio */
+    opacity: 1; 
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
 }
 
@@ -39,7 +39,7 @@
     height: 672px;
     z-index: 21;
     top: 108px;
-    animation: sway 8s ease-in-out infinite alternate; /* Mantener solo la animación de movimiento */
+    animation: sway 8s ease-in-out infinite alternate; 
 }
 
 .tree-right-2 {
@@ -63,7 +63,7 @@
 /* Arbustos */
 .bush {
     position: absolute;
-    opacity: 1; /* Cambiado para que sea visible desde el inicio */
+    opacity: 1; 
     filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
     z-index: 10;
 }
@@ -197,12 +197,12 @@
     animation: float 6s ease-in-out infinite alternate;
 }
 
-/* Transiciones para el scroll */
+
 .tree, .bush, .rock, .character, .logo {
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
-/* Contenedor para el scroll */
+
 .scroll-container {
     height: 959px;
 }
