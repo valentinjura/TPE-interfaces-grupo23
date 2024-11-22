@@ -26,7 +26,7 @@
     transform: translateZ(-1px) scale(1.1);  
 }
 
-/* Árboles */
+
 .tree {
     position: absolute;
     opacity: 1; 
@@ -289,7 +289,6 @@
       transform: translateY(10px) rotate(-5deg);
     }
   }
-
   @keyframes fadeOut {
     from {
       opacity: 1;
