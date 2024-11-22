@@ -38,3 +38,28 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+   
+    window.addEventListener('load', function() {
+      const loader = document.querySelector('.loader-container');
+      const content = document.querySelector('.content');
+      
+      
+      setTimeout(() => {
+       
+        loader.classList.add('hidden');
+        
+        
+        content.classList.add('visible');
+        
+        
+        setTimeout(() => {
+          loader.remove();
+        }, 500);
+      }, 3000);
+    });
+  });
+
+
