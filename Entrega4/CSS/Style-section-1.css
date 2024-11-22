@@ -51,7 +51,7 @@
     object-fit: cover;
     width: 576px;
     height: 324px;
-    border: 29px solid #1B5F99; /* Borde blanco */
+    border: 29px solid #1B5F99;
     border-radius: 77px;
 }
 .ejemplo0-img {
@@ -71,7 +71,7 @@
     top: 0;
     left: 0;
     z-index: 3;
-    pointer-events: none; /* Esto asegura que los personajes no interfieran con la interactividad */
+    pointer-events: none; 
 }
 
 .cuatro-info-section {
