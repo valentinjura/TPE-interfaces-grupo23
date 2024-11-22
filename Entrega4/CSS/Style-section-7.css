@@ -127,8 +127,8 @@
     }
 
     .model-box:hover .model-side-a {
-        transform: scale(0.95); /* Mantiene un ligero escalado */
-        opacity: 0.3; /* Ajusta la transparencia si lo deseas */
+        transform: scale(0.95); 
+        opacity: 0.3; 
         filter: blur(2px);
     }
 
