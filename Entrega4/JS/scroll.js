@@ -1,6 +1,6 @@
 /*sección cinco*/
 
-/*función que logra que haya desplazamiento a diferentes velocidades entre video y personaje*/
+
 
 function checkScroll() {
     const reveals = document.querySelectorAll('.scroll-reveal');
@@ -8,7 +8,7 @@ function checkScroll() {
     reveals.forEach(reveal => {
         const windowHeight = window.innerHeight;
         const revealTop = reveal.getBoundingClientRect().top;
-        const revealPoint = 150; // Adjust this value to control when the reveal happens
+        const revealPoint = 150; 
         
         if (revealTop < windowHeight - revealPoint) {
             reveal.classList.add('active2');
@@ -49,72 +49,72 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollProgress = Math.max(0, Math.min(1, -sceneTop / (window.innerHeight * 0.5)));
 
 
-        // Movimiento controlado para el fondo
+  
         if (scrollProgress > 0) {
-            sceneContainer.style.transform = `translateY(${scrollY * 0.3}px)`;  // Fondo moviéndose suave
+            sceneContainer.style.transform = `translateY(${scrollY * 0.3}px)`;  
         } else {
-            sceneContainer.style.transform = '';  // Resetear si no hay scroll
+            sceneContainer.style.transform = '';  
         }
 
         if (scrollProgress > 0) {
-            // Ajustar la velocidad del movimiento de los árboles (hacerlos más lentos)
-            const moveFactor = 0.5;  // Reducir la velocidad general para los elementos
+           
+            const moveFactor = 0.5;  
             const leftTree = document.querySelector('.tree-left-1');
             const rightTree1 = document.querySelector('.tree-right-1');
             const rightTree2 = document.querySelector('.tree-right-2');
 
             if (leftTree) {
-                leftTree.style.transform = `translateX(${-scrollProgress * window.innerWidth * 0.1 * moveFactor}px)`;  // Reducir velocidad
+                leftTree.style.transform = `translateX(${-scrollProgress * window.innerWidth * 0.1 * moveFactor}px)`;  
             }
 
             if (rightTree1) {
-                rightTree1.style.transform = `translateX(${scrollProgress * window.innerWidth * 0.1 * moveFactor}px)`;  // Reducir velocidad
+                rightTree1.style.transform = `translateX(${scrollProgress * window.innerWidth * 0.1 * moveFactor}px)`; 
             }
 
             if (rightTree2) {
-                rightTree2.style.transform = `translateX(${scrollProgress * window.innerWidth * 0.08 * moveFactor}px)`;  // Reducir velocidad
+                rightTree2.style.transform = `translateX(${scrollProgress * window.innerWidth * 0.08 * moveFactor}px)`;  
             }
 
-            // Ajustar la velocidad del movimiento de los arbustos
+          
             elements.bushes.forEach((bush) => {
                 const isLeft = bush.classList.contains('bush-1') || bush.classList.contains('bush-2');
                 const direction = isLeft ? -1 : 1;
-                const distance = window.innerWidth * 0.1;  // Reducir distancia
-                bush.style.transform = `translateX(${direction * scrollProgress * distance * moveFactor}px)`;  // Lento
+                const distance = window.innerWidth * 0.1;  
+                bush.style.transform = `translateX(${direction * scrollProgress * distance * moveFactor}px)`; 
             });
 
-            // Ajustar la velocidad del movimiento de las rocas
+            
             elements.rocks.forEach((rock) => {
                 const isLeft = rock.classList.contains('rock-1');
                 const direction = isLeft ? -1 : 1;
-                const distance = window.innerWidth * 0.1;  // Reducir distancia
-                rock.style.transform = `translateX(${direction * scrollProgress * distance * moveFactor}px)`;  // Lento
+                const distance = window.innerWidth * 0.1;  
+                rock.style.transform = `translateX(${direction * scrollProgress * distance * moveFactor}px)`;  
             });
 
-            // Ajustar la velocidad del movimiento de los personajes, y restringir dentro del contenedor
+          
             elements.characters.forEach((character) => {
-                // Asegurarse de que el personaje no se salga del contenedor
-                const containerHeight = sceneContainer.offsetHeight;  // Altura del contenedor
-                const characterHeight = character.offsetHeight;  // Altura del personaje
-                const maxTranslateY = containerHeight - characterHeight;  // Limitar el movimiento a la altura del contenedor
+              
+                const containerHeight = sceneContainer.offsetHeight;  
+                const characterHeight = character.offsetHeight; 
+                const maxTranslateY = containerHeight - characterHeight; 
 
-                // Movimiento hacia arriba (cambiar de 'scrollProgress * 0' a algo positivo para subir)
-                const translateY = Math.min(scrollProgress * 30 * moveFactor, maxTranslateY);  // Limite para no salirse del contenedor
-                const opacity = 1;  // Mantener la opacidad en 1
+               
+                const translateY = Math.min(scrollProgress * 30 * moveFactor, maxTranslateY);  
+                const opacity = 1; 
 
-                character.style.transform = `translateY(${-translateY}px)`;  // Mover hacia arriba (negativo)
-                character.style.opacity = opacity;  // Mantener la opacidad
+                character.style.transform = `translateY(${-translateY}px)`; 
+                character.style.opacity = opacity;  
             });
 
-            // Logo: ajustar velocidad
+            
             if (elements.logo) {
-                const scale = 1 - (scrollProgress * 0.1 * moveFactor);  // Escala más lenta
-                const opacity = 1 - scrollProgress * 0.4 * moveFactor;  // Opacidad más lenta
+                const scale = 1 - (scrollProgress * 0.1 * moveFactor); 
+                const opacity = 1 - scrollProgress * 0.4 * moveFactor;  
                 elements.logo.style.transform = `translate(-50%, 0) scale(${scale})`;
                 elements.logo.style.opacity = opacity;
             }
         } else {
-            // Resetear a posiciones iniciales
+            
             resetPositions();
         }
 
@@ -159,10 +159,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Asegurar posiciones iniciales al cargar
+    
     resetPositions();
 
-    // Crear contenedor de scroll si no existe
+   
     if (!document.querySelector('.scroll-container')) {
         const scrollContainer = document.createElement('div');
         scrollContainer.className = 'scroll-container';
