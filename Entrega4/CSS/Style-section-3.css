@@ -58,36 +58,36 @@ h1, span{
     font-weight: 600;
     color: #ffffff;
     letter-spacing: -2px;
-    background-color: #83C252;  /* Fondo del botón */
-    border: 8px solid #ffffff;  /* Borde blanco de 8px */
-    border-radius: 111px;  /* Bordes redondeados, si lo deseas */
+    background-color: #83C252;  
+    border: 8px solid #ffffff;  
+    border-radius: 111px;  
     padding: 0; cursor: pointer;
-    animation: bounce 1s ease-in-out infinite; /* Aplicar la animación de rebote */
-    box-shadow: 0 4px 0 #281973; /* Sombra sólida de color azul sin opacidad */
+    animation: bounce 1s ease-in-out infinite; 
+    box-shadow: 0 4px 0 #281973; 
 }
 
 .download-button:hover {
     cursor: pointer;
-    box-shadow: 0 8px 15px rgba(130, 194, 82, 0.7); /* Sombra más grande y suave para dar el efecto de iluminación */
+    box-shadow: 0 8px 15px rgba(130, 194, 82, 0.7); 
     background-color: #3d51a9;
 }
 
 /* Animación de rebote */
 @keyframes bounce {
     0% {
-        transform: translateY(0); /* Comienza en la posición original */
+        transform: translateY(0); 
     }
     30% {
-        transform: translateY(-10px); /* Sube un poco */
+        transform: translateY(-10px); 
     }
     50% {
-        transform: translateY(0); /* Vuelve a la posición original */
+        transform: translateY(0); 
     }
     70% {
-        transform: translateY(-5px); /* Sube un poquito más */
+        transform: translateY(-5px); 
     }
     100% {
-        transform: translateY(0); /* Vuelve a la posición original */
+        transform: translateY(0); 
     }
 }
 
