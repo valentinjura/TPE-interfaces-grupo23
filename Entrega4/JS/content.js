@@ -52,8 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loader.classList.add('hidden');
         
         
-        content.classList.add('visible');
-        
         
         setTimeout(() => {
           loader.remove();
