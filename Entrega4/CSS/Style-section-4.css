@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    max-width: 1280px;
+    color: #333;
+}
+
+.title-seccion-4 {
+    width: 731px; /* Cambiado de max-width a width fijo */
+    height: 57px;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    margin-bottom: 73px;
+    margin-top: 174px;
+    white-space: nowrap; /* Fuerza el texto a una sola línea */
+ 
+}
+.title-seccion-4 h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
+    line-height: 1; /* Ajusta la altura de línea */
+    white-space: nowrap; /* Asegura que el texto permanezca en una línea */
+}
+
+.personajes-seccion {
+    position: relative;
+    display: flex;
+    background: #fff;
+   justify-content: space-around;
+   
+}
+
+.imagen-container {
+    position: sticky;
+    top: 100px;
+    width: 475px; /* Aumentado para acomodar el personaje más ancho */
+    height: 514px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 200px; /* Añadido para mover los personajes 243px desde la izquierda */
+
+}
+
+.imagen-personaje {
+    position: absolute;
+    width: auto; /* Importante: permite que el ancho se ajuste según la clase específica */
+    height: auto; /* Importante: permite que la altura se ajuste según la clase específica */
+    object-fit: contain;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+ 
+}
+
+.imagen-personaje.pj-0 {
+    width: 291px;
+    height: 436px;
+    max-width: 291px;
+    max-height: 436px;
+}
+
+.imagen-personaje.pj-1 {
+    width: 379px;
+    height: 509px;
+    max-width: 379px;
+    max-height: 509px;
+}
+
+.imagen-personaje.pj-2 {
+    width: 266px;
+    height: 479px;
+    max-width: 266px;
+    max-height: 479px;
+}
+
+.imagen-personaje.pj-3 {
+    width: 187px;
+    height: 497px;
+    max-width: 187px;
+    max-height: 497px;
+}
+
+.imagen-personaje.pj-4 {
+    width: 475px;
+    height: 488px;
+    max-width: 475px;
+    max-height: 488px;
+}
+
+.imagen-personaje.pj-5 {
+    width: 231px;
+    height: 509px;
+    max-width: 231px;
+    max-height: 509px;
+}
+
+.imagen-personaje.pj-6 {
+    width: 338px;
+    height: 514px;
+    max-width: 338px;
+    max-height: 514px;
+}
+
+.imagen-personaje.pj-7 {
+    width: 134px;
+    height: 482px;
+    max-width: 134px;
+    max-height: 482px;
+}
+
+.imagen-personaje.pj-8 {
+    width: 437px;
+    height: 499px;
+    max-width: 437px;
+    max-height: 499px;
+}
+
+.imagen-personaje.pj-9 {
+    width: 485px;
+    height: 509px;
+    max-width: 485px;
+    max-height: 509px;
+}
+
+.imagen-personaje.pj-10 {
+    width: 359px;
+    height: 488px;
+    max-width: 359px;
+    max-height: 488px;
+}
+
+
+.imagen-personaje.activo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.textos-container {
+    width: 50%;
+    margin-right: 100px;
+    
+}
+
+.personaje-info {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 60px;
+    padding-right: 100px; /* Asegurando el espacio desde la derecha */
+    overflow: hidden;
+}
+
+.personaje-info::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 2px;
+    height: 0;
+    background-color: #333;
+    transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-50%);
+}
+
+.personaje-info.activo::before {
+    height: 200px;
+}
+
+.titulo-container {
+    overflow: hidden;
+    margin-bottom: 30px;
+    /* Añadido: asegurar que el contenedor tenga altura suficiente */
+    height: 60px; /* Ajusta este valor según el tamaño de tu título */
+}
+
+.personaje-info h2 {
+    width: 467px;
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    margin-bottom: 15px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Eliminado height fijo para permitir ajuste natural */
+}
+
+.personaje-info.activo h2 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.texto-container {
+    overflow: hidden;
+    position: relative;
+    /* Añadido: asegurar espacio adecuado para el texto */
+    margin-top: 20px; /* Añade espacio después del título */
+}
+
+.texto-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.personaje-info.activo .texto-container::after {
+    transform: scaleX(0);
+}
+
+.personaje-info p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #666;
+    width: 467px;
+    /* Eliminado height fijo para permitir ajuste natural */
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.personaje-info.activo p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.personaje-info .decoracion {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #333;
+    left: 60px;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+}
+
+.personaje-info .decoracion-top {
+    top: 40%;
+}
+
+.personaje-info .decoracion-bottom {
+    bottom: 40%;
+}
+
+.personaje-info.activo .decoracion {
+    transform: scaleX(1);
+}
+@media (max-width: 768px) {
+    .personajes-seccion {
+        flex-direction: column;
+    }
+
+    .imagen-container,
+    .textos-container {
+        width: 100%;
+    }
+
+    .imagen-container {
+        height: 50vh;
+    }
+
+    .personaje-info {
+        padding: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.character-container {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+}
+
+.character {
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center center;
+    will-change: transform;
+}
+
+/* Posiciones específicas para cada personaje */
+.character-1 {
+    top: 20%;
+    left: 10%;
+    width: 200px;
+    height: 300px;
+    background-color: rgba(255, 100, 100, 0.8);
+}
+
+.character-2 {
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    height: 350px;
+    background-color: rgba(100, 255, 100, 0.8);
+}
+
+.character-3 {
+    top: 30%;
+    right: 15%;
+    width: 180px;
+    height: 280px;
+    background-color: rgba(100, 100, 255, 0.8);
+}
+
+.character-4 {
+    bottom: 25%;
+    left: 25%;
+    width: 220px;
+    height: 320px;
+    background-color: rgba(255, 255, 100, 0.8);
+}
+
+.character-5 {
+    bottom: 20%;
+    right: 20%;
+    width: 190px;
+    height: 290px;
+    background-color: rgba(255, 100, 255, 0.8);
+}
+
+/* Para imágenes reales */
+.character img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+        
+
+      

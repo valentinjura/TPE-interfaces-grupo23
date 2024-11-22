@@ -1,0 +1,76 @@
+/*sección dos*/
+
+.content-container2 {
+    width: 1280px;
+    height: 970px;
+  
+    margin-bottom: 0;
+}
+
+.content-container2-info {
+    margin-top: 350px;
+    position: absolute;
+    display: flex;
+    gap: 41px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Ocultar inicialmente las tarjetas */
+.content-info-container {
+    width: 333px;
+    height: 543px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+/* Animación de scroll reveal con efecto de flotación */
+@keyframes float-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clase que se añadirá con JavaScript cuando el elemento entra en vista */
+.content-info-container.is-visible {
+    animation: float-in 1s ease-out forwards;
+}
+
+/* Delays para la aparición escalonada */
+.content-info-container:nth-child(1).is-visible {
+    animation-delay: 0s;
+}
+
+.content-info-container:nth-child(2).is-visible {
+    animation-delay: 0.4s;
+}
+
+.content-info-container:nth-child(3).is-visible {
+    animation-delay: 0.8s;
+}
+
+.content-info-container p {
+    margin-top: 20px;
+}
+
+.content-info-container img {
+    width: 330px;
+    border-radius: 50px;
+    border: 9px solid #2982FF;
+    box-shadow: 4px 4px 0 #281973;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Agregamos transiciones suaves */
+}
+
+.content-info-container img:hover {
+    transform: translateZ(30px) scale(1.1);  /* Desplazamos la imagen en el eje Z y la ampliamos ligeramente */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);  /* Añadimos una sombra para simular profundidad */
+}

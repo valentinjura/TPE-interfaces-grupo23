@@ -1,0 +1,67 @@
+/*sección 6*/
+
+.content-container6 {
+
+    width: 1280px;
+    height: 1027px;
+    background-color: white;
+    max-height: 973px;
+    margin-bottom: 54px
+    
+}
+
+.container6-info {
+    margin-left: 100px;
+    position: relative; /* Necesario para posicionar los elementos dentro */
+}
+
+.container6-info-container {
+    display: flex;
+    align-items: flex-start;
+    position: relative; /* Contenedor de los elementos */
+}
+
+/* Título */
+
+.title-container6 {
+    position: relative; /* Necesario para permitir el solapamiento */
+    margin-top: 120px; /* Ajustamos para darle más espacio en la parte superior */
+    color: #9D2121;
+    z-index: 2; /* Nos aseguramos de que esté por encima de la imagen */
+}
+
+.title-container6 h2 {
+    width: 692px;
+    height: 360px;
+    font-weight: 500;
+    line-height: 1.0;
+}
+
+/* Imagen del personaje */
+.container6-caracter {
+    margin-left: 520px;
+    position: absolute; /* Lo posicionamos de forma absoluta */
+    z-index: 1; /* Aseguramos que la imagen esté debajo del título */
+}
+
+/* Ajustamos la imagen del personaje */
+.container6-caracter img {
+    width: 667px;
+    height: 973px; /* Ajusta la altura según el diseño */
+    max-height: 1000px; /* Limita la altura máxima si es necesario */
+}
+
+.container6-additional-info {
+    width: 470px;
+    
+}
+
+.container6-additional-info p {
+    color: black;
+    font-size: 20px;
+    
+}
+
+.container6-all-caracters{
+    margin-top: 300px;
+}

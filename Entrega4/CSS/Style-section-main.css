@@ -1,0 +1,208 @@
+.scene-container {
+    background-image: url(../IMG/seccion-main/fondo-seccion-1.svg);
+    background-repeat: no-repeat;
+    position: sticky;
+    background-attachment: fixed; /* Fondo fijo */
+    position: relative; /* Cambiar a relative para no afectar otros elementos */
+    top: 0;
+    height: 959px;
+    width: 100%;
+    overflow: hidden; /* Evita que el contenido se salga del contenedor */
+    background-size: cover;
+    perspective: 1280px;
+}
+
+.scene-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../IMG/seccion-main/fondo-seccion-1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(-1px) scale(1.1);  /* Esto reducirá el movimiento y aumentará el efecto de fondo */
+}
+
+/* Árboles */
+.tree {
+    position: absolute;
+    opacity: 1; /* Cambiado para que sea visible desde el inicio */
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+}
+
+.tree-right-1 {
+    right: -10px;
+    width: 434px;
+    height: 672px;
+    z-index: 21;
+    top: 108px;
+    animation: sway 8s ease-in-out infinite alternate; /* Mantener solo la animación de movimiento */
+}
+
+.tree-right-2 {
+    right: -45px;
+    width: 278px;
+    height: 440px;
+    z-index: 19;
+    top: 280px;
+    animation: sway 8s ease-in-out infinite alternate;
+}
+
+.tree-left-1 {
+    width: 560px;
+    height: 867px;
+    left: -160px;
+    top: 1px;
+    z-index: 20;
+    animation: sway 8s ease-in-out infinite alternate;
+}
+
+/* Arbustos */
+.bush {
+    position: absolute;
+    opacity: 1; /* Cambiado para que sea visible desde el inicio */
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+    z-index: 10;
+}
+
+.bush-1 { 
+    left: 171px;
+    width: 156px;
+    height: 103px;
+    top: 823px;
+    z-index: 21;
+    animation: floatBush 6s ease-in-out infinite alternate;
+}
+
+.bush-2 { 
+    left: 135px;
+    width: 250px;
+    height: 115px;
+    top: 713px;
+    z-index: 19;
+    animation: floatBush 6s ease-in-out infinite alternate;
+}
+
+.bush-3 { 
+    right: 90px;
+    width: 191px;
+    height: 63px;
+    top: 631px;
+    z-index: 18;
+    animation: floatBush 6s ease-in-out infinite alternate;
+}
+
+.bush-4 { 
+    right: -20px;
+    top: 661px;
+    width: 244px;
+    height: 107px;
+    z-index: 20;
+    animation: floatBush 6s ease-in-out infinite alternate;
+}
+
+/* Piedras */
+.rock {
+    position: absolute;
+    opacity: 1; /* Cambiado para que sea visible desde el inicio */
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
+}
+
+.rock-1 { 
+    width: 145px;
+    height: 78px;
+    left: 103px;
+    top: 794px;
+    z-index: 20;
+    animation: subtle-float 8s ease-in-out infinite alternate;
+}
+
+.rock-2 { 
+    width: 113px;
+    height: 74px;
+    right: 119px;
+    top: 738px;
+    z-index: 23;
+    animation: subtle-float 8s ease-in-out infinite alternate;
+}
+
+.rock-3 { 
+    width: 66px;
+    height: 56px;
+    right: 203px;
+    top: 738px;
+    z-index: 22;
+    animation: subtle-float 8s ease-in-out infinite alternate;
+}
+
+.rock-4 { 
+    width: 59px;
+    height: 35px;
+    right: 203px;
+    top: 788px;
+    z-index: 24;
+    animation: subtle-float 8s ease-in-out infinite alternate;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    width: 560px;
+    height: 320px;
+    top: 55px;
+    left: 50%;
+    opacity: 1;
+    z-index: 50;
+    transform: translate(-50%, 0);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+    animation: floatLogo 8s ease-in-out infinite alternate;
+}
+
+/* Personajes */
+.character {
+    position: absolute;
+    opacity: 1; /* Cambiado para que sea visible desde el inicio */
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.25));
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+.character:nth-child(1) {
+    width: 240px;
+    height: 314px;
+    top: 485px;
+    left: 395px;
+    z-index: 21;
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+.character:nth-child(2) {
+    width: 197px;
+    height: 270px;
+    top: 400px;
+    left: 505px;
+    z-index: 20;
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+.character:nth-child(3) {
+    width: 174px;
+    height: 384px;
+    top: 360px;
+    left: 633px;
+    z-index: 19;
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+/* Transiciones para el scroll */
+.tree, .bush, .rock, .character, .logo {
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* Contenedor para el scroll */
+.scroll-container {
+    height: 959px;
+}

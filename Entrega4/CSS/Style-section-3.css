@@ -1,0 +1,100 @@
+/*sección tres*/
+
+
+h1, span{
+    font-size: 61.14px;
+    font-weight: 600;
+}
+
+
+.content-container3 {
+    width: 1280px;
+    height: 1157px;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.title-container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;  
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100%;
+    padding-top: 175px; 
+}
+
+.title3 {
+    text-align: center;
+    width: 950px;
+    height: 153px;
+    color: #ffffff;
+}
+
+.italic-text {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: bold;  
+}
+
+.title3-button-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    padding-top: 382px;
+}
+
+.download-button {
+    width: 540px;
+    height: 66px;
+    font-size: 31.14px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -2px;
+    background-color: #83C252;  /* Fondo del botón */
+    border: 8px solid #ffffff;  /* Borde blanco de 8px */
+    border-radius: 111px;  /* Bordes redondeados, si lo deseas */
+    padding: 0; cursor: pointer;
+    animation: bounce 1s ease-in-out infinite; /* Aplicar la animación de rebote */
+    box-shadow: 0 4px 0 #281973; /* Sombra sólida de color azul sin opacidad */
+}
+
+.download-button:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(130, 194, 82, 0.7); /* Sombra más grande y suave para dar el efecto de iluminación */
+    background-color: #3d51a9;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0% {
+        transform: translateY(0); /* Comienza en la posición original */
+    }
+    30% {
+        transform: translateY(-10px); /* Sube un poco */
+    }
+    50% {
+        transform: translateY(0); /* Vuelve a la posición original */
+    }
+    70% {
+        transform: translateY(-5px); /* Sube un poquito más */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a la posición original */
+    }
+}
+
+.caracter-img-container3 {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+}
