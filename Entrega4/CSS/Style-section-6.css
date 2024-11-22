@@ -12,22 +12,22 @@
 
 .container6-info {
     margin-left: 100px;
-    position: relative; /* Necesario para posicionar los elementos dentro */
+    position: relative; 
 }
 
 .container6-info-container {
     display: flex;
     align-items: flex-start;
-    position: relative; /* Contenedor de los elementos */
+    position: relative; 
 }
 
 /* Título */
 
 .title-container6 {
-    position: relative; /* Necesario para permitir el solapamiento */
-    margin-top: 120px; /* Ajustamos para darle más espacio en la parte superior */
+    position: relative;
+    margin-top: 120px; 
     color: #9D2121;
-    z-index: 2; /* Nos aseguramos de que esté por encima de la imagen */
+    z-index: 2; 
 }
 
 .title-container6 h2 {
@@ -40,15 +40,15 @@
 /* Imagen del personaje */
 .container6-caracter {
     margin-left: 520px;
-    position: absolute; /* Lo posicionamos de forma absoluta */
-    z-index: 1; /* Aseguramos que la imagen esté debajo del título */
+    position: absolute; 
+    z-index: 1; 
 }
 
-/* Ajustamos la imagen del personaje */
+
 .container6-caracter img {
     width: 667px;
-    height: 973px; /* Ajusta la altura según el diseño */
-    max-height: 1000px; /* Limita la altura máxima si es necesario */
+    height: 973px; 
+    max-height: 1000px; 
 }
 
 .container6-additional-info {
