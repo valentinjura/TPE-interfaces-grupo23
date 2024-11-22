@@ -19,12 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     }
 
-    // Event listeners para los botones de hamburguesa
+   
     hamburgers.forEach(hamburger => {
         hamburger.addEventListener('click', toggleMenu);
     });
 
-    // Cerrar menú al hacer click en el overlay
     menuOverlay.addEventListener('click', toggleMenu);
 
     // Event listener para el scroll
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
 
-    // Cerrar menú al hacer click en los enlaces
+    // Cerrar menú 
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Cerrar menú con la tecla Escape
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             toggleMenu();
