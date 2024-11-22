@@ -23,8 +23,8 @@ footer{
 
 .footer-policies {
     display: flex;
-    gap: 10px; /* Espacio entre los enlaces */
-    align-items: center; /* Centra los enlaces verticalmente */
+    gap: 10px; 
+    align-items: center; 
     margin-bottom: 30px;
 }
 
