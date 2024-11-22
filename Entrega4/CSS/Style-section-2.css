@@ -16,7 +16,7 @@
     margin-right: 100px;
 }
 
-/* Ocultar inicialmente las tarjetas */
+
 .content-info-container {
     width: 333px;
     height: 543px;
@@ -27,7 +27,7 @@
     will-change: opacity, transform;
 }
 
-/* Animación de scroll reveal con efecto de flotación */
+
 @keyframes float-in {
     0% {
         opacity: 0;
@@ -39,12 +39,12 @@
     }
 }
 
-/* Clase que se añadirá con JavaScript cuando el elemento entra en vista */
+
 .content-info-container.is-visible {
     animation: float-in 1s ease-out forwards;
 }
 
-/* Delays para la aparición escalonada */
+
 .content-info-container:nth-child(1).is-visible {
     animation-delay: 0s;
 }
@@ -67,10 +67,10 @@
     border: 9px solid #2982FF;
     box-shadow: 4px 4px 0 #281973;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Agregamos transiciones suaves */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
 }
 
 .content-info-container img:hover {
-    transform: translateZ(30px) scale(1.1);  /* Desplazamos la imagen en el eje Z y la ampliamos ligeramente */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);  /* Añadimos una sombra para simular profundidad */
+    transform: translateZ(30px) scale(1.1); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);  
 }
