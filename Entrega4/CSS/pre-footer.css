@@ -91,9 +91,10 @@
     width: 562px;
     height: 84px;
     border-radius: 111px 0 0 111px;
-  }
-
-  .pre-footer-form button {
+    border: 8px solid #ffffff;
+    font-size: 20px;
+    }
+    .suscribirse{
     color: white;
     background-color: #83C252;
     width: 218px;
@@ -101,7 +102,11 @@
     box-sizing: border-box;
     font-weight: 800;
     border-radius: 0 111px 111px 0;
-  }
+    border: 8px solid #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    
+    }
   .pre-footer-form input, .pre-footer-form button {
     font-size: 20px;
     border: 8px solid #ffffff;
@@ -134,27 +139,98 @@
    
    }
    
+   
    .gif1 {
-     top: 370px;
-     left: 10px;
-      width: 480px;
-     height: 480px;
-   }
-   
-   .gif2 {
-     left: 20%;
-     top: 350px;
-     width: 509px;
-     height: 509px;
-   }
-   
-   .gif3 {
-     left: 350px;
-     top: 150px;
-     width: 561px;
-     height: 997px;
-   }
+    top: 370px;
+    left: 10px;
+     width: 480px;
+    height: 480px;
+  }
+  
+  .gif2 {
+    left: 20%;
+    top: 350px;
+    width: 509px;
+    height: 509px;
+  }
+  
+  .gif3 {
+    left: 350px;
+    top: 150px;
+    width: 561px;
+  }
 
    
 
+   .spritesheet{
+    position: absolute;
+    top: 60px;
+    left: 70%;
+    
+    background-image: url("../spritestrip.webp");
+    width: 138px;
+    height: 139px;
+    animation: correr 1s steps(6) infinite;
+   }
+   @keyframes correr{
+    0%{
+      background-position: 0px;
+    }
+    100%{
+      background-position: -832px;
+    }
+   }
+   
+
+.pajaro{
+  height: 90px;
+  width: 55px;
+  margin: auto;
+  background: url(../pajaro.png) repeat-x;
+  background-size: 430px 70px;
+  animation: volar .8s steps(8) infinite;
+  position: absolute;
  
+  top: 60px;
+  left: 15%;
+}
+
+@keyframes volar {
+  0% {
+    background-position: 0
+  }
+  100% {
+    background-position: -430px
+  }
+}
+
+.spritesheet-pj1{
+  position: absolute;
+  top: 400px;
+    left: 80%;
+    width: 200px;
+    height: 200px;
+    background-image: url('../spritesheet-pj1.png');
+    animation: posicionEnX 0.2s steps(5) infinite, posicionEnY 0.6s steps(3) infinite;
+    background-size: 500% 300%;
+}
+@keyframes posicionEnX {
+  0%{
+      background-position-x: 0px;
+  }
+  100%{
+      background-position-x: -1000px;
+  }
+}
+
+@keyframes posicionEnY  {
+  0%{
+      background-position-y: 0px;
+  }
+  100%{
+      background-position-y: -600px;
+  }
+}
+
+
+   

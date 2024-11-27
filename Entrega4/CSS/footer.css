@@ -37,21 +37,3 @@ footer{
     background-color: #242424;
 }
 
-.ave{
-    height: 90px;
-    width: 55px;
-    background: url(personajes-scroll\IMG\footer\ave-interfaces.png) repeat-x;
-    background-size: 430px 70px;
-    animation: walk .8s steps(8) infinite;
-    position: absolute;
-    z-index: 8;
-}
-
-@keyframes walk {
-    0% {
-      background-position: 0
-    }
-    100% {
-      background-position: -430px
-    }
-  }
