@@ -1,84 +1,100 @@
-'use strict';
-export  class Ficha {
-    posXInicial;
-    posYInicial;
-    constructor(x,y,equipo, img) {
-        this.posX = x;
-        this.posY = y; 
-        this.radio = 25;
-        this.equipo = equipo;
-        this.selected = false;
-        this.image = new Image();
-        this.image.src = this.definirEquipo(equipo);
-        this.posXInicial=x;
-        this.posYInicial=y;
-    }
-
-    dibujarFicha(ctx) {
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(this.posX, this.posY, this.radio, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.clip();
-        ctx.drawImage(this.image, this.posX - this.radio, this.posY - this.radio, this.radio * 2, this.radio * 2);
-        ctx.restore();
-        //console.log('ficha dibujada en:' + this.posX,this.posY);
-        
-    }
-
-    esClickeada(x, y) {
-        const dist = Math.sqrt((x - this.posX) ** 2 + (y - this.posY) ** 2);
-        return dist <= this.radio;
-    }
-
-    setPosicion(posX, posY) {
+class Ficha {
+     // Constructor: Inicializa una ficha con su posición, contexto, radio e imagen del jugador
+    constructor(posX, posY, ctx, radius, imgJugador) {
+        this.posIniX = posX;
+        this.posIniY = posY;
         this.posX = posX;
         this.posY = posY;
+        this.ctx = ctx;
+        this.radius = radius;
+        this.fill = imgJugador;
+        this.resaltado = false;
+        this.colocado = false;
+        this.velY = 0;
+        this.enCaida = false;
+    }
+    // Dibuja la ficha en el canvas con su imagen correspondiente
+    // Si no es el turno del jugador, la ficha se muestra semi transparente
+    // Si está resaltada, se dibuja un borde amarillo
+    draw(turnoActual, jugadorFicha) {
+        this.ctx.save();
+        
+        if (turnoActual !== jugadorFicha && this.colocado === false) {
+            this.ctx.globalAlpha = 0.3; 
+        } else {
+            this.ctx.globalAlpha = 1; 
+        }
+
+        this.ctx.beginPath();
+        this.ctx.arc(this.posX, this.posY, this.radius, 0, 2 * Math.PI);
+        this.ctx.fillStyle = "transparent"; 
+        this.ctx.closePath();
+        this.ctx.drawImage(this.fill, this.posX - this.radius, this.posY - this.radius, this.radius * 2, this.radius * 2);
+        this.ctx.restore();
+
+        if (this.resaltado === true) {
+            this.ctx.strokeStyle = "yellow";
+            this.ctx.lineWidth = 2;
+            this.ctx.stroke();
+        }
     }
 
-    getPosicion(){
-        return this.getPosX, this.posY;
+   // Verifica si un punto (x,y) está dentro del área de la ficha
+    // Utiliza el teorema de Pitágoras para calcular la distancia al centro
+    isPointInside(x, y) {
+        let _x = this.posX - x;
+        let _y = this.posY - y;
+        let resultado = Math.sqrt(_x * _x + _y * _y) < this.radius;
+        
+        return resultado;
     }
 
-    getEquipo(){
-        return this.equipo;
-    }
-
-    getPosX() {
-        return this.posX;
+    getPosition() {
+        return { x: this.posX, y: this.posY };
     }
 
     getPosY() {
         return this.posY;
     }
 
-    setPosY(posY) {
-        this.posY = posY;
+    getPosX() {
+        return this.posX;
     }
 
-    setPosX(posX) {
-
-        this.posX = posX;
+    getFill() {
+        return this.fill;
     }
 
-    resetPosicion(){
-        console.log('reseto pos');
-        this.posX=this.posXInicial;
-        this.posY=this.posYInicial;
+    getFill() {
+        return this.resaltado;
     }
 
-    definirEquipo(equipo) {
-        switch (equipo) {
-            case "batman":
-                return 'IMG-GAME/batman.png';
-            case "joker":
-                return 'IMG-GAME/joker.png';
-            case "nightwing":
-                return 'IMG-GAME/nightwing.png';
-            case "harley":
-                return 'IMG-GAME/harley.png';
-            default:
-                return null; 
-        }
+    isColocado(){
+        return this.colocado;
     }
+
+    setFill(fill) {
+        this.fill = fill;
+    }
+
+    setPosition(x, y) {
+        this.posX = x;
+        this.posY = y;
+    }
+
+    // Cambia el estado de resaltado de la ficha (para mostrar selección)
+    setResaltado(bool) {
+        this.resaltado = bool;
+    }
+
+    // Devuelve la ficha a su posición inicial
+    setPosicionInicial() {
+        this.setPosition(this.posIniX,this.posIniY);
+    } 
+
+     // Marca la ficha como colocada en el tablero (no se puede mover más)
+    setColocado(){
+        this.colocado = true;
+    }
+
 }

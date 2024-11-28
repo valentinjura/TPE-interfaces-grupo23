@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Style-game.css">
+    
 </head>
 <body>
     <header>
@@ -77,106 +77,32 @@
             <a href="index.html#Clasicos">Clásicos</a> - 
             <span>4 en línea: Batman vs Joker</span>
         </nav>
-        <div class="contenedor-juego-completo">
+        <div class="canvas-container">
+            <canvas id="myCanvas" width="1205" height="750"></canvas>
+        </div>
 
-            <div class="game-canva" id="gamePortada">
-                <div class="contenido-juego">
-                    <div class="fondo-game">
-                        <img class="fondo-game" src="IMG-GAME/fondo-tablero.jpg" alt="fotoJuego" />
-                    </div>
-                    <div class="elemento-canvas-juego" id="elementsPortada">
-                        <div class="text-box">
-                            <h1>Batman vs Joker</h1>
-                            <button class="button-play" id="changeScreen">
-                                <span class="jugar-texto">JUGAR</span>
-                              </button>
-                        </div>
-                    </div>
+        <div class="support-share">
+            <div class="support">
+                <a href="" class="support-link">¿Tienes problemas? Visita nuestro soporte técnico.</a>
+            </div>
+            <div class="share-button-container">
+                <p>Compartir</p>
+                <div class="share-button">
+                    <button><img src="Imagenes\Botones\youtube.png" alt=""></button>
+                    <button><img src="Imagenes\Botones\whatsapp.png" alt=""></button>
+                    <button><img src="Imagenes\Botones\messenger.png" alt=""></button>
+                    <button><img src="Imagenes\Botones\group.png" alt="group"></button>
+                    <button><img src="Imagenes\Botones\tiktok.png" alt="tiktok"></button>
+                    <button><img src="Imagenes\Botones\gmail.png" alt="gmail"></button>
                 </div>
             </div>
-           
-            <div class="cartel taparJuego" id="formLineas" style="margin-top: 0px;">
-                <h2>Modo de juego: </h2>
-                <form class="form-juego">
-                    <label>
-                        <input type="radio" name="tipo" value="4"> 4 en línea
-                    </label><br>
-                    <label>
-                        <input type="radio" name="tipo" value="5"> 5 en línea
-                    </label><br>
-                    <label>
-                        <input type="radio" name="tipo" value="6"> 6 en línea
-                    </label><br>
-                    <h4 style="margin-top: 5px;">Elija los equipos:</h4>
-
-                    
-                    <label for="equipo1">Equipo 1:</label>
-                    <select id="equipo1" name="equipo1" class="select-equipo">
-                        <option value="batman">Batman</option>
-                        <option value="joker">Joker</option>
-                        <option value="harley">harley</option>
-                        <option value="nightwing">nightwing</option>
-                    </select>
-
-                    <label for="equipo2">Equipo 2:</label>
-                    
-                    <select id="equipo2" name="equipo2" class="select-equipo">
-                        <option value="batman">Batman</option>
-                        <option value="joker">Joker</option>
-                        <option value="harley">harley</option>
-                        <option value="nightwing">nightwing</option>
-                    </select>
-
-                    <button type="submit" class="button-play" id="btnJugar" style="margin-top: 10px;">
-                        <span class="jugar-texto">JUGAR</span>
-                      </button>
-                    <br>
-                      <span class="taparJuego" id="msjError";">para poder jugar, no deben ser iguales las fichas!</span>
-                </form>
-            </div>
-            <div id="turn-indicator" class="turno-indicador taparJuego"></div>
-            <div class="contenedor-temporizador taparJuego">
-                <span id="juego-temporizador"></span>
-            </div>
-            <div id="modal" class="modal taparJuego">
-                <div class="modal-content ">
-                    <h3 id="winner-message"></h3>
-                    <button  id="play-again-btn">Jugar de nuevo</button>
-                </div>
-            </div>
-            <div class="cointainerBtnBack " id="btnResetGame">
-                <button class="taparJuego" id="resetGame">
-                    <span class="material-symbols-outlined">
-                        
-                        </span>
-                        Reiniciar Juego
-                </button>
-            </div>
-            <div class="taparJuego" id="fondoJuego">
-                <canvas id="canvaJuego" width="1011" height="550" class="canvasClass"></canvas>
-            </div>
-            
+        </div>
           
     </div>
    
 
 
-    <div class="support-share">
-        <div class="support">
-            <a href="" class="support-link">¿Tienes problemas? Visita nuestro soporte técnico.</a>
-        </div>
-        <div class="share-button-container">
-            <p>Compartir</p>
-            <div class="share-button">
-                <button><img src="Imagenes\Botones\youtube.png" alt=""></button>
-                <button><img src="Imagenes\Botones\whatsapp.png" alt=""></button>
-                <button><img src="Imagenes\Botones\messenger.png" alt=""></button>
-                <button><img src="Imagenes\Botones\group.png" alt="group"></button>
-                <button><img src="Imagenes\Botones\tiktok.png" alt="tiktok"></button>
-                <button><img src="Imagenes\Botones\gmail.png" alt="gmail"></button>
-            </div>
-        </div>
-    </div>
+    
  <div class="main-layout">
     <div class="main-layout">
         <div class="four-in-line-container">
@@ -408,11 +334,12 @@
     </div>
   
     <script src="js.js"></script>
-    <script type="module" src="JS/game/Casillero.js"></script>
-    <script type="module" src="JS/game/Juego.js"></script>
-    <script type="module" src="JS/game/Main.js"></script>
-    <script type="module" src="JS/game/Ficha.js"></script>
-    <script type="module" src="JS/game/Tablero.js"></script>
+   
+    <script src="JS/game/ficha.js"></script>
+    <script src="JS/game/tablero.js"></script>
+    <script src="JS/game/game.js"></script>
+    <script src="JS/game/main.js"></script>
+    <script src="JS/game/timer.js"></script>
 
 </body>
 </html>
