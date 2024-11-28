@@ -37,8 +37,6 @@ function loadMain() {
     imgArrowHover.src = "IMG-GAME/arrow-hover.png";
 
   
-
-
     //imagenes de menu y restart
     const homeMenu = new Image();
     homeMenu.src = "IMG-GAME/Home.png"
