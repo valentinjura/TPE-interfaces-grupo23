@@ -39,7 +39,7 @@ function loadMain() {
   
     //imagenes de menu y restart
     const homeMenu = new Image();
-    homeMenu.src = "IMG-GAME/Home.png"
+    homeMenu.src = "IMG-GAME/home.png"
 
     const imgRestart = new Image();
     imgRestart.src = "IMG-GAME/Restart.png"
